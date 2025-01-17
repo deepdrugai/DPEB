@@ -1,0 +1,156 @@
+Data Loading is completed
+Total Number of Edges:  11797471
+Train Number of Edges:  8258230
+Valid Number of Edges:  2359494
+Test Number of Edges:  1179747
+Graph Splitting is completed
+For Feature: esm_features ; Sage Model
+Epoch: 00 | Iteration: 00000 | Loss: 0.6933 | Training Accuracy: 52.5391 | AUC Score: 0.4959
+Epoch: 00 | Iteration: 04000 | Loss: 0.6156 | Training Accuracy: 67.2852 | AUC Score: 0.7261
+Epoch: 00 | Iteration: 08000 | Loss: 0.5997 | Training Accuracy: 69.6289 | AUC Score: 0.7672
+Epoch: 00 | Iteration: 12000 | Loss: 0.5882 | Training Accuracy: 68.7500 | AUC Score: 0.7602
+Epoch: 00 | Iteration: 16000 | Loss: 0.5801 | Training Accuracy: 69.3359 | AUC Score: 0.7668
+Epoch: 00 | Iteration: 00000 | Loss: 0.0000 | Validation Accuracy: 71.9437 | AUC Score: 0.7995
+Epoch: 01 | Iteration: 00000 | Loss: 0.5373 | Training Accuracy: 71.9727 | AUC Score: 0.7954
+Epoch: 01 | Iteration: 04000 | Loss: 0.5489 | Training Accuracy: 70.3125 | AUC Score: 0.7753
+Epoch: 01 | Iteration: 08000 | Loss: 0.5457 | Training Accuracy: 73.0469 | AUC Score: 0.7987
+Epoch: 01 | Iteration: 12000 | Loss: 0.5426 | Training Accuracy: 70.8984 | AUC Score: 0.7816
+Epoch: 01 | Iteration: 16000 | Loss: 0.5398 | Training Accuracy: 71.9727 | AUC Score: 0.7904
+Epoch: 01 | Iteration: 00000 | Loss: 0.0000 | Validation Accuracy: 73.6846 | AUC Score: 0.8178
+Epoch: 01 | Iteration: 00000 | Loss: 0.0000 | Testing Accuracy: 73.3923 | AUC Score: 0.8145
+=================================
+For Feature: esm_features ; GAT Model
+Epoch: 00 | Iteration: 00000 | Loss: 0.6943 | Training Accuracy: 52.1484 | AUC Score: 0.5005
+Epoch: 00 | Iteration: 04000 | Loss: 0.6262 | Training Accuracy: 67.3828 | AUC Score: 0.7227
+Epoch: 00 | Iteration: 08000 | Loss: 0.6025 | Training Accuracy: 68.2617 | AUC Score: 0.7543
+Epoch: 00 | Iteration: 12000 | Loss: 0.5890 | Training Accuracy: 70.3125 | AUC Score: 0.7725
+Epoch: 00 | Iteration: 16000 | Loss: 0.5799 | Training Accuracy: 70.1172 | AUC Score: 0.7712
+Epoch: 00 | Iteration: 00000 | Loss: 0.0000 | Validation Accuracy: 69.4369 | AUC Score: 0.7693
+Epoch: 01 | Iteration: 00000 | Loss: 0.5566 | Training Accuracy: 70.0195 | AUC Score: 0.7723
+Epoch: 01 | Iteration: 04000 | Loss: 0.5496 | Training Accuracy: 72.9492 | AUC Score: 0.7987
+Epoch: 01 | Iteration: 08000 | Loss: 0.5486 | Training Accuracy: 69.6289 | AUC Score: 0.7747
+Epoch: 01 | Iteration: 12000 | Loss: 0.5477 | Training Accuracy: 71.5820 | AUC Score: 0.7838
+Epoch: 01 | Iteration: 16000 | Loss: 0.5468 | Training Accuracy: 70.3125 | AUC Score: 0.7759
+Epoch: 01 | Iteration: 00000 | Loss: 0.0000 | Validation Accuracy: 67.5799 | AUC Score: 0.7375
+Epoch: 01 | Iteration: 00000 | Loss: 0.0000 | Testing Accuracy: 68.8893 | AUC Score: 0.7549
+=================================
+For Feature: Protvec_embeddings ; Sage Model
+Epoch: 00 | Iteration: 00000 | Loss: 43.7828 | Training Accuracy: 52.0508 | AUC Score: 0.5097
+Epoch: 00 | Iteration: 04000 | Loss: 0.8645 | Training Accuracy: 67.3828 | AUC Score: 0.7327
+Epoch: 00 | Iteration: 08000 | Loss: 0.7240 | Training Accuracy: 70.6055 | AUC Score: 0.7734
+Epoch: 00 | Iteration: 12000 | Loss: 0.6720 | Training Accuracy: 69.6289 | AUC Score: 0.7641
+Epoch: 00 | Iteration: 16000 | Loss: 0.6432 | Training Accuracy: 69.0430 | AUC Score: 0.7624
+Epoch: 00 | Iteration: 00000 | Loss: 0.0000 | Validation Accuracy: 72.7922 | AUC Score: 0.8093
+Epoch: 01 | Iteration: 00000 | Loss: 0.5546 | Training Accuracy: 71.0938 | AUC Score: 0.7864
+Epoch: 01 | Iteration: 04000 | Loss: 0.5500 | Training Accuracy: 69.5312 | AUC Score: 0.7683
+Epoch: 01 | Iteration: 08000 | Loss: 0.5476 | Training Accuracy: 71.6797 | AUC Score: 0.7945
+Epoch: 01 | Iteration: 12000 | Loss: 0.5458 | Training Accuracy: 70.9961 | AUC Score: 0.7859
+Epoch: 01 | Iteration: 16000 | Loss: 0.5442 | Training Accuracy: 71.8750 | AUC Score: 0.8047
+Epoch: 01 | Iteration: 00000 | Loss: 0.0000 | Validation Accuracy: 72.8489 | AUC Score: 0.8092
+Epoch: 01 | Iteration: 00000 | Loss: 0.0000 | Testing Accuracy: 72.8986 | AUC Score: 0.8092
+=================================
+For Feature: Protvec_embeddings ; GAT Model
+Epoch: 00 | Iteration: 00000 | Loss: 0.7001 | Training Accuracy: 50.6836 | AUC Score: 0.4701
+Epoch: 00 | Iteration: 04000 | Loss: 0.6851 | Training Accuracy: 56.1523 | AUC Score: 0.5698
+Epoch: 00 | Iteration: 08000 | Loss: 0.6738 | Training Accuracy: 57.4219 | AUC Score: 0.5883
+Epoch: 00 | Iteration: 12000 | Loss: 0.6705 | Training Accuracy: 57.9102 | AUC Score: 0.5933
+Epoch: 00 | Iteration: 16000 | Loss: 0.6671 | Training Accuracy: 56.3477 | AUC Score: 0.5620
+Epoch: 00 | Iteration: 00000 | Loss: 0.0000 | Validation Accuracy: 56.2568 | AUC Score: 0.5145
+Epoch: 01 | Iteration: 00000 | Loss: 0.6524 | Training Accuracy: 57.1289 | AUC Score: 0.5815
+Epoch: 01 | Iteration: 04000 | Loss: 0.6491 | Training Accuracy: 58.4961 | AUC Score: 0.5913
+Epoch: 01 | Iteration: 08000 | Loss: 0.8003 | Training Accuracy: 54.8828 | AUC Score: 0.5614
+Epoch: 01 | Iteration: 12000 | Loss: 0.7798 | Training Accuracy: 55.1758 | AUC Score: 0.5665
+Epoch: 01 | Iteration: 16000 | Loss: 0.7531 | Training Accuracy: 55.9570 | AUC Score: 0.5483
+Epoch: 01 | Iteration: 00000 | Loss: 0.0000 | Validation Accuracy: 56.5324 | AUC Score: 0.5862
+Epoch: 01 | Iteration: 00000 | Loss: 0.0000 | Testing Accuracy: 58.1382 | AUC Score: 0.6110
+=================================
+For Feature: norm_esm_features ; Sage Model
+Epoch: 00 | Iteration: 00000 | Loss: 0.6933 | Training Accuracy: 51.2695 | AUC Score: 0.4924
+Epoch: 00 | Iteration: 04000 | Loss: 0.6192 | Training Accuracy: 65.0391 | AUC Score: 0.7012
+Epoch: 00 | Iteration: 08000 | Loss: 0.6051 | Training Accuracy: 67.9688 | AUC Score: 0.7411
+Epoch: 00 | Iteration: 12000 | Loss: 0.5938 | Training Accuracy: 70.2148 | AUC Score: 0.7761
+Epoch: 00 | Iteration: 16000 | Loss: 0.5854 | Training Accuracy: 68.5547 | AUC Score: 0.7408
+Epoch: 00 | Iteration: 00000 | Loss: 0.0000 | Validation Accuracy: 71.1590 | AUC Score: 0.7912
+Epoch: 01 | Iteration: 00000 | Loss: 0.5803 | Training Accuracy: 68.4570 | AUC Score: 0.7561
+Epoch: 01 | Iteration: 04000 | Loss: 0.5529 | Training Accuracy: 71.2891 | AUC Score: 0.7748
+Epoch: 01 | Iteration: 08000 | Loss: 0.5503 | Training Accuracy: 68.7500 | AUC Score: 0.7494
+Epoch: 01 | Iteration: 12000 | Loss: 0.5477 | Training Accuracy: 70.7031 | AUC Score: 0.7777
+Epoch: 01 | Iteration: 16000 | Loss: 0.5449 | Training Accuracy: 75.2930 | AUC Score: 0.8207
+Epoch: 01 | Iteration: 00000 | Loss: 0.0000 | Validation Accuracy: 73.4265 | AUC Score: 0.8155
+Epoch: 01 | Iteration: 00000 | Loss: 0.0000 | Testing Accuracy: 73.1039 | AUC Score: 0.8121
+=================================
+For Feature: norm_esm_features ; GAT Model
+Epoch: 00 | Iteration: 00000 | Loss: 0.6939 | Training Accuracy: 52.5391 | AUC Score: 0.5536
+Epoch: 00 | Iteration: 04000 | Loss: 0.6266 | Training Accuracy: 64.0625 | AUC Score: 0.6914
+Epoch: 00 | Iteration: 08000 | Loss: 0.6067 | Training Accuracy: 66.1133 | AUC Score: 0.7323
+Epoch: 00 | Iteration: 12000 | Loss: 0.5956 | Training Accuracy: 67.9688 | AUC Score: 0.7369
+Epoch: 00 | Iteration: 16000 | Loss: 0.5868 | Training Accuracy: 70.5078 | AUC Score: 0.7717
+Epoch: 00 | Iteration: 00000 | Loss: 0.0000 | Validation Accuracy: 66.7104 | AUC Score: 0.7162
+Epoch: 01 | Iteration: 00000 | Loss: 0.5362 | Training Accuracy: 72.1680 | AUC Score: 0.7939
+Epoch: 01 | Iteration: 04000 | Loss: 0.5534 | Training Accuracy: 70.1172 | AUC Score: 0.7807
+Epoch: 01 | Iteration: 08000 | Loss: 0.5516 | Training Accuracy: 69.7266 | AUC Score: 0.7690
+Epoch: 01 | Iteration: 12000 | Loss: 0.5501 | Training Accuracy: 73.6328 | AUC Score: 0.8059
+Epoch: 01 | Iteration: 16000 | Loss: 0.5488 | Training Accuracy: 70.2148 | AUC Score: 0.7702
+Epoch: 01 | Iteration: 00000 | Loss: 0.0000 | Validation Accuracy: 68.3068 | AUC Score: 0.7535
+Epoch: 01 | Iteration: 00000 | Loss: 0.0000 | Testing Accuracy: 69.9231 | AUC Score: 0.7774
+=================================
+For Feature: norm_protvec_embeddings ; Sage Model
+Epoch: 00 | Iteration: 00000 | Loss: 0.6938 | Training Accuracy: 53.2227 | AUC Score: 0.4935
+Epoch: 00 | Iteration: 04000 | Loss: 0.5908 | Training Accuracy: 72.9492 | AUC Score: 0.7941
+Epoch: 00 | Iteration: 08000 | Loss: 0.5715 | Training Accuracy: 71.9727 | AUC Score: 0.7980
+Epoch: 00 | Iteration: 12000 | Loss: 0.5618 | Training Accuracy: 72.4609 | AUC Score: 0.8007
+Epoch: 00 | Iteration: 16000 | Loss: 0.5555 | Training Accuracy: 71.8750 | AUC Score: 0.7988
+Epoch: 00 | Iteration: 00000 | Loss: 0.0000 | Validation Accuracy: 73.4835 | AUC Score: 0.8173
+Epoch: 01 | Iteration: 00000 | Loss: 0.5491 | Training Accuracy: 70.7031 | AUC Score: 0.7811
+Epoch: 01 | Iteration: 04000 | Loss: 0.5327 | Training Accuracy: 73.0469 | AUC Score: 0.8179
+Epoch: 01 | Iteration: 08000 | Loss: 0.5313 | Training Accuracy: 71.0938 | AUC Score: 0.7874
+Epoch: 01 | Iteration: 12000 | Loss: 0.5301 | Training Accuracy: 71.3867 | AUC Score: 0.8000
+Epoch: 01 | Iteration: 16000 | Loss: 0.5289 | Training Accuracy: 70.8008 | AUC Score: 0.7862
+Epoch: 01 | Iteration: 00000 | Loss: 0.0000 | Validation Accuracy: 74.6450 | AUC Score: 0.8292
+Epoch: 01 | Iteration: 00000 | Loss: 0.0000 | Testing Accuracy: 74.4892 | AUC Score: 0.8275
+=================================
+For Feature: norm_protvec_embeddings ; GAT Model
+Epoch: 00 | Iteration: 00000 | Loss: 0.6942 | Training Accuracy: 50.0000 | AUC Score: 0.4404
+Epoch: 00 | Iteration: 04000 | Loss: 0.6147 | Training Accuracy: 68.7500 | AUC Score: 0.7480
+Epoch: 00 | Iteration: 08000 | Loss: 0.6003 | Training Accuracy: 66.7969 | AUC Score: 0.7325
+Epoch: 00 | Iteration: 12000 | Loss: 0.5907 | Training Accuracy: 71.1914 | AUC Score: 0.7870
+Epoch: 00 | Iteration: 16000 | Loss: 0.5835 | Training Accuracy: 69.8242 | AUC Score: 0.7522
+Epoch: 00 | Iteration: 00000 | Loss: 0.0000 | Validation Accuracy: 63.9510 | AUC Score: 0.6833
+Epoch: 01 | Iteration: 00000 | Loss: 0.5657 | Training Accuracy: 68.3594 | AUC Score: 0.7642
+Epoch: 01 | Iteration: 04000 | Loss: 0.5568 | Training Accuracy: 70.2148 | AUC Score: 0.7719
+Epoch: 01 | Iteration: 08000 | Loss: 0.5555 | Training Accuracy: 70.3125 | AUC Score: 0.7746
+Epoch: 01 | Iteration: 12000 | Loss: 0.5542 | Training Accuracy: 72.0703 | AUC Score: 0.7889
+Epoch: 01 | Iteration: 16000 | Loss: 0.5532 | Training Accuracy: 72.1680 | AUC Score: 0.7888
+Epoch: 01 | Iteration: 00000 | Loss: 0.0000 | Validation Accuracy: 60.1184 | AUC Score: 0.6417
+Epoch: 01 | Iteration: 00000 | Loss: 0.0000 | Testing Accuracy: 65.4671 | AUC Score: 0.7189
+=================================
+For Feature: norm_esm_protvec_features ; Sage Model
+Epoch: 00 | Iteration: 00000 | Loss: 0.6933 | Training Accuracy: 50.8789 | AUC Score: 0.4858
+Epoch: 00 | Iteration: 04000 | Loss: 0.5853 | Training Accuracy: 70.6055 | AUC Score: 0.7752
+Epoch: 00 | Iteration: 08000 | Loss: 0.5665 | Training Accuracy: 73.4375 | AUC Score: 0.7987
+Epoch: 00 | Iteration: 12000 | Loss: 0.5566 | Training Accuracy: 73.7305 | AUC Score: 0.8079
+Epoch: 00 | Iteration: 16000 | Loss: 0.5501 | Training Accuracy: 73.2422 | AUC Score: 0.8044
+Epoch: 00 | Iteration: 00000 | Loss: 0.0000 | Validation Accuracy: 73.8707 | AUC Score: 0.8216
+Epoch: 01 | Iteration: 00000 | Loss: 0.5309 | Training Accuracy: 72.8516 | AUC Score: 0.8016
+Epoch: 01 | Iteration: 04000 | Loss: 0.5247 | Training Accuracy: 75.0000 | AUC Score: 0.8294
+Epoch: 01 | Iteration: 08000 | Loss: 0.5229 | Training Accuracy: 72.5586 | AUC Score: 0.8006
+Epoch: 01 | Iteration: 12000 | Loss: 0.5216 | Training Accuracy: 74.4141 | AUC Score: 0.8231
+Epoch: 01 | Iteration: 16000 | Loss: 0.5202 | Training Accuracy: 74.7070 | AUC Score: 0.8194
+Epoch: 01 | Iteration: 00000 | Loss: 0.0000 | Validation Accuracy: 75.1230 | AUC Score: 0.8337
+Epoch: 01 | Iteration: 00000 | Loss: 0.0000 | Testing Accuracy: 74.9587 | AUC Score: 0.8319
+=================================
+For Feature: norm_esm_protvec_features ; GAT Model
+Epoch: 00 | Iteration: 00000 | Loss: 0.6932 | Training Accuracy: 51.1719 | AUC Score: 0.4841
+Epoch: 00 | Iteration: 04000 | Loss: 0.6155 | Training Accuracy: 66.7969 | AUC Score: 0.7189
+Epoch: 00 | Iteration: 08000 | Loss: 0.5973 | Training Accuracy: 67.3828 | AUC Score: 0.7416
+Epoch: 00 | Iteration: 12000 | Loss: 0.5861 | Training Accuracy: 69.2383 | AUC Score: 0.7541
+Epoch: 00 | Iteration: 16000 | Loss: 0.5784 | Training Accuracy: 68.7500 | AUC Score: 0.7550
+Epoch: 00 | Iteration: 00000 | Loss: 0.0000 | Validation Accuracy: 68.5382 | AUC Score: 0.7584
+Epoch: 01 | Iteration: 00000 | Loss: 0.5378 | Training Accuracy: 71.8750 | AUC Score: 0.7970
+Epoch: 01 | Iteration: 04000 | Loss: 0.5506 | Training Accuracy: 68.0664 | AUC Score: 0.7475
+Epoch: 01 | Iteration: 08000 | Loss: 0.5495 | Training Accuracy: 72.6562 | AUC Score: 0.8103
+Epoch: 01 | Iteration: 12000 | Loss: 0.5483 | Training Accuracy: 71.9727 | AUC Score: 0.7986
+Epoch: 01 | Iteration: 16000 | Loss: 0.5474 | Training Accuracy: 70.8008 | AUC Score: 0.7838
+Epoch: 01 | Iteration: 00000 | Loss: 0.0000 | Validation Accuracy: 59.9010 | AUC Score: 0.6043
+Epoch: 01 | Iteration: 00000 | Loss: 0.0000 | Testing Accuracy: 62.9257 | AUC Score: 0.6541
+=================================
