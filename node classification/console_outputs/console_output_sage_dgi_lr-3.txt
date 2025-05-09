@@ -1,0 +1,70 @@
+Label distribution: tensor([17077,  4781])
+Epoch 0: DGI Loss = 0.7250
+Epoch 50: DGI Loss = 0.6411
+Epoch 100: DGI Loss = 0.5093
+Epoch 150: DGI Loss = 0.3551
+Epoch 200: DGI Loss = 0.2526
+Epoch 250: DGI Loss = 0.1691
+Epoch 300: DGI Loss = 0.1493
+Epoch 350: DGI Loss = 0.1138
+Epoch 400: DGI Loss = 0.0927
+Epoch 450: DGI Loss = 0.0883
+Epoch 500: DGI Loss = 0.0725
+Epoch 550: DGI Loss = 0.0627
+Epoch 600: DGI Loss = 0.0503
+Epoch 650: DGI Loss = 0.0923
+Epoch 700: DGI Loss = 0.0594
+Epoch 750: DGI Loss = 0.0463
+Epoch 800: DGI Loss = 0.0463
+Epoch 850: DGI Loss = 0.0387
+Epoch 900: DGI Loss = 0.0387
+Epoch 950: DGI Loss = 0.0353
+Epoch 1000: DGI Loss = 0.0487
+Epoch 1050: DGI Loss = 0.0337
+Epoch 1100: DGI Loss = 0.0558
+Epoch 1150: DGI Loss = 0.0324
+Epoch 1200: DGI Loss = 0.0304
+Epoch 1250: DGI Loss = 0.0323
+Epoch 1300: DGI Loss = 0.0256
+Epoch 1350: DGI Loss = 0.0282
+Epoch 1400: DGI Loss = 0.0212
+Epoch 1450: DGI Loss = 0.0226
+Test Classification Accuracy: 0.7274
+conf_matrix
+ [[2434  982]
+ [ 210  746]]
+Label distribution: tensor([17077,  4781])
+Epoch 0: DGI Loss = 0.9365
+Epoch 50: DGI Loss = 0.6518
+Epoch 100: DGI Loss = 0.5477
+Epoch 150: DGI Loss = 0.4621
+Epoch 200: DGI Loss = 0.3497
+Epoch 250: DGI Loss = 0.2821
+Epoch 300: DGI Loss = 0.1853
+Epoch 350: DGI Loss = 0.1746
+Epoch 400: DGI Loss = 0.1517
+Epoch 450: DGI Loss = 0.1208
+Epoch 500: DGI Loss = 0.1042
+Epoch 550: DGI Loss = 0.0938
+Epoch 600: DGI Loss = 0.1431
+Epoch 650: DGI Loss = 0.0712
+Epoch 700: DGI Loss = 0.0663
+Epoch 750: DGI Loss = 0.0642
+Epoch 800: DGI Loss = 0.0627
+Epoch 850: DGI Loss = 0.0554
+Epoch 900: DGI Loss = 0.0566
+Epoch 950: DGI Loss = 0.0524
+Epoch 1000: DGI Loss = 0.0468
+Epoch 1050: DGI Loss = 0.0445
+Epoch 1100: DGI Loss = 0.0361
+Epoch 1150: DGI Loss = 0.0359
+Epoch 1200: DGI Loss = 0.0407
+Epoch 1250: DGI Loss = 0.0342
+Epoch 1300: DGI Loss = 0.0295
+Epoch 1350: DGI Loss = 0.0341
+Epoch 1400: DGI Loss = 0.0296
+Epoch 1450: DGI Loss = 0.0278
+Test Classification Accuracy: 0.7198
+conf_matrix
+ [[2403 1013]
+ [ 212  744]]

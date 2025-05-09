@@ -1,0 +1,26 @@
+g Graph(num_nodes=21858, num_edges=10896322,
+      ndata_schemes={'alphafold_feat': Scheme(shape=(384,), dtype=torch.float32)}
+      edata_schemes={'weight': Scheme(shape=(), dtype=torch.float32)})
+Graph and protein mapping loaded successfully!
+Number of nodes in graph: 21858
+Data Loading is completed
+g.ndata['alphafold_feat']:
+ tensor([[ 4.2677e+01,  2.4698e+01,  7.4710e+00,  ..., -2.6990e+03,
+         -2.1257e+00,  6.5668e+01],
+        [ 4.5743e+01,  1.8593e+01,  2.3770e+01,  ..., -2.7327e+03,
+         -1.2250e+01,  5.9654e+01],
+        [ 3.5471e+01,  3.1732e+01,  2.6182e+01,  ..., -2.6993e+03,
+         -2.5851e+00,  6.4406e+01],
+        ...,
+        [ 4.4356e+01,  3.0529e+01,  2.2769e+01,  ..., -2.7967e+03,
+         -1.4113e+01,  5.1987e+01],
+        [ 4.7577e+01,  2.7335e+01,  2.3170e+01,  ..., -2.6287e+03,
+         -1.2398e+01,  4.9265e+01],
+        [ 4.6665e+01,  2.6411e+01,  2.6187e+01,  ..., -2.7619e+03,
+         -1.0858e+01,  5.1963e+01]])
+Total Number of Edges:  10893974
+Train Number of Edges:  7625783
+Valid Number of Edges:  2178794
+Test Number of Edges:  1089397
+Graph Splitting is completed
+For Feature: alphafold_feat ; flag 1.10f GTN Model

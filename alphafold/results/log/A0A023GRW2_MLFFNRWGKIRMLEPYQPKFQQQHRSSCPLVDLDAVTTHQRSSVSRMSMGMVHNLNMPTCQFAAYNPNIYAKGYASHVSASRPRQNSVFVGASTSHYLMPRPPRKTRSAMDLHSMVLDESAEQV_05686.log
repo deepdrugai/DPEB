@@ -1,0 +1,6 @@
+num_models=5
+use_amber=False
+use_msa=False
+msa_mode=single_sequence
+use_templates=True
+homooligomer=1

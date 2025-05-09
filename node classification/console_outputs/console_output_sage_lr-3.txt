@@ -1,0 +1,73 @@
+Graph and protein mapping loaded successfully!
+Number of nodes in graph: 21858
+Example mapping: [('Q68DU8', 0), ('P04279', 1), ('P51800', 2), ('P13591', 3), ('Q16647', 4)]
+Label distribution: tensor([17077,  4781])
+Graph(num_nodes=21858, num_edges=10896322,
+      ndata_schemes={'alphafold_feat': Scheme(shape=(384,), dtype=torch.float32), 'label': Scheme(shape=(), dtype=torch.int64)}
+      edata_schemes={'weight': Scheme(shape=(), dtype=torch.float32)})
+Epoch 0: Loss 6.9304
+Epoch 50: Loss 3.7571
+Epoch 100: Loss 3.1194
+Epoch 150: Loss 2.7091
+Epoch 200: Loss 2.3873
+Epoch 250: Loss 2.1046
+Epoch 300: Loss 1.8618
+Epoch 350: Loss 1.6244
+Epoch 400: Loss 1.4255
+Epoch 450: Loss 1.2808
+Epoch 500: Loss 1.1976
+Epoch 550: Loss 1.1618
+Epoch 600: Loss 1.1440
+Epoch 650: Loss 1.1334
+Epoch 700: Loss 1.1250
+Epoch 750: Loss 1.1206
+Epoch 800: Loss 1.1158
+Epoch 850: Loss 1.1139
+Epoch 900: Loss 1.1137
+Epoch 950: Loss 1.1067
+Epoch 1000: Loss 1.1059
+Epoch 1050: Loss 1.1027
+Epoch 1100: Loss 1.1008
+Epoch 1150: Loss 1.0927
+Epoch 1200: Loss 1.0975
+Epoch 1250: Loss 1.0936
+Epoch 1300: Loss 1.0924
+Epoch 1350: Loss 1.0922
+Epoch 1400: Loss 1.0901
+Epoch 1450: Loss 1.0926
+Epoch 1500: Loss 1.0865
+Epoch 1550: Loss 1.0843
+Epoch 1600: Loss 1.0845
+Epoch 1650: Loss 1.0846
+Epoch 1700: Loss 1.0793
+Epoch 1750: Loss 1.0832
+Epoch 1800: Loss 1.0792
+Epoch 1850: Loss 1.0796
+Epoch 1900: Loss 1.0728
+Epoch 1950: Loss 1.0710
+model:
+ GraphSAGE(
+  (conv1): SAGEConv(
+    (feat_drop): Dropout(p=0.0, inplace=False)
+    (fc_neigh): Linear(in_features=384, out_features=64, bias=False)
+    (fc_self): Linear(in_features=384, out_features=64, bias=True)
+  )
+  (conv2): SAGEConv(
+    (feat_drop): Dropout(p=0.0, inplace=False)
+    (fc_neigh): Linear(in_features=64, out_features=64, bias=False)
+    (fc_self): Linear(in_features=64, out_features=64, bias=True)
+  )
+  (conv3): SAGEConv(
+    (feat_drop): Dropout(p=0.0, inplace=False)
+    (fc_neigh): Linear(in_features=64, out_features=32, bias=False)
+    (fc_self): Linear(in_features=64, out_features=32, bias=True)
+  )
+  (bn1): BatchNorm1d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (bn2): BatchNorm1d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (dropout): Dropout(p=0.2, inplace=False)
+  (layer_norm): LayerNorm((32,), eps=1e-05, elementwise_affine=True)
+)
+Test Classification Accuracy: 0.7784
+conf_matrix:
+ [[2639  777]
+ [ 192  764]]

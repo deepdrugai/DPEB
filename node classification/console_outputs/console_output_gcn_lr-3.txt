@@ -1,0 +1,14 @@
+Graph Loaded! Nodes: 21858 Edges: 10918180
+Label Distribution: tensor([17077,  4781])
+Epoch 0: Label Propagation Loss = 16855.8535
+Test Classification Accuracy: 0.4714
+Confusion Matrix:
+ [[1227 2189]
+ [ 122  834]]
+Graph Loaded! Nodes: 21858 Edges: 10918180
+Label Distribution: tensor([17077,  4781])
+Epoch 0: Label Propagation Loss = 18035.1855
+Test Classification Accuracy: 0.3785
+Confusion Matrix:
+ [[ 838 2578]
+ [ 139  817]]

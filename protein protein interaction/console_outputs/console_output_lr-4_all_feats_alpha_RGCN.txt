@@ -1,0 +1,41 @@
+g Graph(num_nodes=21858, num_edges=10896322,
+      ndata_schemes={'alphafold_feat': Scheme(shape=(384,), dtype=torch.float32)}
+      edata_schemes={'weight': Scheme(shape=(), dtype=torch.float32)})
+Graph and protein mapping loaded successfully!
+Number of nodes in graph: 21858
+Data Loading is completed
+g.ndata['alphafold_feat']:
+ tensor([[ 4.2677e+01,  2.4698e+01,  7.4710e+00,  ..., -2.6990e+03,
+         -2.1257e+00,  6.5668e+01],
+        [ 4.5743e+01,  1.8593e+01,  2.3770e+01,  ..., -2.7327e+03,
+         -1.2250e+01,  5.9654e+01],
+        [ 3.5471e+01,  3.1732e+01,  2.6182e+01,  ..., -2.6993e+03,
+         -2.5851e+00,  6.4406e+01],
+        ...,
+        [ 4.4356e+01,  3.0529e+01,  2.2769e+01,  ..., -2.7967e+03,
+         -1.4113e+01,  5.1987e+01],
+        [ 4.7577e+01,  2.7335e+01,  2.3170e+01,  ..., -2.6287e+03,
+         -1.2398e+01,  4.9265e+01],
+        [ 4.6665e+01,  2.6411e+01,  2.6187e+01,  ..., -2.7619e+03,
+         -1.0858e+01,  5.1963e+01]])
+Total Number of Edges:  10893974
+Train Number of Edges:  7625783
+Valid Number of Edges:  2178794
+Test Number of Edges:  1089397
+Graph Splitting is completed
+For Feature: alphafold_feat ; flag 1.10e RGCN Model
+Epoch: 00 |  Iteration: 00000 | Loss: 0.6990 | Training Accuracy: 54.2969 | AUC Score: 0.5027
+Epoch: 00 |  Iteration: 04000 | Loss: 0.6445 | Training Accuracy: 58.9844 | AUC Score: 0.6232
+Epoch: 00 |  Iteration: 08000 | Loss: 0.6385 | Training Accuracy: 67.1875 | AUC Score: 0.7253
+Epoch: 00 |  Iteration: 12000 | Loss: 0.6303 | Training Accuracy: 65.6250 | AUC Score: 0.7053
+Epoch: 00 |  Iteration: 16000 | Loss: 0.6247 | Training Accuracy: 64.0625 | AUC Score: 0.6832
+Epoch: 00 |  Iteration: 20000 | Loss: 0.6206 | Training Accuracy: 66.7969 | AUC Score: 0.7219
+Epoch: 00 |  Iteration: 24000 | Loss: 0.6177 | Training Accuracy: 68.7500 | AUC Score: 0.7325
+Epoch: 00 |  Iteration: 28000 | Loss: 0.6154 | Training Accuracy: 63.6719 | AUC Score: 0.6838
+Epoch: 00 |  Iteration: 32000 | Loss: 0.6135 | Training Accuracy: 66.7969 | AUC Score: 0.7311
+Epoch: 00 |  Iteration: 36000 | Loss: 0.6119 | Training Accuracy: 64.8438 | AUC Score: 0.6902
+Epoch: 00 |  Iteration: 40000 | Loss: 0.6106 | Training Accuracy: 67.9688 | AUC Score: 0.7183
+Epoch: 00 |  Iteration: 44000 | Loss: 0.6094 | Training Accuracy: 66.0156 | AUC Score: 0.7063
+Epoch: 00 |  Iteration: 48000 | Loss: 0.6083 | Training Accuracy: 69.1406 | AUC Score: 0.7335
+Epoch: 00 |  Iteration: 52000 | Loss: 0.6074 | Training Accuracy: 67.9688 | AUC Score: 0.7282
+Epoch: 00 |  Iteration: 56000 | Loss: 0.6063 | Training Accuracy: 66.4062 | AUC Score: 0.7307

@@ -1,0 +1,79 @@
+
+runfile('/home/saiful/ePPI_dgl/unsupervised task/graph_representation_LR_sage.py', wdir='/home/saiful/ePPI_dgl/unsupervised task')
+/home/saiful/anaconda3/envs/ePPI_dgl38/lib/python3.8/site-packages/tqdm/auto.py:21: TqdmWarning: IProgress not found. Please update jupyter and ipywidgets. See https://ipywidgets.readthedocs.io/en/stable/user_install.html
+  from .autonotebook import tqdm as notebook_tqdm
+Graph and protein mapping loaded successfully!
+Number of nodes in graph: 21858
+Example mapping: [('Q68DU8', 0), ('P04279', 1), ('P51800', 2), ('P13591', 3), ('Q16647', 4)]
+Label distribution: tensor([17077,  4781])
+Graph(num_nodes=21858, num_edges=10896322,
+      ndata_schemes={'alphafold_feat': Scheme(shape=(384,), dtype=torch.float32), 'label': Scheme(shape=(), dtype=torch.int64)}
+      edata_schemes={'weight': Scheme(shape=(), dtype=torch.float32)})
+Epoch 0: Loss 7.1341
+Epoch 50: Loss 5.4086
+Epoch 100: Loss 4.8557
+Epoch 150: Loss 4.5618
+Epoch 200: Loss 4.3343
+Epoch 250: Loss 4.1516
+Epoch 300: Loss 4.0023
+Epoch 350: Loss 3.8989
+Epoch 400: Loss 3.7767
+Epoch 450: Loss 3.6690
+Epoch 500: Loss 3.5895
+Epoch 550: Loss 3.4994
+Epoch 600: Loss 3.4224
+Epoch 650: Loss 3.3536
+Epoch 700: Loss 3.3011
+Epoch 750: Loss 3.2222
+Epoch 800: Loss 3.1761
+Epoch 850: Loss 3.1125
+Epoch 900: Loss 3.0734
+Epoch 950: Loss 3.0185
+Epoch 1000: Loss 2.9610
+Epoch 1050: Loss 2.9299
+Epoch 1100: Loss 2.8833
+Epoch 1150: Loss 2.8306
+Epoch 1200: Loss 2.7942
+Epoch 1250: Loss 2.7621
+Epoch 1300: Loss 2.7263
+Epoch 1350: Loss 2.6849
+Epoch 1400: Loss 2.6595
+Epoch 1450: Loss 2.6155
+Epoch 1500: Loss 2.5754
+Epoch 1550: Loss 2.5415
+Epoch 1600: Loss 2.5088
+Epoch 1650: Loss 2.4664
+Epoch 1700: Loss 2.4465
+Epoch 1750: Loss 2.4196
+Epoch 1800: Loss 2.3788
+Epoch 1850: Loss 2.3559
+Epoch 1900: Loss 2.3262
+Epoch 1950: Loss 2.2942
+Test Classification Accuracy: 0.7839
+conf_matrix:
+ [[2689  727]
+ [ 218  738]]
+
+model
+Out[2]: 
+GraphSAGE(
+  (conv1): SAGEConv(
+    (feat_drop): Dropout(p=0.0, inplace=False)
+    (fc_neigh): Linear(in_features=384, out_features=64, bias=False)
+    (fc_self): Linear(in_features=384, out_features=64, bias=True)
+  )
+  (conv2): SAGEConv(
+    (feat_drop): Dropout(p=0.0, inplace=False)
+    (fc_neigh): Linear(in_features=64, out_features=64, bias=False)
+    (fc_self): Linear(in_features=64, out_features=64, bias=True)
+  )
+  (conv3): SAGEConv(
+    (feat_drop): Dropout(p=0.0, inplace=False)
+    (fc_neigh): Linear(in_features=64, out_features=32, bias=False)
+    (fc_self): Linear(in_features=64, out_features=32, bias=True)
+  )
+  (bn1): BatchNorm1d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (bn2): BatchNorm1d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (dropout): Dropout(p=0.2, inplace=False)
+  (layer_norm): LayerNorm((32,), eps=1e-05, elementwise_affine=True)
+)

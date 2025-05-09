@@ -1,0 +1,3 @@
+Epoch 0: Loss 0.0001
+Epoch 50: Loss 0.0000
+Epoch 100: Loss 0.0000

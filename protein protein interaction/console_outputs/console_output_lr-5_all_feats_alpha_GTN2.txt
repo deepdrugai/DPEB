@@ -1,0 +1,34 @@
+g Graph(num_nodes=21858, num_edges=10896322,
+      ndata_schemes={'alphafold_feat': Scheme(shape=(384,), dtype=torch.float32)}
+      edata_schemes={'weight': Scheme(shape=(), dtype=torch.float32)})
+Original graph: Graph(num_nodes=21858, num_edges=10896322,
+      ndata_schemes={'alphafold_feat': Scheme(shape=(384,), dtype=torch.float32), '_ID': Scheme(shape=(), dtype=torch.int64), '_TYPE': Scheme(shape=(), dtype=torch.int64)}
+      edata_schemes={'weight': Scheme(shape=(), dtype=torch.float32), '_ID': Scheme(shape=(), dtype=torch.int64), '_TYPE': Scheme(shape=(), dtype=torch.int64)})
+Subgraph: Graph(num_nodes=1000, num_edges=21393,
+      ndata_schemes={'alphafold_feat': Scheme(shape=(384,), dtype=torch.float32), '_ID': Scheme(shape=(), dtype=torch.int64), '_TYPE': Scheme(shape=(), dtype=torch.int64)}
+      edata_schemes={'weight': Scheme(shape=(), dtype=torch.float32), '_ID': Scheme(shape=(), dtype=torch.int64), '_TYPE': Scheme(shape=(), dtype=torch.int64)})
+Number of nodes in subgraph: 1000
+Number of edges in subgraph: 21393
+Graph and protein mapping loaded successfully!
+Number of nodes in graph: 1000
+Data Loading is completed
+g.ndata['alphafold_feat']:
+ tensor([[   47.9823,    31.5438,    26.5897,  ..., -2773.5012,   -11.7149,
+            51.3731],
+        [   64.1283,    34.3173,    21.6394,  ..., -2939.2710,   -17.0898,
+            52.2557],
+        [   51.7711,    31.8953,    17.7653,  ..., -2862.4678,   -10.2175,
+            56.2097],
+        ...,
+        [   47.3268,    30.6305,    17.6018,  ..., -2758.6145,    -5.9703,
+            63.8216],
+        [   42.3641,    26.1354,    26.9445,  ..., -2772.3359,   -10.3540,
+            49.8702],
+        [   52.7230,    31.6280,    15.9159,  ..., -2875.0674,   -13.7993,
+            49.7693]])
+Total Number of Edges:  21284
+Train Number of Edges:  14900
+Valid Number of Edges:  4256
+Test Number of Edges:  2128
+Graph Splitting is completed
+For Feature: alphafold_feat ; flag 1.10i TAG Model

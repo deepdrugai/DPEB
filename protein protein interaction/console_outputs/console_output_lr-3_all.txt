@@ -1,0 +1,214 @@
+g Graph(num_nodes=21858, num_edges=10896322,
+      ndata_schemes={'alphafold_feat': Scheme(shape=(384,), dtype=torch.float32)}
+      edata_schemes={'weight': Scheme(shape=(), dtype=torch.float32)})
+Original graph: Graph(num_nodes=21858, num_edges=10896322,
+      ndata_schemes={'alphafold_feat': Scheme(shape=(384,), dtype=torch.float32)}
+      edata_schemes={'weight': Scheme(shape=(), dtype=torch.float32)})
+Subgraph: Graph(num_nodes=1000, num_edges=23326,
+      ndata_schemes={'alphafold_feat': Scheme(shape=(384,), dtype=torch.float32), '_ID': Scheme(shape=(), dtype=torch.int64)}
+      edata_schemes={'weight': Scheme(shape=(), dtype=torch.float32), '_ID': Scheme(shape=(), dtype=torch.int64)})
+Number of nodes in subgraph: 1000
+Number of edges in subgraph: 23326
+Graph and protein mapping loaded successfully!
+Number of nodes in graph: 1000
+Example mapping: [('Q68DU8', 0), ('P04279', 1), ('P51800', 2), ('P13591', 3), ('Q16647', 4)]
+Data Loading is completed
+tensor([[0., 0., 0.,  ..., 0., 0., 0.],
+        [0., 0., 0.,  ..., 0., 0., 0.],
+        [0., 0., 0.,  ..., 0., 0., 0.],
+        ...,
+        [0., 0., 0.,  ..., 0., 0., 0.],
+        [0., 0., 0.,  ..., 0., 0., 0.],
+        [0., 0., 0.,  ..., 0., 0., 0.]])
+Total Number of Edges:  23214
+Train Number of Edges:  16251
+Valid Number of Edges:  4642
+Test Number of Edges:  2321
+Graph Splitting is completed
+For Feature: alphafold_feat ; flag 1.10a Sage Model
+Epoch: 00 |  Iteration: 00000 | Loss: 0.6932 | Training Accuracy: 50.6836 | AUC Score: 0.4683
+Epoch: 00 |  Iteration: 00000 | Loss: 0.0000 | Validation Accuracy: 62.3654 | AUC Score: 0.6338
+Epoch: 01 |  Iteration: 00000 | Loss: 0.6682 | Training Accuracy: 59.5703 | AUC Score: 0.5747
+Epoch: 01 |  Iteration: 00000 | Loss: 0.0000 | Validation Accuracy: 62.2792 | AUC Score: 0.6215
+Epoch: 02 |  Iteration: 00000 | Loss: 0.6252 | Training Accuracy: 60.3516 | AUC Score: 0.6000
+Epoch: 02 |  Iteration: 00000 | Loss: 0.0000 | Validation Accuracy: 62.5054 | AUC Score: 0.6330
+Epoch: 03 |  Iteration: 00000 | Loss: 0.6397 | Training Accuracy: 59.1797 | AUC Score: 0.5743
+Epoch: 03 |  Iteration: 00000 | Loss: 0.0000 | Validation Accuracy: 62.4838 | AUC Score: 0.6232
+Epoch: 04 |  Iteration: 00000 | Loss: 0.6323 | Training Accuracy: 58.5938 | AUC Score: 0.5931
+Epoch: 04 |  Iteration: 00000 | Loss: 0.0000 | Validation Accuracy: 62.5700 | AUC Score: 0.6392
+=== === flag1.11a performance_metrics === ===
+Threshold: -1.57451
+True Positive: 0.46423955191727706
+False Negative: 0.03576044808272297
+True Negative: 0.1912968548039638
+False Positive: 0.3087031451960362
+confusion_matrix: [[0.19129685 0.30870315]
+ [0.03576045 0.46423955]]
+J   = 0.3110728134424816
+MCC = 0.3712706983651818
+AUC = 0.6722478072841843
+Accuracy using deepdrug method:  = 65.5536%
+Precision = 0.6006
+Recall = 0.9285
+F1 Score = 0.7294
+
+
+=== === === ===
+Epoch: 04 | Final Performance: 00000 | Loss: 0.0000 | Testing Accuracy: 65.5536 | AUC Score: 0.6722
+=================================
+For Feature: alphafold_feat ; flag 1.10b GAT Model
+Epoch: 00 |  Iteration: 00000 | Loss: 0.6950 | Training Accuracy: 50.0000 | AUC Score: 0.5000
+Epoch: 00 |  Iteration: 00000 | Loss: 0.0000 | Validation Accuracy: 50.0000 | AUC Score: 0.5000
+Epoch: 01 |  Iteration: 00000 | Loss: 0.6932 | Training Accuracy: 50.0000 | AUC Score: 0.5000
+Epoch: 01 |  Iteration: 00000 | Loss: 0.0000 | Validation Accuracy: 50.0000 | AUC Score: 0.5000
+Epoch: 02 |  Iteration: 00000 | Loss: 0.6931 | Training Accuracy: 50.0000 | AUC Score: 0.5000
+Epoch: 02 |  Iteration: 00000 | Loss: 0.0000 | Validation Accuracy: 50.0000 | AUC Score: 0.5000
+Epoch: 03 |  Iteration: 00000 | Loss: 0.6931 | Training Accuracy: 50.0000 | AUC Score: 0.5000
+Epoch: 03 |  Iteration: 00000 | Loss: 0.0000 | Validation Accuracy: 50.0000 | AUC Score: 0.5000
+Epoch: 04 |  Iteration: 00000 | Loss: 0.6931 | Training Accuracy: 50.0000 | AUC Score: 0.5000
+Epoch: 04 |  Iteration: 00000 | Loss: 0.0000 | Validation Accuracy: 50.0000 | AUC Score: 0.5000
+=== === flag1.11a performance_metrics === ===
+Threshold: inf
+True Positive: 0.0
+False Negative: 0.5
+True Negative: 0.5
+False Positive: 0.0
+confusion_matrix: [[0.5 0. ]
+ [0.5 0. ]]
+J   = 0.0
+MCC = nan
+AUC = 0.5
+Accuracy using deepdrug method:  = 50.0000%
+Precision = nan
+Recall = 0.0000
+F1 Score = nan
+
+
+=== === === ===
+Epoch: 04 | Final Performance: 00000 | Loss: 0.0000 | Testing Accuracy: 50.0000 | AUC Score: 0.5000
+=================================
+For Feature: alphafold_feat ; flag 1.10c GCN Model
+Epoch: 00 |  Iteration: 00000 | Loss: 0.6955 | Training Accuracy: 50.0000 | AUC Score: 0.5000
+Epoch: 00 |  Iteration: 00000 | Loss: 0.0000 | Validation Accuracy: 50.0000 | AUC Score: 0.5000
+Epoch: 01 |  Iteration: 00000 | Loss: 0.6932 | Training Accuracy: 50.0000 | AUC Score: 0.5000
+Epoch: 01 |  Iteration: 00000 | Loss: 0.0000 | Validation Accuracy: 50.0000 | AUC Score: 0.5000
+Epoch: 02 |  Iteration: 00000 | Loss: 0.6931 | Training Accuracy: 50.0000 | AUC Score: 0.5000
+Epoch: 02 |  Iteration: 00000 | Loss: 0.0000 | Validation Accuracy: 50.0000 | AUC Score: 0.5000
+Epoch: 03 |  Iteration: 00000 | Loss: 0.6931 | Training Accuracy: 50.0000 | AUC Score: 0.5000
+Epoch: 03 |  Iteration: 00000 | Loss: 0.0000 | Validation Accuracy: 50.0000 | AUC Score: 0.5000
+Epoch: 04 |  Iteration: 00000 | Loss: 0.6931 | Training Accuracy: 50.0000 | AUC Score: 0.5000
+Epoch: 04 |  Iteration: 00000 | Loss: 0.0000 | Validation Accuracy: 50.0000 | AUC Score: 0.5000
+=== === flag1.11a performance_metrics === ===
+Threshold: inf
+True Positive: 0.0
+False Negative: 0.5
+True Negative: 0.5
+False Positive: 0.0
+confusion_matrix: [[0.5 0. ]
+ [0.5 0. ]]
+J   = 0.0
+MCC = nan
+AUC = 0.5
+Accuracy using deepdrug method:  = 50.0000%
+Precision = nan
+Recall = 0.0000
+F1 Score = nan
+
+
+=== === === ===
+Epoch: 04 | Final Performance: 00000 | Loss: 0.0000 | Testing Accuracy: 50.0000 | AUC Score: 0.5000
+=================================
+For Feature: alphafold_feat ; flag 1.10d GIN Model
+Epoch: 00 |  Iteration: 00000 | Loss: 0.6956 | Training Accuracy: 50.2930 | AUC Score: 0.3341
+Epoch: 00 |  Iteration: 00000 | Loss: 0.0000 | Validation Accuracy: 50.7863 | AUC Score: 0.3719
+Epoch: 01 |  Iteration: 00000 | Loss: 0.6606 | Training Accuracy: 65.3320 | AUC Score: 0.6880
+Epoch: 01 |  Iteration: 00000 | Loss: 0.0000 | Validation Accuracy: 50.6247 | AUC Score: 0.3799
+Epoch: 02 |  Iteration: 00000 | Loss: 0.6380 | Training Accuracy: 66.8945 | AUC Score: 0.6939
+Epoch: 02 |  Iteration: 00000 | Loss: 0.0000 | Validation Accuracy: 62.5485 | AUC Score: 0.6635
+Epoch: 03 |  Iteration: 00000 | Loss: 0.6136 | Training Accuracy: 65.9180 | AUC Score: 0.6733
+Epoch: 03 |  Iteration: 00000 | Loss: 0.0000 | Validation Accuracy: 63.3994 | AUC Score: 0.6662
+Epoch: 04 |  Iteration: 00000 | Loss: 0.6113 | Training Accuracy: 65.3320 | AUC Score: 0.6919
+Epoch: 04 |  Iteration: 00000 | Loss: 0.0000 | Validation Accuracy: 64.2826 | AUC Score: 0.6778
+=== === flag1.11a performance_metrics === ===
+Threshold: -1.31502
+True Positive: 0.12903920723825937
+False Negative: 0.37096079276174065
+True Negative: 0.40866006031882807
+False Positive: 0.0913399396811719
+confusion_matrix: [[0.40866006 0.09133994]
+ [0.37096079 0.12903921]]
+J   = 0.07539853511417483
+MCC = 0.09095067786959594
+AUC = 0.5202344849426616
+Accuracy using deepdrug method:  = 53.7699%
+Precision = 0.5855
+Recall = 0.2581
+F1 Score = 0.3583
+
+
+=== === === ===
+Epoch: 04 | Final Performance: 00000 | Loss: 0.0000 | Testing Accuracy: 53.7699 | AUC Score: 0.5202
+=================================
+For Feature: alphafold_feat ; flag 1.10e RGCN Model
+Epoch: 00 |  Iteration: 00000 | Loss: 0.6937 | Training Accuracy: 50.0000 | AUC Score: 0.5000
+Epoch: 00 |  Iteration: 00000 | Loss: 0.0000 | Validation Accuracy: 50.0000 | AUC Score: 0.5000
+Epoch: 01 |  Iteration: 00000 | Loss: 0.6932 | Training Accuracy: 50.0000 | AUC Score: 0.5000
+Epoch: 01 |  Iteration: 00000 | Loss: 0.0000 | Validation Accuracy: 50.0000 | AUC Score: 0.5000
+Epoch: 02 |  Iteration: 00000 | Loss: 0.6931 | Training Accuracy: 50.0000 | AUC Score: 0.5000
+Epoch: 02 |  Iteration: 00000 | Loss: 0.0000 | Validation Accuracy: 50.0000 | AUC Score: 0.5000
+Epoch: 03 |  Iteration: 00000 | Loss: 0.6931 | Training Accuracy: 50.0000 | AUC Score: 0.5000
+Epoch: 03 |  Iteration: 00000 | Loss: 0.0000 | Validation Accuracy: 50.0000 | AUC Score: 0.5000
+Epoch: 04 |  Iteration: 00000 | Loss: 0.6931 | Training Accuracy: 50.0000 | AUC Score: 0.5000
+Epoch: 04 |  Iteration: 00000 | Loss: 0.0000 | Validation Accuracy: 50.0000 | AUC Score: 0.5000
+=== === flag1.11a performance_metrics === ===
+Threshold: inf
+True Positive: 0.0
+False Negative: 0.5
+True Negative: 0.5
+False Positive: 0.0
+confusion_matrix: [[0.5 0. ]
+ [0.5 0. ]]
+J   = 0.0
+MCC = nan
+AUC = 0.5
+Accuracy using deepdrug method:  = 50.0000%
+Precision = nan
+Recall = 0.0000
+F1 Score = nan
+
+
+=== === === ===
+Epoch: 04 | Final Performance: 00000 | Loss: 0.0000 | Testing Accuracy: 50.0000 | AUC Score: 0.5000
+=================================
+For Feature: alphafold_feat ; flag 1.10f GTN Model
+Epoch: 00 |  Iteration: 00000 | Loss: 0.7036 | Training Accuracy: 50.6836 | AUC Score: 0.4879
+Epoch: 00 |  Iteration: 00000 | Loss: 0.0000 | Validation Accuracy: 50.0000 | AUC Score: 0.5000
+Epoch: 01 |  Iteration: 00000 | Loss: 0.6934 | Training Accuracy: 51.5625 | AUC Score: 0.4977
+Epoch: 01 |  Iteration: 00000 | Loss: 0.0000 | Validation Accuracy: 50.0000 | AUC Score: 0.5000
+Epoch: 02 |  Iteration: 00000 | Loss: 0.6934 | Training Accuracy: 51.1719 | AUC Score: 0.4923
+Epoch: 02 |  Iteration: 00000 | Loss: 0.0000 | Validation Accuracy: 50.0000 | AUC Score: 0.5000
+Epoch: 03 |  Iteration: 00000 | Loss: 0.6933 | Training Accuracy: 51.9531 | AUC Score: 0.4845
+Epoch: 03 |  Iteration: 00000 | Loss: 0.0000 | Validation Accuracy: 50.0000 | AUC Score: 0.5000
+Epoch: 04 |  Iteration: 00000 | Loss: 0.6934 | Training Accuracy: 52.0508 | AUC Score: 0.4921
+Epoch: 04 |  Iteration: 00000 | Loss: 0.0000 | Validation Accuracy: 50.0000 | AUC Score: 0.5000
+=== === flag1.11a performance_metrics === ===
+Threshold: inf
+True Positive: 0.0
+False Negative: 0.5
+True Negative: 0.5
+False Positive: 0.0
+confusion_matrix: [[0.5 0. ]
+ [0.5 0. ]]
+J   = 0.0
+MCC = nan
+AUC = 0.5
+Accuracy using deepdrug method:  = 50.0000%
+Precision = nan
+Recall = 0.0000
+F1 Score = nan
+
+
+=== === === ===
+Epoch: 04 | Final Performance: 00000 | Loss: 0.0000 | Testing Accuracy: 50.0000 | AUC Score: 0.5000
+=================================
+Execution Finished..

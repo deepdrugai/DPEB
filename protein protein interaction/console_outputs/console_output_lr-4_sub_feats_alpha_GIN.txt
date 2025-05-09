@@ -1,0 +1,77 @@
+g Graph(num_nodes=21858, num_edges=10896322,
+      ndata_schemes={'alphafold_feat': Scheme(shape=(384,), dtype=torch.float32)}
+      edata_schemes={'weight': Scheme(shape=(), dtype=torch.float32)})
+Original graph: Graph(num_nodes=21858, num_edges=10896322,
+      ndata_schemes={'alphafold_feat': Scheme(shape=(384,), dtype=torch.float32)}
+      edata_schemes={'weight': Scheme(shape=(), dtype=torch.float32)})
+Subgraph: Graph(num_nodes=1000, num_edges=21393,
+      ndata_schemes={'alphafold_feat': Scheme(shape=(384,), dtype=torch.float32), '_ID': Scheme(shape=(), dtype=torch.int64)}
+      edata_schemes={'weight': Scheme(shape=(), dtype=torch.float32), '_ID': Scheme(shape=(), dtype=torch.int64)})
+Number of nodes in subgraph: 1000
+Number of edges in subgraph: 21393
+Graph and protein mapping loaded successfully!
+Number of nodes in graph: 1000
+Data Loading is completed
+g.ndata['alphafold_feat']:
+ tensor([[   47.9823,    31.5438,    26.5897,  ..., -2773.5012,   -11.7149,
+            51.3731],
+        [   64.1283,    34.3173,    21.6394,  ..., -2939.2710,   -17.0898,
+            52.2557],
+        [   51.7711,    31.8953,    17.7653,  ..., -2862.4678,   -10.2175,
+            56.2097],
+        ...,
+        [   47.3268,    30.6305,    17.6018,  ..., -2758.6145,    -5.9703,
+            63.8216],
+        [   42.3641,    26.1354,    26.9445,  ..., -2772.3359,   -10.3540,
+            49.8702],
+        [   52.7230,    31.6280,    15.9159,  ..., -2875.0674,   -13.7993,
+            49.7693]])
+Total Number of Edges:  21284
+Train Number of Edges:  14900
+Valid Number of Edges:  4256
+Test Number of Edges:  2128
+Graph Splitting is completed
+For Feature: alphafold_feat ; flag 1.10d GIN Model
+Epoch: 00 |  Iteration: 00000 | Loss: 0.6867 | Training Accuracy: 65.3320 | AUC Score: 0.6926
+Epoch: 00 |  Iteration: 00000 | Loss: 0.0000 | Validation Accuracy: 50.0000 | AUC Score: 0.3145
+Epoch: 01 |  Iteration: 00000 | Loss: 0.6861 | Training Accuracy: 63.4766 | AUC Score: 0.6587
+Epoch: 01 |  Iteration: 00000 | Loss: 0.0000 | Validation Accuracy: 50.0000 | AUC Score: 0.3072
+Epoch: 02 |  Iteration: 00000 | Loss: 0.6856 | Training Accuracy: 64.0625 | AUC Score: 0.6548
+Epoch: 02 |  Iteration: 00000 | Loss: 0.0000 | Validation Accuracy: 50.0000 | AUC Score: 0.2917
+Epoch: 03 |  Iteration: 00000 | Loss: 0.7978 | Training Accuracy: 50.3906 | AUC Score: 0.3702
+Epoch: 03 |  Iteration: 00000 | Loss: 0.0000 | Validation Accuracy: 50.0000 | AUC Score: 0.2922
+Epoch: 04 |  Iteration: 00000 | Loss: 0.6963 | Training Accuracy: 52.1484 | AUC Score: 0.4497
+Epoch: 04 |  Iteration: 00000 | Loss: 0.0000 | Validation Accuracy: 50.0000 | AUC Score: 0.2864
+Epoch: 05 |  Iteration: 00000 | Loss: 0.7142 | Training Accuracy: 51.1719 | AUC Score: 0.4478
+Epoch: 05 |  Iteration: 00000 | Loss: 0.0000 | Validation Accuracy: 50.0000 | AUC Score: 0.2840
+Epoch: 06 |  Iteration: 00000 | Loss: 0.7159 | Training Accuracy: 51.6602 | AUC Score: 0.4659
+Epoch: 06 |  Iteration: 00000 | Loss: 0.0000 | Validation Accuracy: 50.0000 | AUC Score: 0.2820
+Epoch: 07 |  Iteration: 00000 | Loss: 0.6640 | Training Accuracy: 64.2578 | AUC Score: 0.6706
+Epoch: 07 |  Iteration: 00000 | Loss: 0.0000 | Validation Accuracy: 50.0000 | AUC Score: 0.2812
+Epoch: 08 |  Iteration: 00000 | Loss: 0.6934 | Training Accuracy: 60.2539 | AUC Score: 0.6381
+Epoch: 08 |  Iteration: 00000 | Loss: 0.0000 | Validation Accuracy: 50.0000 | AUC Score: 0.2827
+Epoch: 09 |  Iteration: 00000 | Loss: 0.6377 | Training Accuracy: 64.5508 | AUC Score: 0.6788
+Epoch: 09 |  Iteration: 00000 | Loss: 0.0000 | Validation Accuracy: 50.0000 | AUC Score: 0.2870
+#---Testing Performance Metrics---#
+=== === flag1.11a performance_metrics === ===
+Threshold: inf
+True Positive: 0.0
+False Negative: 0.5
+True Negative: 0.5
+False Positive: 0.0
+confusion_matrix: [[0.5 0. ]
+ [0.5 0. ]]
+J   = 0.0
+MCC = nan
+AUC = 0.27103311026626714
+Accuracy using deepdrug method:  = 50.0000%
+Precision = nan
+Recall = 0.0000
+F1 Score = nan
+=== === === ===
+
+
+Epoch: 09 | Final Performance: 00000 | Loss: 0.0000 | Testing Accuracy: 50.0000 | AUC Score: 0.2710
+=================================
+Execution Finished..
+[4;33mReloaded modules[24m: model[0m

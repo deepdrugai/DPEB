@@ -1,5 +1,0 @@
-Data Loading is completed
-Total Number of Edges:  11797471
-Train Number of Edges:  8258230
-Valid Number of Edges:  2359494
-Test Number of Edges:  1179747

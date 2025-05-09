@@ -1,0 +1,486 @@
+np.__version__ : 1.24.4
+Bio.__version__) 1.79
+TensorFlow version: 2.8.4
+GPU is available
+PhysicalDevice(name='/physical_device:GPU:0', device_type='GPU')
+PhysicalDevice(name='/physical_device:GPU:1', device_type='GPU')
+PhysicalDevice(name='/physical_device:GPU:2', device_type='GPU')
+PhysicalDevice(name='/physical_device:GPU:3', device_type='GPU')
+PhysicalDevice(name='/physical_device:GPU:4', device_type='GPU')
+PhysicalDevice(name='/physical_device:GPU:5', device_type='GPU')
+PhysicalDevice(name='/physical_device:GPU:6', device_type='GPU')
+PhysicalDevice(name='/physical_device:GPU:7', device_type='GPU')
+TensorFlow version: 2.8.4
+JAX version: 0.4.6
+JAXLIB version: 0.4.6
+GPU is available
+PhysicalDevice(name='/physical_device:GPU:0', device_type='GPU')
+PhysicalDevice(name='/physical_device:GPU:1', device_type='GPU')
+PhysicalDevice(name='/physical_device:GPU:2', device_type='GPU')
+PhysicalDevice(name='/physical_device:GPU:3', device_type='GPU')
+PhysicalDevice(name='/physical_device:GPU:4', device_type='GPU')
+PhysicalDevice(name='/physical_device:GPU:5', device_type='GPU')
+PhysicalDevice(name='/physical_device:GPU:6', device_type='GPU')
+PhysicalDevice(name='/physical_device:GPU:7', device_type='GPU')
+JAX devices:
+gpu:0
+gpu:1
+gpu:2
+gpu:3
+gpu:4
+gpu:5
+gpu:6
+gpu:7
+GPU is not available or JAX is not running on GPU
+
+
+## running protein ID :  A0A023GRW2	
+# num_models : 5
+mk_mock_template() called.. 
+running model_1
+flag 1.31 calling from alphafold/model/modules.py 
+flag 1.31 calling from alphafold/model/modules.py 
+flag 1.31 calling from alphafold/model/modules.py 
+flag 1.31 calling from alphafold/model/modules.py 
+running model_2
+running model_3
+flag 1.31 calling from alphafold/model/modules.py 
+flag 1.31 calling from alphafold/model/modules.py 
+flag 1.31 calling from alphafold/model/modules.py 
+flag 1.31 calling from alphafold/model/modules.py 
+running model_4
+running model_5
+reranking models based on avg. predicted lDDT
+model_1 47.652331847077555
+set_bfactor() called.. 
+model_2 44.88695383766511
+set_bfactor() called.. 
+model_3 42.68018396638431
+set_bfactor() called.. 
+model_4 36.44633732467538
+set_bfactor() called.. 
+model_5 35.75787219265582
+set_bfactor() called.. 
+predict_structure() finished
+
+
+## running protein ID :  A0A023PXA5	
+# num_models : 5
+mk_mock_template() called.. 
+running model_1
+flag 1.31 calling from alphafold/model/modules.py 
+flag 1.31 calling from alphafold/model/modules.py 
+flag 1.31 calling from alphafold/model/modules.py 
+flag 1.31 calling from alphafold/model/modules.py 
+running model_2
+running model_3
+flag 1.31 calling from alphafold/model/modules.py 
+flag 1.31 calling from alphafold/model/modules.py 
+flag 1.31 calling from alphafold/model/modules.py 
+flag 1.31 calling from alphafold/model/modules.py 
+running model_4
+running model_5
+reranking models based on avg. predicted lDDT
+model_1 36.33997497169199
+set_bfactor() called.. 
+model_2 34.66464728517341
+set_bfactor() called.. 
+model_3 32.51219585920015
+set_bfactor() called.. 
+model_4 28.146584199530803
+set_bfactor() called.. 
+model_5 26.740828325725023
+set_bfactor() called.. 
+predict_structure() finished
+
+
+## running protein ID :  A0A023PXH6	
+# num_models : 5
+mk_mock_template() called.. 
+running model_1
+flag 1.31 calling from alphafold/model/modules.py 
+flag 1.31 calling from alphafold/model/modules.py 
+flag 1.31 calling from alphafold/model/modules.py 
+flag 1.31 calling from alphafold/model/modules.py 
+running model_2
+running model_3
+flag 1.31 calling from alphafold/model/modules.py 
+flag 1.31 calling from alphafold/model/modules.py 
+flag 1.31 calling from alphafold/model/modules.py 
+flag 1.31 calling from alphafold/model/modules.py 
+running model_4
+running model_5
+reranking models based on avg. predicted lDDT
+model_1 36.44720580533397
+set_bfactor() called.. 
+model_2 35.19072504617636
+set_bfactor() called.. 
+model_3 32.457772205679724
+set_bfactor() called.. 
+model_4 31.311060416379657
+set_bfactor() called.. 
+model_5 27.748454849325952
+set_bfactor() called.. 
+predict_structure() finished
+
+
+## running protein ID :  A0A023PXI0	
+# num_models : 5
+mk_mock_template() called.. 
+running model_1
+flag 1.31 calling from alphafold/model/modules.py 
+flag 1.31 calling from alphafold/model/modules.py 
+flag 1.31 calling from alphafold/model/modules.py 
+flag 1.31 calling from alphafold/model/modules.py 
+running model_2
+running model_3
+flag 1.31 calling from alphafold/model/modules.py 
+flag 1.31 calling from alphafold/model/modules.py 
+flag 1.31 calling from alphafold/model/modules.py 
+flag 1.31 calling from alphafold/model/modules.py 
+running model_4
+running model_5
+reranking models based on avg. predicted lDDT
+model_1 56.960448611296194
+set_bfactor() called.. 
+model_2 56.684486295315146
+set_bfactor() called.. 
+model_3 53.29046418110326
+set_bfactor() called.. 
+model_4 52.356770124635446
+set_bfactor() called.. 
+model_5 51.6845440431403
+set_bfactor() called.. 
+predict_structure() finished
+
+
+## running protein ID :  A0A023PXP4	
+# num_models : 5
+mk_mock_template() called.. 
+running model_1
+flag 1.31 calling from alphafold/model/modules.py 
+flag 1.31 calling from alphafold/model/modules.py 
+flag 1.31 calling from alphafold/model/modules.py 
+flag 1.31 calling from alphafold/model/modules.py 
+running model_2
+running model_3
+flag 1.31 calling from alphafold/model/modules.py 
+flag 1.31 calling from alphafold/model/modules.py 
+flag 1.31 calling from alphafold/model/modules.py 
+flag 1.31 calling from alphafold/model/modules.py 
+running model_4
+running model_5
+reranking models based on avg. predicted lDDT
+model_1 63.88726363529496
+set_bfactor() called.. 
+model_2 53.49160792499356
+set_bfactor() called.. 
+model_3 53.09866498582599
+set_bfactor() called.. 
+model_4 52.91672151784571
+set_bfactor() called.. 
+model_5 46.06082434040247
+set_bfactor() called.. 
+predict_structure() finished
+
+
+## running protein ID :  A0A023PYF7	
+# num_models : 5
+mk_mock_template() called.. 
+running model_1
+flag 1.31 calling from alphafold/model/modules.py 
+flag 1.31 calling from alphafold/model/modules.py 
+flag 1.31 calling from alphafold/model/modules.py 
+flag 1.31 calling from alphafold/model/modules.py 
+running model_2
+running model_3
+flag 1.31 calling from alphafold/model/modules.py 
+flag 1.31 calling from alphafold/model/modules.py 
+flag 1.31 calling from alphafold/model/modules.py 
+flag 1.31 calling from alphafold/model/modules.py 
+running model_4
+running model_5
+reranking models based on avg. predicted lDDT
+model_1 38.11925270017026
+set_bfactor() called.. 
+model_2 37.915905614976204
+set_bfactor() called.. 
+model_3 35.27692306651639
+set_bfactor() called.. 
+model_4 33.37951480008431
+set_bfactor() called.. 
+model_5 30.737878797847813
+set_bfactor() called.. 
+predict_structure() finished
+
+
+## running protein ID :  A0A023PZ99	
+# num_models : 5
+mk_mock_template() called.. 
+running model_1
+flag 1.31 calling from alphafold/model/modules.py 
+flag 1.31 calling from alphafold/model/modules.py 
+flag 1.31 calling from alphafold/model/modules.py 
+flag 1.31 calling from alphafold/model/modules.py 
+running model_2
+running model_3
+flag 1.31 calling from alphafold/model/modules.py 
+flag 1.31 calling from alphafold/model/modules.py 
+flag 1.31 calling from alphafold/model/modules.py 
+flag 1.31 calling from alphafold/model/modules.py 
+running model_4
+running model_5
+reranking models based on avg. predicted lDDT
+model_1 63.770516588899554
+set_bfactor() called.. 
+model_2 63.573378190745395
+set_bfactor() called.. 
+model_3 59.05779738903645
+set_bfactor() called.. 
+model_4 58.16071130714016
+set_bfactor() called.. 
+model_5 56.06852002977947
+set_bfactor() called.. 
+predict_structure() finished
+
+
+## running protein ID :  A0A023PZA9	
+# num_models : 5
+mk_mock_template() called.. 
+running model_1
+flag 1.31 calling from alphafold/model/modules.py 
+flag 1.31 calling from alphafold/model/modules.py 
+flag 1.31 calling from alphafold/model/modules.py 
+flag 1.31 calling from alphafold/model/modules.py 
+running model_2
+running model_3
+flag 1.31 calling from alphafold/model/modules.py 
+flag 1.31 calling from alphafold/model/modules.py 
+flag 1.31 calling from alphafold/model/modules.py 
+flag 1.31 calling from alphafold/model/modules.py 
+running model_4
+running model_5
+reranking models based on avg. predicted lDDT
+model_1 37.78718685766068
+set_bfactor() called.. 
+model_2 35.26314343586428
+set_bfactor() called.. 
+model_3 35.25550094418223
+set_bfactor() called.. 
+model_4 34.91673264330432
+set_bfactor() called.. 
+model_5 33.291838442313
+set_bfactor() called.. 
+predict_structure() finished
+
+
+## running protein ID :  A0A023PZD0	
+# num_models : 5
+mk_mock_template() called.. 
+running model_1
+flag 1.31 calling from alphafold/model/modules.py 
+flag 1.31 calling from alphafold/model/modules.py 
+flag 1.31 calling from alphafold/model/modules.py 
+flag 1.31 calling from alphafold/model/modules.py 
+running model_2
+running model_3
+flag 1.31 calling from alphafold/model/modules.py 
+flag 1.31 calling from alphafold/model/modules.py 
+flag 1.31 calling from alphafold/model/modules.py 
+flag 1.31 calling from alphafold/model/modules.py 
+running model_4
+running model_5
+reranking models based on avg. predicted lDDT
+model_1 38.293744517361155
+set_bfactor() called.. 
+model_2 37.12420582624125
+set_bfactor() called.. 
+model_3 34.14719766514189
+set_bfactor() called.. 
+model_4 33.344717785629186
+set_bfactor() called.. 
+model_5 32.011491615358494
+set_bfactor() called.. 
+predict_structure() finished
+
+
+## running protein ID :  A0A023PZE6	
+# num_models : 5
+mk_mock_template() called.. 
+running model_1
+flag 1.31 calling from alphafold/model/modules.py 
+flag 1.31 calling from alphafold/model/modules.py 
+flag 1.31 calling from alphafold/model/modules.py 
+flag 1.31 calling from alphafold/model/modules.py 
+running model_2
+running model_3
+flag 1.31 calling from alphafold/model/modules.py 
+flag 1.31 calling from alphafold/model/modules.py 
+flag 1.31 calling from alphafold/model/modules.py 
+flag 1.31 calling from alphafold/model/modules.py 
+running model_4
+running model_5
+reranking models based on avg. predicted lDDT
+model_1 63.64173462896189
+set_bfactor() called.. 
+model_2 62.0802274607494
+set_bfactor() called.. 
+model_3 59.977782955369584
+set_bfactor() called.. 
+model_4 59.366662316474795
+set_bfactor() called.. 
+model_5 58.21315001199473
+set_bfactor() called.. 
+predict_structure() finished
+
+
+## running protein ID :  A0A023PZE8	
+# num_models : 5
+mk_mock_template() called.. 
+running model_1
+flag 1.31 calling from alphafold/model/modules.py 
+flag 1.31 calling from alphafold/model/modules.py 
+flag 1.31 calling from alphafold/model/modules.py 
+flag 1.31 calling from alphafold/model/modules.py 
+running model_2
+running model_3
+flag 1.31 calling from alphafold/model/modules.py 
+flag 1.31 calling from alphafold/model/modules.py 
+flag 1.31 calling from alphafold/model/modules.py 
+flag 1.31 calling from alphafold/model/modules.py 
+running model_4
+running model_5
+reranking models based on avg. predicted lDDT
+model_1 47.87953610370081
+set_bfactor() called.. 
+model_2 47.6235253055013
+set_bfactor() called.. 
+model_3 47.520637351994964
+set_bfactor() called.. 
+model_4 44.54268801368522
+set_bfactor() called.. 
+model_5 44.508187395988166
+set_bfactor() called.. 
+predict_structure() finished
+
+
+## running protein ID :  A0A023PZH5	
+# num_models : 5
+mk_mock_template() called.. 
+running model_1
+running model_2
+running model_3
+running model_4
+running model_5
+reranking models based on avg. predicted lDDT
+model_1 70.78954604344811
+set_bfactor() called.. 
+model_2 70.27439161025734
+set_bfactor() called.. 
+model_3 68.7353933755831
+set_bfactor() called.. 
+model_4 65.69195096089634
+set_bfactor() called.. 
+model_5 60.63044279196873
+set_bfactor() called.. 
+predict_structure() finished
+
+
+## running protein ID :  A0A023PZM3	
+# num_models : 5
+mk_mock_template() called.. 
+running model_1
+flag 1.31 calling from alphafold/model/modules.py 
+flag 1.31 calling from alphafold/model/modules.py 
+flag 1.31 calling from alphafold/model/modules.py 
+flag 1.31 calling from alphafold/model/modules.py 
+running model_2
+running model_3
+flag 1.31 calling from alphafold/model/modules.py 
+flag 1.31 calling from alphafold/model/modules.py 
+flag 1.31 calling from alphafold/model/modules.py 
+flag 1.31 calling from alphafold/model/modules.py 
+running model_4
+running model_5
+reranking models based on avg. predicted lDDT
+model_1 33.65463791241104
+set_bfactor() called.. 
+model_2 32.820215385717766
+set_bfactor() called.. 
+model_3 31.105487695195993
+set_bfactor() called.. 
+model_4 30.25942474964225
+set_bfactor() called.. 
+model_5 26.84581286631829
+set_bfactor() called.. 
+predict_structure() finished
+
+
+## running protein ID :  A0A023T778	
+# num_models : 5
+mk_mock_template() called.. 
+running model_1
+flag 1.31 calling from alphafold/model/modules.py 
+flag 1.31 calling from alphafold/model/modules.py 
+flag 1.31 calling from alphafold/model/modules.py 
+flag 1.31 calling from alphafold/model/modules.py 
+running model_2
+running model_3
+flag 1.31 calling from alphafold/model/modules.py 
+flag 1.31 calling from alphafold/model/modules.py 
+flag 1.31 calling from alphafold/model/modules.py 
+flag 1.31 calling from alphafold/model/modules.py 
+running model_4
+running model_5
+reranking models based on avg. predicted lDDT
+model_1 37.10400209612209
+set_bfactor() called.. 
+model_2 34.79272510501192
+set_bfactor() called.. 
+model_3 33.865550283360875
+set_bfactor() called.. 
+model_4 33.81297599810824
+set_bfactor() called.. 
+model_5 33.73835590191366
+set_bfactor() called.. 
+predict_structure() finished
+
+
+## running protein ID :  A0A024A2C9	
+# num_models : 5
+mk_mock_template() called.. 
+running model_1
+flag 1.31 calling from alphafold/model/modules.py 
+flag 1.31 calling from alphafold/model/modules.py 
+flag 1.31 calling from alphafold/model/modules.py 
+flag 1.31 calling from alphafold/model/modules.py 
+running model_2
+running model_3
+flag 1.31 calling from alphafold/model/modules.py 
+flag 1.31 calling from alphafold/model/modules.py 
+flag 1.31 calling from alphafold/model/modules.py 
+flag 1.31 calling from alphafold/model/modules.py 
+running model_4
+running model_5
+reranking models based on avg. predicted lDDT
+model_1 34.89628935632267
+set_bfactor() called.. 
+model_2 33.32694543014775
+set_bfactor() called.. 
+model_3 28.03852047333408
+set_bfactor() called.. 
+model_4 26.975054343196845
+set_bfactor() called.. 
+model_5 26.51073882774454
+set_bfactor() called.. 
+predict_structure() finished
+
+
+## running protein ID :  A0A024B7W1	
+# num_models : 5
+mk_mock_template() called.. 
+running model_1
+flag 1.31 calling from alphafold/model/modules.py 
+flag 1.31 calling from alphafold/model/modules.py 
+flag 1.31 calling from alphafold/model/modules.py 
+flag 1.31 calling from alphafold/model/modules.py 

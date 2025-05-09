@@ -1,0 +1,31 @@
+Graph and protein mapping loaded successfully!
+Number of nodes in graph: 21858
+Example mapping: [('Q68DU8', 0), ('P04279', 1), ('P51800', 2), ('P13591', 3), ('Q16647', 4)]
+Label distribution: tensor([17077,  4781])
+Graph(num_nodes=21858, num_edges=10918180,
+      ndata_schemes={'alphafold_feat': Scheme(shape=(384,), dtype=torch.float32), 'label': Scheme(shape=(), dtype=torch.int64)}
+      edata_schemes={'weight': Scheme(shape=(), dtype=torch.float32)})
+Epoch 0: Loss 6.2181
+Epoch 50: Loss 3.0353
+Epoch 100: Loss 2.5538
+Epoch 150: Loss 2.5577
+Epoch 200: Loss 2.4404
+Epoch 250: Loss 2.3478
+Epoch 300: Loss 2.3899
+Epoch 350: Loss 2.2575
+Epoch 400: Loss 2.2128
+Epoch 450: Loss 2.2618
+model:
+ GCN(
+  (conv1): GraphConv(in=384, out=64, normalization=both, activation=None)
+  (conv2): GraphConv(in=64, out=64, normalization=both, activation=None)
+  (conv3): GraphConv(in=64, out=10, normalization=both, activation=None)
+  (bn1): BatchNorm1d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (bn2): BatchNorm1d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (dropout): Dropout(p=0.2, inplace=False)
+  (layer_norm): LayerNorm((10,), eps=1e-05, elementwise_affine=True)
+)
+Test Classification Accuracy: 0.6722
+conf_matrix:
+ [[2253 1163]
+ [ 270  686]]

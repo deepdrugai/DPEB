@@ -1,0 +1,16 @@
+Graph Loaded! Nodes: 21858 Edges: 10918180
+Label Distribution: tensor([17077,  4781])
+Epoch 0: KL Divergence Loss = nan
+Epoch 50: KL Divergence Loss = nan
+Epoch 100: KL Divergence Loss = nan
+Epoch 150: KL Divergence Loss = nan
+Epoch 200: KL Divergence Loss = nan
+Epoch 250: KL Divergence Loss = nan
+Epoch 300: KL Divergence Loss = nan
+Epoch 350: KL Divergence Loss = nan
+Epoch 400: KL Divergence Loss = nan
+Epoch 450: KL Divergence Loss = nan
+Test Classification Accuracy: 0.7816
+Confusion Matrix:
+ [[3403   13]
+ [ 942   14]]
