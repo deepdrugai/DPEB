@@ -83,9 +83,9 @@ medicine through more accurate and comprehensive protein
 interaction predictions than previously possible.
 
 --- 
-##  Dataset Acesss
+##  Dataset Acesss :
 
-The dataset can accessed from this link : 
+The dataset can be accessed from this link : https://lsu.box.com/s/iodwl7twijzxtsckv4fo5wmm92m4zs95
 ---
 ##  Environment Setup
 
