@@ -1,4 +1,7 @@
-#  DPEB: Deep Protein Embedding Benchmark Environment
+
+
+# DeepDrug Protein Embeddings Bank (DPEB) : A Multimodal Human Protein Embeddings Database
+
 
 Protein-protein interactions (PPIs) are fundamental to biological processes, yet researchers face significant challenges
 in computational PPI prediction due to the lack of integrated, multimodal protein representations. We present DPEB,
@@ -21,7 +24,63 @@ and personalized medicine through more powerful protein interaction modeling.
 This repository provides the environment setup used in our experiments related to deep protein embeddings, graph neural networks, and AlphaFold-based representations.
 
 ---
+## Our Contribution
+We present DPEB, the first searchable database exclusively
+focused on 22,043 human proteins that integrates four
+distinct protein embedding types—each capturing a unique
+biological modality including sequences up to 1,975 amino
+acids. This novel resource combines representations of
+structurally-informed features (AlphaFold2 [18]), transformer-
+based sequence embeddings (BioEmbeddings [8]), contextual
+amino acid patterns (ESM-2: Evolutionary Scale Modeling
+[23]), and sequence-based n-gram statistics (ProtVec [3]),
+which altogether provide a multi-dimensional characterization
+of human proteins. By incorporating these complementary
+embedding approaches, our database captures protein
+properties at multiple biological levels—from primary sequence
+patterns to tertiary structural features—enabling a more
+holistic analysis than any single embedding method could
+achieve.
+The novelty of DPEB extends beyond its human-
+specific focus and multimodal embeddings. Our platform
+uniquely enables researchers to cross-reference predictions
+across different embedding types, revealing insights that
+might be missed when using a single representation
+strategy. The observed variation in predictive accuracy
+across embedding types suggests that each representation
+captures distinct and complementary aspects of protein
+function, structure, or sequence—a key advantage for modeling
+complex biological systems. For example, BioEmbedding
+achieved the highest AUROC (87.37%) in our experiments,
+while AlphaFold2 captured interactions potentially driven
+by structural similarity. These findings reveal that no
+single embedding type captures the full spectrum of protein
+properties, establishing that multimodal integration is essential
+rather than optional for comprehensive interactome modeling.
+Unlike existing databases that lack species specificity or
+utilize limited embedding approaches, DPEB distinctively
+combines human-specific data from multiple established
+repositories, including UniProt [7], STRING [33], and
+IntAct [28] with our novel multimodal embedding framework.
+This comprehensive protein interaction resource integrates
+structural, sequential, evolutionary, and functional properties
+within a unified analysis platform.
+Our database supports multiple graph-based neural network
+architectures, including GraphSage, Graph Convolutional
+Networks (GCNs), Graph Transformer Networks (GTNs),
+Graph Neural Networks (GNNs), and Graph Isomorphism
+Networks (GINs). This flexibility enables researchers to apply
+the most appropriate model for specific biological questions,
+further enhancing the utility and adaptability of our platform
+for diverse research needs in computational biology.
+By providing researchers with this innovative, human-
+focused resource that leverages the complementary strengths of
+four distinct embedding approaches, DPEB aims to accelerate
+research in systems biology, drug discovery, and personalized
+medicine through more accurate and comprehensive protein
+interaction predictions than previously possible.
 
+---
 ##  Environment Setup
 
 To reproduce the results or run any experiments in this repository, use the provided Conda environment file to set up your environment. The environment is named `DPEB` and includes dependencies such as PyTorch, DGL (CUDA 10.2), scikit-learn, transformers, and AlphaFold-related utilities.
