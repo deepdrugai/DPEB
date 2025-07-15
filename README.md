@@ -85,7 +85,8 @@ interaction predictions than previously possible.
 --- 
 ##  Dataset Acesss
 
-The dataset can be accessed from this link:[https://lsu.box.com/s/iodwl7twijzxtsckv4fo5wmm92m4zs95](https://lsu.box.com/s/iodwl7twijzxtsckv4fo5wmm92m4zs95)
+The dataset can be accessed from this [Box link](https://lsu.box.com/s/iodwl7twijzxtsckv4fo5wmm92m4zs95).
+
 ---
 ##  Environment Setup
 
