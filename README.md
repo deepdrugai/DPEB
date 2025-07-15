@@ -2,7 +2,7 @@
 
 # DeepDrug Protein Embeddings Bank (DPEB) : A Multimodal Human Protein Embeddings Database
 
-![DPEB Overview](images/dpeb_overview.png 
+![DPEB Overview](images/dpeb.PNG 
 Protein-protein interactions (PPIs) are fundamental to biological processes, yet researchers face significant challenges
 in computational PPI prediction due to the lack of integrated, multimodal protein representations. We present DPEB,
 the first searchable database focused exclusively on human proteins that integrates four distinct protein embedding
