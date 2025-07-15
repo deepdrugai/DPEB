@@ -1,7 +1,6 @@
 
 
-# DeepDrug Protein Embeddings Bank (DPEB) : A Multimodal Human Protein Embeddings Database
-
+# DeepDrug Protein Embeddings Bank (DPEB) : A Multimodal Human Protein Embeddings Data
 
 <p align="center">
   <img src="images/dpeb-detail2.png" alt="DPEB Overview" style="width:70%;">
@@ -83,6 +82,10 @@ research in systems biology, drug discovery, and personalized
 medicine through more accurate and comprehensive protein
 interaction predictions than previously possible.
 
+--- 
+##  Dataset Acesss
+
+The dataset can accessed from this link : 
 ---
 ##  Environment Setup
 
