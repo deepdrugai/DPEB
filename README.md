@@ -176,3 +176,28 @@ Use DGL-based GNNs for protein-protein interaction prediction
 Load and analyze protein sequence datasets
 
 Train transformer-based or hybrid models for biological tasks
+
+## Loading and Understanding `.npy` Embedding Files
+
+Each `.npy` file inside the `.rar` archive contains the embedding and metadata for a single protein, stored as a Python dictionary. These files can be loaded and inspected using NumPy:
+
+### Example: Loading a Protein Embedding
+
+```python
+import numpy as np
+
+# Path to an example AlphaFold embedding file
+file_path = "/data/saiful/ePPI/alphafold_eppi_embeddings/All_ePPI_Alphafold2_Embeddings_np_v1.3/X6RFL8_embedding.npy"
+
+# Load the file (set allow_pickle=True to load Python objects)
+embedding = np.load(file_path, allow_pickle=True)
+
+# The stored object is a Python dictionary, so extract it using .item()
+content = embedding.item()
+
+# Inspect the structure
+print("Extracted object type:", type(content))
+print("Protein ID:", content['protein_id'])
+print("FASTA sequence:", content['fasta'][:60], "...")  # Preview the sequence
+print("Embedding shape:", content['embedding'].shape)
+
