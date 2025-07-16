@@ -87,6 +87,9 @@ interaction predictions than previously possible.
 
 The dataset can be accessed from this [Box link](https://lsu.box.com/s/klwmn28k7hf8s048ebervd4v8y9i0zli).
 
+The data repository contains three main subdirectories under the `embeddings/` directory, each corresponding to a different protein embedding type:
+
+
 ---
 ##  Environment Setup
 
