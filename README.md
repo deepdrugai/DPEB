@@ -201,7 +201,7 @@ print("Protein ID:", content['protein_id'])
 print("FASTA sequence:", content['fasta'][:60], "...")  # Preview the sequence
 print("Embedding shape:", content['embedding'].shape)
 
-
+```
 
 ### Structure of Each `.npy` File
 
