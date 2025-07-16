@@ -89,6 +89,10 @@ The dataset can be accessed from this [Box link](https://lsu.box.com/s/klwmn28k7
 
 The data repository contains three main subdirectories under the `embeddings/` directory, each corresponding to a different protein embedding type:
 
+embeddings/
+├── AlphaFold/
+├── ESMFold/
+└── ProtVec/
 
 ---
 ##  Environment Setup
