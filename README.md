@@ -90,11 +90,42 @@ The dataset can be accessed from this [Box link](https://lsu.box.com/s/klwmn28k7
 The data repository contains three main subdirectories under the `embeddings/` directory, each corresponding to a different protein embedding type:
 
 
+
+The repository is organized under the `embeddings/` directory with subfolders for each protein embedding type. Each folder includes:
+
+- A `.rar` archive containing individual `.npy` embedding files
+- A `.csv` metadata file with UniProt IDs, protein sequences, or pre-aggregated embeddings
+
 ```text
 embeddings/
 ├── AlphaFold/
+│   ├── All_ePPI_Alphafold2_Embeddings_np_v1.3.rar
+│   │   ├── Q9Y6X2.npy
+│   │   ├── P12345.npy
+│   │   └── ...
+│   ├── eppi_alphafold_aggregated_embeddings.csv
+│   └── ...
 ├── ESMFold/
-└── ProtVec/
+│   ├── esm2_dict_embeddings.rar
+│   │   ├── Q9Y6X2.npy
+│   │   ├── P12345.npy
+│   │   └── ...
+│   ├── ProteinID_proteinSEQ_ESM_emb.csv
+│   └── ...
+├── ProtVec/
+│   ├── protvec_dict_embeddings.rar
+│   │   ├── Q9Y6X2.npy
+│   │   ├── P12345.npy
+│   │   └── ...
+│   ├── protvec_embeddings_eppi.csv
+│   └── ...
+└── BioEmbeddings/
+    ├── bioemb_dict_embeddings.rar
+    │   ├── Q9Y6X2.npy
+    │   ├── P12345.npy
+    │   └── ...
+    ├── bioembeddings_metadata.csv
+    └── ...
 ---
 ##  Environment Setup
 
