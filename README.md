@@ -89,8 +89,6 @@ The dataset can be accessed from this [Box link](https://lsu.box.com/s/klwmn28k7
 
 The data repository contains three main subdirectories under the `embeddings/` directory, each corresponding to a different protein embedding type:
 
-
-
 The repository is organized under the `embeddings/` directory with subfolders for each protein embedding type. Each folder includes:
 
 - A `.rar` archive containing individual `.npy` embedding files
@@ -128,6 +126,21 @@ embeddings/
     └── ...
 
 ```
+Each `.npy` file inside the `.rar` archive corresponds to a protein and contains its embedding matrix or vector:
+
+- **AlphaFold2**: `[L × 384]` structure-informed residue embeddings
+- **ESMFold**: `[L × 1280]` or `[L × 2560]` contextualized transformer embeddings
+- **ProtVec**: `[100]` pooled trigram-based sequence vector
+- **BioEmbeddings**: `[L × 1024]` embeddings from language models like SeqVec or ProtBert
+
+The `.csv` metadata files contain UniProt IDs, amino acid sequences, and optionally precomputed averaged embeddings for fast access.
+
+These files are ready to be used in:
+- GNN-based protein–protein interaction (PPI) prediction
+- Protein classification
+- Protein family clustering
+- Any downstream computational biology pipeline
+
 ---
 ##  Environment Setup
 
