@@ -87,7 +87,7 @@ interaction predictions than previously possible.
 
 The dataset can be accessed from this [Box link](https://lsu.box.com/s/klwmn28k7hf8s048ebervd4v8y9i0zli).
 
-The data repository contains three main subdirectories under the `embeddings/` directory, each corresponding to a different protein embedding type:
+The data repository contains four main subdirectories under the `embeddings/` directory, each corresponding to a different protein embedding type:
 
 The repository is organized under the `embeddings/` directory with subfolders for each protein embedding type. Each folder includes:
 
