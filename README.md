@@ -126,6 +126,8 @@ embeddings/
     │   └── ...
     ├── bioembeddings_metadata.csv
     └── ...
+
+```
 ---
 ##  Environment Setup
 
