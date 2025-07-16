@@ -201,3 +201,32 @@ print("Protein ID:", content['protein_id'])
 print("FASTA sequence:", content['fasta'][:60], "...")  # Preview the sequence
 print("Embedding shape:", content['embedding'].shape)
 
+
+
+### Structure of Each `.npy` File
+
+Each file contains a Python dictionary with the following keys:
+
+- **`protein_id`**: A UniProt-style identifier for the protein  
+  _Example_: `"X6RFL8"`
+
+- **`fasta`**: The amino acid sequence of the protein in FASTA format  
+  _Example_: `"MATAPYNYSYIFKYIIIGDMGVGKSCLLHQFTEKKFMADCPHTI..."`
+
+- **`embedding`**: A NumPy array of shape `[L × D]` where:  
+  - `L` is the number of amino acids (i.e., the length of the protein)  
+  - `D` is the embedding dimension  
+    - _Examples_: `384` for AlphaFold2, `1024` for BioEmbeddings, etc.
+
+This array contains **per-residue embeddings** suitable for structural or sequence-based modeling tasks such as classification or graph-based learning.
+
+---
+
+### Example Output
+
+<pre lang="md"> ```text Extracted object type: <class 'dict'> Protein ID: X6RFL8 FASTA sequence: MATAPYNYSYIFKYIIIGDMGVGKSCLLHQFTEKKFMADCPHTIGVEFGT ... Embedding shape: (228, 384) ``` </pre>
+
+For an AlphaFold2 embedding file:
+
+
+
