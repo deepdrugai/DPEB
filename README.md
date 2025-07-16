@@ -226,7 +226,19 @@ This array contains **per-residue embeddings** suitable for structural or sequen
 
 <pre lang="md"> ```text Extracted object type: <class 'dict'> Protein ID: X6RFL8 FASTA sequence: MATAPYNYSYIFKYIIIGDMGVGKSCLLHQFTEKKFMADCPHTIGVEFGT ... Embedding shape: (228, 384) ``` </pre>
 
-For an AlphaFold2 embedding file:
+
+
+
+---
+
+### Use Cases
+
+These embeddings can be directly used as input features for deep learning models in tasks like:
+
+- Graph-based **protein–protein interaction prediction**
+- **Enzyme vs. non-enzyme classification**
+- **Protein function** and **family clustering**
+
 
 
 
