@@ -225,7 +225,7 @@ This array contains **per-residue embeddings** suitable for structural or sequen
 ### Example Output
 
 <pre lang="md">
-```text
+```
 Extracted object type: <class 'dict'>
 Protein ID: X6RFL8
 FASTA sequence: MATAPYNYSYIFKYIIIGDMGVGKSCLLHQFTEKKFMADCPHTIGVEFGT ...
