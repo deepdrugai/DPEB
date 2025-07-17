@@ -52,7 +52,7 @@ Activate your conda environment and install any missing dependencies.
 conda activate DPEB
 pip install scikit-learn matplotlib pandas torch
 ```
-
+---
 ## File Setup and Path Configuration
 
 Before running the tutorial script, make sure to complete the following steps:
