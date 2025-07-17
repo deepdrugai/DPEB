@@ -90,6 +90,8 @@ embedding_folder = "/your/local/path/to/All_ePPI_Alphafold2_Embeddings_np_v1.3/"
 
 # Example: Set this to your local path to the metadata CSV file
 protein_file = "/your/local/path/to/protein_families23k.csv"
+```
+
 ## Run the Tutorial Script
 
 You can execute the tutorial by running the Python script inside the `tutorial/` folder:
