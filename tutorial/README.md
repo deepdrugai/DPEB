@@ -7,14 +7,19 @@ This tutorial demonstrates how to load `.npy` embedding files from the [DeepDrug
 
 ## Objective
 
-We show how to:
-- Load AlphaFold2 `.npy` embedding files
-- Aggregate per-residue embeddings into fixed-length vectors using **mean pooling**
-- Merge the embeddings with protein family metadata
-- Apply **K-Means clustering**
-- Visualize using **t-SNE**
-- Evaluate clustering performance (Accuracy, Precision, Recall, F1-Score)
 
+
+This script will perform the following actions:
+
+- Load **AlphaFold2 `.npy` embedding files** stored in the dataset
+- Apply **mean pooling** across residue-level embeddings to produce fixed-length vectors
+- Aggregate per-residue embeddings into fixed-length vectors using **mean pooling**
+- Merge these embeddings with protein family labels from `protein_families23k.csv`
+- Save the aggregated results to `eppi_alphafold_aggregated_embeddings.csv`
+- Generate **t-SNE plots** and save them as:
+  - `raw_embeddings_tsne_Alphafold.png`
+  - `raw_embeddings_kmeans_tsne_Alphafold.png`
+- Print **clustering evaluation metrics** (Accuracy, Precision, Recall, F1-Score)
 ---
 
 ##  Input Files
@@ -53,13 +58,4 @@ You can execute the tutorial by running the Python script inside the `tutorial/`
 ```bash
 python tutorial_clustering.py
 ```
-This script will perform the following actions:
 
-- Load **AlphaFold2 `.npy` embedding files** stored in the dataset
-- Apply **mean pooling** across residue-level embeddings to produce fixed-length vectors
-- Merge these embeddings with protein family labels from `protein_families23k.csv`
-- Save the aggregated results to `eppi_alphafold_aggregated_embeddings.csv`
-- Generate **t-SNE plots** and save them as:
-  - `raw_embeddings_tsne_Alphafold.png`
-  - `raw_embeddings_kmeans_tsne_Alphafold.png`
-- Print **clustering evaluation metrics** (Accuracy, Precision, Recall, F1-Score)
