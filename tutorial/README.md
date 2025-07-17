@@ -77,6 +77,7 @@ sudo yum install unrar       # For RHEL/CentOS
 
 # Extract the .rar file
 unrar x All_ePPI_Alphafold2_Embeddings_np_v1.3.rar
+```
 
 Download `protein_families23k.csv` from the [GitHub tutorial folder](https://github.com/deepdrugai/DPEB/tree/main/tutorial).
 
