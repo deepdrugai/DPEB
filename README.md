@@ -273,7 +273,7 @@ For a step-by-step guide on how to use the DeepDrug Protein Embeddings Bank (DPE
 
 
 
-[DPEB/tutorial](https://github.com/deepdrugai/DPEB/tree/632525fd995f03c3ae540b14d68f446e0f2b4490/tutorial)
+[DPEB/tutorial](https://github.com/deepdrugai/DPEB/tree/main/tutorial)
 
 This tutorial includes example scripts, usage instructions, and recommendations for running protein embedding pipelines using AlphaFold2, ESM, ProtVec, BioEmbeddings.
 
