@@ -1,8 +1,10 @@
 
 
-# DeepDrug Protein Embeddings Bank (DPEB) : A Multimodal Human Protein Embeddings Database
+# DeepDrug Protein Embeddings Bank (DPEB) : A Multimodal Human Protein Embeddings Data
 
-![DPEB Overview](images/dpeb_overview.png 
+<p align="center">
+  <img src="images/dpeb.PNG" alt="DPEB Overview" style="width:99%;">
+</p>
 Protein-protein interactions (PPIs) are fundamental to biological processes, yet researchers face significant challenges
 in computational PPI prediction due to the lack of integrated, multimodal protein representations. We present DPEB,
 the first searchable database focused exclusively on human proteins that integrates four distinct protein embedding
@@ -41,6 +43,10 @@ properties at multiple biological levels—from primary sequence
 patterns to tertiary structural features—enabling a more
 holistic analysis than any single embedding method could
 achieve.
+
+<p align="center">
+  <img src="images/dpeb-detail2.png" alt="DPEB Overview" style="width:70%;">
+</p>
 The novelty of DPEB extends beyond its human-
 specific focus and multimodal embeddings. Our platform
 uniquely enables researchers to cross-reference predictions
@@ -80,6 +86,65 @@ research in systems biology, drug discovery, and personalized
 medicine through more accurate and comprehensive protein
 interaction predictions than previously possible.
 
+--- 
+##  Dataset Acesss
+
+The dataset can be accessed from this [Box link](https://lsu.box.com/s/klwmn28k7hf8s048ebervd4v8y9i0zli).
+
+The data repository contains four main subdirectories under the `embeddings/` directory, each corresponding to a different protein embedding type:
+
+The repository is organized under the `embeddings/` directory with subfolders for each protein embedding type. Each folder includes:
+
+- A `.rar` archive containing individual `.npy` embedding files
+- A `.csv` metadata file with UniProt IDs, protein sequences, or pre-aggregated embeddings
+
+```text
+embeddings/
+├── AlphaFold/
+│   ├── All_ePPI_Alphafold2_Embeddings_np_v1.3.rar
+│   │   ├── Q9Y6X2.npy
+│   │   ├── P12345.npy
+│   │   └── ...
+│   ├── eppi_alphafold_aggregated_embeddings.csv
+│   └── ...
+├── ESMFold/
+│   ├── esm2_dict_embeddings.rar
+│   │   ├── Q9Y6X2.npy
+│   │   ├── P12345.npy
+│   │   └── ...
+│   ├── ProteinID_proteinSEQ_ESM_emb.csv
+│   └── ...
+├── ProtVec/
+│   ├── protvec_dict_embeddings.rar
+│   │   ├── Q9Y6X2.npy
+│   │   ├── P12345.npy
+│   │   └── ...
+│   ├── protvec_embeddings_eppi.csv
+│   └── ...
+└── BioEmbeddings/
+    ├── bioemb_dict_embeddings.rar
+    │   ├── Q9Y6X2.npy
+    │   ├── P12345.npy
+    │   └── ...
+    ├── bioembeddings_metadata.csv
+    └── ...
+
+```
+Each `.npy` file inside the `.rar` archive corresponds to a protein and contains its embedding matrix or vector:
+
+- **AlphaFold2**: `[L × 384]` structure-informed residue embeddings
+- **ESMFold**: `[L × 1280]` or `[L × 2560]` contextualized transformer embeddings
+- **ProtVec**: `[100]` pooled trigram-based sequence vector
+- **BioEmbeddings**: `[L × 1024]` embeddings from language models like SeqVec or ProtBert
+
+The `.csv` metadata files contain UniProt IDs, amino acid sequences, and optionally precomputed averaged embeddings for fast access.
+
+These files are ready to be used in:
+- GNN-based protein–protein interaction (PPI) prediction
+- Protein classification
+- Protein family clustering
+- Any downstream computational biology pipeline
+
 ---
 ##  Environment Setup
 
@@ -115,3 +180,73 @@ Use DGL-based GNNs for protein-protein interaction prediction
 Load and analyze protein sequence datasets
 
 Train transformer-based or hybrid models for biological tasks
+
+## Loading and Understanding `.npy` Embedding Files
+
+Each `.npy` file inside the `.rar` archive contains the embedding and metadata for a single protein, stored as a Python dictionary. These files can be loaded and inspected using NumPy:
+
+### Example: Loading a Protein Embedding
+
+```python
+import numpy as np
+
+# Path to an example AlphaFold embedding file
+file_path = "/data/saiful/ePPI/alphafold_eppi_embeddings/All_ePPI_Alphafold2_Embeddings_np_v1.3/X6RFL8_embedding.npy"
+
+# Load the file (set allow_pickle=True to load Python objects)
+embedding = np.load(file_path, allow_pickle=True)
+
+# The stored object is a Python dictionary, so extract it using .item()
+content = embedding.item()
+
+# Inspect the structure
+print("Extracted object type:", type(content))
+print("Protein ID:", content['protein_id'])
+print("FASTA sequence:", content['fasta'][:60], "...")  # Preview the sequence
+print("Embedding shape:", content['embedding'].shape)
+
+```
+
+### Structure of Each `.npy` File
+
+Each file contains a Python dictionary with the following keys:
+
+- **`protein_id`**: A UniProt-style identifier for the protein  
+  _Example_: `"X6RFL8"`
+
+- **`fasta`**: The amino acid sequence of the protein in FASTA format  
+  _Example_: `"MATAPYNYSYIFKYIIIGDMGVGKSCLLHQFTEKKFMADCPHTI..."`
+
+- **`embedding`**: A NumPy array of shape `[L × D]` where:  
+  - `L` is the number of amino acids (i.e., the length of the protein)  
+  - `D` is the embedding dimension  
+    - _Examples_: `384` for AlphaFold2, `1024` for BioEmbeddings, etc.
+
+This array contains **per-residue embeddings** suitable for structural or sequence-based modeling tasks such as classification or graph-based learning.
+
+---
+
+### Example Output
+
+<pre lang="md">
+```
+Extracted object type: <class 'dict'>
+Protein ID: X6RFL8
+FASTA sequence: MATAPYNYSYIFKYIIIGDMGVGKSCLLHQFTEKKFMADCPHTIGVEFGT ...
+Embedding shape: (228, 384)
+``` </pre>
+
+
+---
+
+### Use Cases
+
+These embeddings can be directly used as input features for deep learning models in tasks like:
+
+- Graph-based **protein–protein interaction prediction**
+- **Enzyme vs. non-enzyme classification**
+- **Protein function** and **family clustering**
+
+
+
+
