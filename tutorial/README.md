@@ -51,6 +51,44 @@ Activate your conda environment and install any missing dependencies.
 conda activate DPEB
 pip install scikit-learn matplotlib pandas torch
 ```
+
+## File Setup and Path Configuration
+
+Before running the tutorial script, make sure to complete the following steps:
+
+### Download and Unrar Embedding Files
+
+Download the `embeddings` folder the [Box link](https://lsu.box.com/s/klwmn28k7hf8s048ebervd4v8y9i0zli). For example:
+
+- All_ePPI_Alphafold2_Embeddings_np_v1.3.rar`
+- `esm2_dict_embeddings.rar`
+- `protvec_dict_embeddings.rar`
+- `bioemb_dict_embeddings.rar`
+
+
+
+Extract them using the following commands:
+
+```bash
+# Install unrar if needed
+sudo apt install unrar       # For Ubuntu/Debian
+# or
+sudo yum install unrar       # For RHEL/CentOS
+
+# Extract the .rar file
+unrar x All_ePPI_Alphafold2_Embeddings_np_v1.3.rar
+
+Download `protein_families23k.csv` from the [GitHub tutorial folder](https://github.com/deepdrugai/DPEB/tree/main/tutorial).
+
+### Change File path
+In your script (e.g., `tutorial_clustering.py`), update the following paths:
+
+```python
+# Example: Set this to your local extracted embedding directory
+embedding_folder = "/your/local/path/to/All_ePPI_Alphafold2_Embeddings_np_v1.3/"
+
+# Example: Set this to your local path to the metadata CSV file
+protein_file = "/your/local/path/to/protein_families23k.csv"
 ## Run the Tutorial Script
 
 You can execute the tutorial by running the Python script inside the `tutorial/` folder:
