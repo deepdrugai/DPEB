@@ -45,4 +45,21 @@ Activate your conda environment and install any missing dependencies.
 ```bash
 conda activate DPEB
 pip install scikit-learn matplotlib pandas torch
+```
+## Run the Tutorial Script
 
+You can execute the tutorial by running the Python script inside the `tutorial/` folder:
+
+```bash
+python tutorial_clustering.py
+```
+This script will perform the following actions:
+
+- Load **AlphaFold2 `.npy` embedding files** stored in the dataset
+- Apply **mean pooling** across residue-level embeddings to produce fixed-length vectors
+- Merge these embeddings with protein family labels from `protein_families23k.csv`
+- Save the aggregated results to `eppi_alphafold_aggregated_embeddings.csv`
+- Generate **t-SNE plots** and save them as:
+  - `raw_embeddings_tsne_Alphafold.png`
+  - `raw_embeddings_kmeans_tsne_Alphafold.png`
+- Print **clustering evaluation metrics** (Accuracy, Precision, Recall, F1-Score)
