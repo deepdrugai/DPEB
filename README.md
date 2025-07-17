@@ -239,7 +239,7 @@ Embedding shape: (228, 384)
 
 ---
 
-### Use Cases
+## Use Cases
 
 These embeddings can be directly used as input features for deep learning models in tasks like:
 
@@ -249,7 +249,7 @@ These embeddings can be directly used as input features for deep learning models
 
 ---
 
-### Tutorial
+## Tutorial
 
 For a step-by-step guide on how to use the DeepDrug Protein Embeddings Bank (DPEB) and reproduce key experiments, please refer to the tutorial section of this repository:
 
@@ -260,7 +260,7 @@ For a step-by-step guide on how to use the DeepDrug Protein Embeddings Bank (DPE
 This tutorial includes example scripts, usage instructions, and recommendations for running protein embedding pipelines using AlphaFold2, ESM, ProtVec, BioEmbeddings.
 
 ---
-### References
+## References
 
 The reference numbers cited throughout the text (e.g., [3], [8], [18], [23], [28], [33]) correspond to the full bibliographic entries listed in the following document:
 
