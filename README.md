@@ -47,6 +47,7 @@ achieve.
 <p align="center">
   <img src="images/dpeb-detail2.png" alt="DPEB Overview" style="width:70%;">
 </p>
+
 The novelty of DPEB extends beyond its human-
 specific focus and multimodal embeddings. Our platform
 uniquely enables researchers to cross-reference predictions
@@ -63,6 +64,7 @@ by structural similarity. These findings reveal that no
 single embedding type captures the full spectrum of protein
 properties, establishing that multimodal integration is essential
 rather than optional for comprehensive interactome modeling.
+
 Unlike existing databases that lack species specificity or
 utilize limited embedding approaches, DPEB distinctively
 combines human-specific data from multiple established
@@ -71,6 +73,7 @@ IntAct [28] with our novel multimodal embedding framework.
 This comprehensive protein interaction resource integrates
 structural, sequential, evolutionary, and functional properties
 within a unified analysis platform.
+
 Our database supports multiple graph-based neural network
 architectures, including GraphSage, Graph Convolutional
 Networks (GCNs), Graph Transformer Networks (GTNs),
@@ -79,12 +82,27 @@ Networks (GINs). This flexibility enables researchers to apply
 the most appropriate model for specific biological questions,
 further enhancing the utility and adaptability of our platform
 for diverse research needs in computational biology.
+
 By providing researchers with this innovative, human-
 focused resource that leverages the complementary strengths of
 four distinct embedding approaches, DPEB aims to accelerate
 research in systems biology, drug discovery, and personalized
 medicine through more accurate and comprehensive protein
 interaction predictions than previously possible.
+
+As shown in the Figure 2, DPEB provides a flexible framework for
+constructing protein-protein interaction graphs, allowing users
+to select their preferred protein embeddings while incorporating
+established interaction data from external sources such as
+HuMap. In this approach, each protein functions as a node
+in the graph, with neighborhoods defined by relationships
+among proteins. Nodes carry features derived from amino
+acid sequences and structural properties, while edges encode
+valuable information about residue interactions drawn from
+known PPI databases. This network provides a mathematical
+representation of known and predicted protein-protein contacts
+based on available data, which helps to improve the accuracy
+of interaction prediction.
 
 --- 
 ##  Dataset Acesss
@@ -239,7 +257,7 @@ Embedding shape: (228, 384)
 
 ---
 
-### Use Cases
+## Use Cases
 
 These embeddings can be directly used as input features for deep learning models in tasks like:
 
@@ -247,7 +265,19 @@ These embeddings can be directly used as input features for deep learning models
 - **Enzyme vs. non-enzyme classification**
 - **Protein function** and **family clustering**
 
+---
 
+## Tutorial
+
+For a step-by-step guide on how to use the DeepDrug Protein Embeddings Bank (DPEB) and reproduce key experiments, please refer to the tutorial section of this repository:
+
+
+
+[DPEB/tutorial](https://github.com/deepdrugai/DPEB/tree/76e716c324da5df156123422859477f145cfebc7/tutorial)
+
+This tutorial includes example scripts, usage instructions, and recommendations for running protein embedding pipelines using AlphaFold2, ESM, ProtVec, BioEmbeddings.
+
+---
 ## References
 
 The reference numbers cited throughout the text (e.g., [3], [8], [18], [23], [28], [33]) correspond to the full bibliographic entries listed in the following document:
