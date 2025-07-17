@@ -29,16 +29,17 @@ This script will perform the following actions:
 - Output aggregated embeddings: `eppi_alphafold_aggregated_embeddings.csv`
 
 ---
-##  Files in This Folder
+##  Files in This `tutorial` Folder
 
 - **`tutorial_clustering.py`**: Main script that performs loading, aggregation, clustering, and visualization.
 - **`protein_families23k.csv`**: CSV file mapping each protein to its family (used for supervised evaluation).
 - **Output**:
-  - `eppi_alphafold_aggregated_embeddings.csv` (generated), we have also provided this inside each embedding folder
-  - `raw_embeddings_tsne_Alphafold.png` (generated)
-  - `raw_embeddings_kmeans_tsne_Alphafold.png` (generated)
+  - `eppi_alphafold_aggregated_embeddings.csv` (generated), we have also provided  aggregated embeddings of each type in csv format  inside each embedding folder.
+  - `generated t-SNE plots/raw_embeddings_tsne_Alphafold.png` (generated)
+  - `generated t-SNE plots/raw_embeddings_kmeans_tsne_Alphafold.png` (generated)
 
-##  Required Libraries
+---
+##  Required Installation Libraries
 
 - `numpy`, `pandas`
 - `matplotlib`, `scikit-learn`
