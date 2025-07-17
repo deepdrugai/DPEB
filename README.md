@@ -247,6 +247,16 @@ These embeddings can be directly used as input features for deep learning models
 - **Enzyme vs. non-enzyme classification**
 - **Protein function** and **family clustering**
 
+## Tutorial
+
+For a step-by-step guide on how to use the DeepDrug Protein Embeddings Bank (DPEB) and reproduce key experiments, please refer to the tutorial section of this repository:
+
+
+
+[https://github.com/deepdrugai/DPEB/tree/76e716c324da5df156123422859477f145cfebc7/tutorial](https://github.com/deepdrugai/DPEB/tree/76e716c324da5df156123422859477f145cfebc7/tutorial)
+
+This tutorial includes example scripts, usage instructions, and recommendations for running protein embedding pipelines using AlphaFold2, ESM, ProtVec, BioEmbeddings.
+
 
 ## References
 
