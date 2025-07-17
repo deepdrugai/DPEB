@@ -24,6 +24,14 @@ We show how to:
 - Output aggregated embeddings: `eppi_alphafold_aggregated_embeddings.csv`
 
 ---
+##  Files in This Folder
+
+- **`tutorial_clustering.py`**: Main script that performs loading, aggregation, clustering, and visualization.
+- **`protein_families23k.csv`**: CSV file mapping each protein to its family (used for supervised evaluation).
+- **Output**:
+  - `eppi_alphafold_aggregated_embeddings.csv` (generated), we have also provided this inside each embedding folder
+  - `raw_embeddings_tsne_Alphafold.png` (generated)
+  - `raw_embeddings_kmeans_tsne_Alphafold.png` (generated)
 
 ##  Required Libraries
 
