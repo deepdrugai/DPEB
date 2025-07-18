@@ -158,12 +158,6 @@ Each `.npy` file inside the `.rar` archive corresponds to a protein and contains
 
 The `.csv` metadata files contain UniProt IDs, amino acid sequences, and optionally precomputed averaged embeddings for fast access.
 
-These files are ready to be used in:
-- GNN-based protein–protein interaction (PPI) prediction
-- Protein classification
-- Protein family clustering
-- Any downstream computational biology pipeline
-
 ---
 ##  Environment Setup
 
@@ -256,6 +250,8 @@ These embeddings can be directly used as input features for deep learning models
 - Graph-based **protein–protein interaction prediction**
 - **Enzyme vs. non-enzyme classification**
 - **Protein function** and **family clustering**
+- Any downstream computational biology pipeline
+
 
 ---
 
