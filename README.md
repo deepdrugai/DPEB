@@ -131,8 +131,8 @@ embeddings/
 │   │   ├── Q9Y6X2.npy
 │   │   ├── P12345.npy
 │   │   └── ...
-│   ├── ProteinID_proteinSEQ_ESM_emb.csv
-│   └── ...
+│   └── ProteinID_proteinSEQ_ESM_emb.csv
+│   
 │ 
 ├── ProtVec/
 │   ├── protvec_dict_embeddings.rar
