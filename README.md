@@ -118,13 +118,14 @@ The repository is organized under the `embeddings/` directory with subfolders fo
 
 ```text
 embeddings/
+│ 
 ├── AlphaFold/
 │   ├── All_ePPI_Alphafold2_Embeddings_np_v1.3.rar
 │   │   ├── Q9Y6X2.npy
 │   │   ├── P12345.npy
 │   │   └── ...
-│   ├── eppi_alphafold_aggregated_embeddings.csv
-│   └── ...
+│   └── eppi_alphafold_aggregated_embeddings.csv
+│   
 ├── ESMFold/
 │   ├── esm2_dict_embeddings.rar
 │   │   ├── Q9Y6X2.npy
@@ -132,20 +133,21 @@ embeddings/
 │   │   └── ...
 │   ├── ProteinID_proteinSEQ_ESM_emb.csv
 │   └── ...
+│ 
 ├── ProtVec/
 │   ├── protvec_dict_embeddings.rar
 │   │   ├── Q9Y6X2.npy
 │   │   ├── P12345.npy
 │   │   └── ...
-│   ├── protvec_embeddings_eppi.csv
-│   └── ...
-└── BioEmbeddings/
+│   └── protvec_embeddings_eppi.csv
+│   
+└── BioEmbedding/
     ├── All_ePPI_Bio_Embeddings_np.rar
     │   ├── Q9Y6X2.npy
     │   ├── P12345.npy
     │   └── ...
-    ├── bio_embeddings_ePPI.csv
-    └── ...
+    └── bio_embeddings_ePPI.csv
+    
 
 ```
 Each `.npy` file inside the `.rar` archive corresponds to a protein and contains its embedding matrix or vector:
