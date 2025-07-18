@@ -188,16 +188,7 @@ conda env create -f /home/saiful/DPEB/env.yml
 conda activate DPEB
 ```
 
- Usage Notes
-After activating the environment, you're ready to:
 
-Run AlphaFold embedding scripts
-
-Use DGL-based GNNs for protein-protein interaction prediction
-
-Load and analyze protein sequence datasets
-
-Train transformer-based or hybrid models for biological tasks
 
 ## Loading and Understanding `.npy` Embedding Files
 
