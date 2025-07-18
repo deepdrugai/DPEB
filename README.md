@@ -140,11 +140,11 @@ embeddings/
 │   ├── protvec_embeddings_eppi.csv
 │   └── ...
 └── BioEmbeddings/
-    ├── bioemb_dict_embeddings.rar
+    ├── All_ePPI_Bio_Embeddings_np.rar
     │   ├── Q9Y6X2.npy
     │   ├── P12345.npy
     │   └── ...
-    ├── bioembeddings_metadata.csv
+    ├── bio_embeddings_ePPI.csv
     └── ...
 
 ```
