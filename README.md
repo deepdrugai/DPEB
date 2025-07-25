@@ -138,7 +138,7 @@ embeddings/
 │   │   ├── Q9Y6X2.npy
 │   │   ├── P12345.npy
 │   │   └── ...
-│   └── protvec_embeddings_eppi.csv
+│   └── stellar_df2_23k.csv
 │   
 └── BioEmbedding/
     ├── All_ePPI_Bio_Embeddings_np.rar
