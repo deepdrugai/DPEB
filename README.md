@@ -190,8 +190,11 @@ Below is a summary table showing the size of each main embedding directory and t
 | *root directory*  | dpeb_aggreagated_embeddings_all_in_one.csv | 1.2749 GB   |
 ```
 ---
+## Downloading DPEB Data from AWS S3
 
-
+A Colab notebook is provided to help users easily explore and download data from the AWS DeepDrug Protein Embeddings Bank (DPEB) S3 bucket (`deepdrug-dpeb`).This notebook allows anyone to quickly preview and download the available data.  
+The Colab notebook and download instructions can be found to this link [DPEB download](https://colab.research.google.com/drive/1UYJOhiGKzpLZKvqOjYUXcAAjKfQnZnjE?usp=sharing) 
+---
 ##  Environment Setup
 
 To reproduce the results or run any experiments in this repository, use the provided Conda environment file to set up your environment. The environment is named `DPEB` and includes dependencies such as PyTorch, DGL (CUDA 10.2), scikit-learn, transformers, and AlphaFold-related utilities.
