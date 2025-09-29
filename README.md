@@ -108,7 +108,10 @@ of interaction prediction.
 ##  Dataset Acesss
 
 we are hosting the DeepDrug Protein Embeddings Bank (DPEB) on the Amazon Web Services (AWS) Open Data Program. This public repository provides curated, multi-modal protein embeddings—including AlphaFold2 structural vectors, ESM and ProtVec sequence representations. By making DPEB openly accessible via AWS, we aim to facilitate reproducibility, promote downstream discovery in drug development and systems biology.
-The dataset can be accessed from this [AWS S3 Bucket Link](https://registry.opendata.aws/deepdrug-dpeb/).
+The dataset can be accessed from this [DPEB AWS S3 Bucket Link](https://registry.opendata.aws/deepdrug-dpeb/).  
+
+A Colab notebook is provided to help users easily explore and download data from the AWS DeepDrug Protein Embeddings Bank (DPEB) S3 bucket (`deepdrug-dpeb`). 
+The Colab notebook and download instructions can be found at this link: [DPEB download](https://colab.research.google.com/drive/1UYJOhiGKzpLZKvqOjYUXcAAjKfQnZnjE?usp=sharing)
 
  <!-- Box Link : https://lsu.box.com/s/klwmn28k7hf8s048ebervd4v8y9i0zli -->
 
@@ -189,11 +192,7 @@ Below is a summary table showing the size of each main embedding directory and t
 |                   | protvec_aggregated_embeddings.csv          | 90.46 MB    |
 | *root directory*  | dpeb_aggreagated_embeddings_all_in_one.csv | 1.2749 GB   |
 ```
----
-## Downloading DPEB Data from AWS S3
 
-A Colab notebook is provided to help users easily explore and download data from the AWS DeepDrug Protein Embeddings Bank (DPEB) S3 bucket (`deepdrug-dpeb`).This notebook allows anyone to quickly preview and download the available data.  
-The Colab notebook and download instructions can be found to this link [DPEB download](https://colab.research.google.com/drive/1UYJOhiGKzpLZKvqOjYUXcAAjKfQnZnjE?usp=sharing) 
 ---
 ##  Environment Setup
 
