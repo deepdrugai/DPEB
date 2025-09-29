@@ -178,6 +178,18 @@ Below is a summary table showing the size of each main embedding directory and t
 | ProtVec/          | protvec_dict_embeddings.rar                | 3.8175 GB   |
 |                   | protvec_aggregated_embeddings.csv          | 90.46 MB    |
 | *root directory*  | dpeb_aggreagated_embeddings_all_in_one.csv | 1.2749 GB   |
+---
+| Directory         | File(s)                                   | Size        | Description                                                                           |
+|-------------------|-------------------------------------------|-------------|---------------------------------------------------------------------------------------|
+| Alphafold-2/      | All_ePPI_Alphafold2_Embeddings_np_v1.3.rar| 14.857 GB   | contains Alphafold-2 individual `.npy` embedding files for each protein                 |
+|                   | eppi_alphafold_aggregated_embeddings.csv  | 171.96 MB   | Metadata file with UniProt IDs, sequences, and aggregated Alphafold-2 embeddings               |
+| BioEmbedding/     | All_ePPI_Bio_Embeddings_np.rar            | 45.6364 GB  | Archive containing individual `.npy` embedding files for each protein                 |
+|                   | bio_embeddings_ePPI.csv                   | 501.52 MB   | Metadata file with UniProt IDs, sequences, or pre-aggregated embeddings               |
+| ESM-2/            | esm2_dict_embeddings.rar                   | 49.3481 GB  | Archive containing individual `.npy` embedding files for each protein                 |
+|                   | ProteinID_proteinSEQ_ESM_emb.csv           | 622.86 MB   | Metadata file with UniProt IDs, sequences, or pre-aggregated embeddings               |
+| ProtVec/          | protvec_dict_embeddings.rar                | 3.8175 GB   | Archive containing individual `.npy` embedding files for each protein                 |
+|                   | protvec_aggregated_embeddings.csv          | 90.46 MB    | Metadata file with UniProt IDs, sequences, or pre-aggregated embeddings               |
+| *root directory*  | dpeb_aggreagated_embeddings_all_in_one.csv | 1.2749 GB   | Combined metadata and aggregated embeddings for all proteins                          |
 
 ---
 ##  Environment Setup
