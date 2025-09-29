@@ -301,6 +301,15 @@ For a step-by-step guide on how to use the DeepDrug Protein Embeddings Bank (DPE
 This tutorial includes example scripts, usage instructions, and recommendations for running protein embedding pipelines using AlphaFold2, ESM, ProtVec, BioEmbeddings.
 
 ---
+## Supporting Data  
+
+In addition to the main DPEB embeddings hosted on the [AWS Open Data Program](https://registry.opendata.aws/deepdrug-dpeb/), we provide a set of Supporting Data files to facilitate reproducibility of the analyses described in our paper. These include protein family labels, enzyme annotations, FASTA sequences, and protein–protein interaction data.  
+
+[Download Supporting Data (Box Link)](https://lsu.box.com/s/wdurq6iyhvotvhk0q2t2docuqcumbyab)  
+
+Detailed file descriptions can be found inside `Supporting Data/readme.txt` file.
+
+---
 ## References
 
 The reference numbers cited throughout the text (e.g., [3], [8], [18], [23], [28], [33]) correspond to the full bibliographic entries listed in the following document:
