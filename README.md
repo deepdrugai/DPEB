@@ -161,26 +161,34 @@ The `.csv` metadata files contain UniProt IDs, amino acid sequences, and optiona
 
 ---
 ### Dataset Directory Size Table
-
+```text
 Below is a summary table showing the size of each main embedding directory and their key files:
 
-| Directory         | File(s)                                   | Size        |
-|-------------------|-------------------------------------------|-------------|
-| Alphafold-2/      | All_ePPI_Alphafold2_Embeddings_np_v1.3.rar| 14.857 GB   |
-|                   | eppi_alphafold_aggregated_embeddings.csv  | 171.96 MB   |
-| BioEmbedding/     | All_ePPI_Bio_Embeddings_np.rar            | 45.6364 GB  |
-|                   | bio_embeddings_ePPI.csv                   | 501.52 MB   |
+| Directory         | File(s)                                    | Size        |
+|-------------------|--------------------------------------------|-------------|
+| Alphafold-2/      | All_ePPI_Alphafold2_Embeddings_np_v1.3.rar | 14.857 GB   |
+|                   | eppi_alphafold_aggregated_embeddings.csv   | 171.96 MB   |
+| BioEmbedding/     | All_ePPI_Bio_Embeddings_np.rar             | 45.6364 GB  |
+|                   | bio_embeddings_ePPI.csv                    | 501.52 MB   |
 | ESM-2/            | esm2_dict_embeddings.rar                   | 49.3481 GB  |
 |                   | ProteinID_proteinSEQ_ESM_emb.csv           | 622.86 MB   |
 | ProtVec/          | protvec_dict_embeddings.rar                | 3.8175 GB   |
 |                   | protvec_aggregated_embeddings.csv          | 90.46 MB    |
 | *root directory*  | dpeb_aggreagated_embeddings_all_in_one.csv | 1.2749 GB   |
-
+```
 **File descriptions:**
 - `.rar` files: Archives containing individual `.npy` embedding files for each protein.
 - `.csv` files: Metadata files with UniProt IDs, amino acid sequences, or pre-aggregated embeddings.
-- `dpeb_aggreagated_embeddings_all_in_one.csv`: Combined metadata and aggregated embeddings for all proteins.
-  
+- `dpeb_aggreagated_embeddings_all_in_one.csv`: Combined metadata and aggregated embeddings for all proteins.  
+
+---
+**User suggestions—when to use which file:**
+
+- Use the `.rar` archive if you need individual per-protein embeddings and want to analyze or model proteins separately (e.g., for custom downstream tasks or when working with raw embedding matrices).
+- Use the `.csv` metadata files in each directory if you want aggregated embeddings (e.g., averaged across residues) and quick access to UniProt IDs and sequences, typically for fast prototyping, graph construction, or ML tasks that do not require per-residue information.
+- Use `dpeb_aggreagated_embeddings_all_in_one.csv` if you want a single file containing aggregated embeddings of all types for all proteins.  
+  This is recommended for benchmarking, tabular machine learning, or analyses requiring a unified multimodal representation for every protein across all embedding modalities.
+  This file provides separate columns for each embedding type, so you can select, combine, or compare AlphaFold2, BioEmbedding, ESM-2, and ProtVec embeddings easily in one place.
 ---
 ##  Environment Setup
 
