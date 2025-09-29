@@ -107,26 +107,31 @@ of interaction prediction.
 --- 
 ##  Dataset Acesss
 
-The dataset can be accessed from this [Box link](https://lsu.box.com/s/klwmn28k7hf8s048ebervd4v8y9i0zli).
+we are hosting the DeepDrug Protein Embeddings Bank (DPEB) on the Amazon Web Services (AWS) Open Data Program. This public repository provides curated, multi-modal protein embeddings—including AlphaFold2 structural vectors, ESM and ProtVec sequence representations. By making DPEB openly accessible via AWS, we aim to facilitate reproducibility, promote downstream discovery in drug development and systems biology.
+The dataset can be accessed from this [DPEB AWS S3 Bucket Link](https://registry.opendata.aws/deepdrug-dpeb/).  
 
-The data repository contains four main subdirectories under the `embeddings/` directory, each corresponding to a different protein embedding type:
+A Colab notebook is provided to help users easily explore and download data from the AWS DeepDrug Protein Embeddings Bank (DPEB) S3 bucket (`deepdrug-dpeb`). 
+The Colab notebook and download instructions can be found at this link: [DPEB download](https://colab.research.google.com/drive/1UYJOhiGKzpLZKvqOjYUXcAAjKfQnZnjE?usp=sharing)
 
-The repository is organized under the `embeddings/` directory with subfolders for each protein embedding type. Each folder includes:
+ <!-- Box Link : https://lsu.box.com/s/klwmn28k7hf8s048ebervd4v8y9i0zli -->
 
-- A `.rar` archive containing individual `.npy` embedding files
-- A `.csv` metadata file with UniProt IDs, protein sequences, or pre-aggregated embeddings
+The data repository contains four main subdirectories under the `deepdrug-dpeb/` directory, each corresponding to a different protein embedding type.
+
+The data directory includes:
 
 ```text
-embeddings/
-│ 
-├── AlphaFold/
+deepdrug-dpeb/
+│
+├── dpeb_aggreagated_embeddings_all_in_one.csv
+│
+├── AlphaFold-2/
 │   ├── All_ePPI_Alphafold2_Embeddings_np_v1.3.rar
 │   │   ├── Q9Y6X2.npy
 │   │   ├── P12345.npy
 │   │   └── ...
 │   └── eppi_alphafold_aggregated_embeddings.csv
 │   
-├── ESMFold/
+├── ESM-2/
 │   ├── esm2_dict_embeddings.rar
 │   │   ├── Q9Y6X2.npy
 │   │   ├── P12345.npy
@@ -138,7 +143,7 @@ embeddings/
 │   │   ├── Q9Y6X2.npy
 │   │   ├── P12345.npy
 │   │   └── ...
-│   └── stellar_df2_23k.csv
+│   └── protvec_aggregated_embeddings.csv
 │   
 └── BioEmbedding/
     ├── All_ePPI_Bio_Embeddings_np.rar
@@ -147,7 +152,6 @@ embeddings/
     │   └── ...
     └── bio_embeddings_ePPI.csv
     
-
 ```
 Each `.npy` file inside the `.rar` archive corresponds to a protein and contains its embedding matrix or vector:
 
@@ -157,6 +161,37 @@ Each `.npy` file inside the `.rar` archive corresponds to a protein and contains
 - **BioEmbeddings**: `[L × 1024]` embeddings from language models like SeqVec or ProtBert
 
 The `.csv` metadata files contain UniProt IDs, amino acid sequences, and optionally precomputed averaged embeddings for fast access.
+
+---
+**File descriptions:**
+- `.rar` files: Archives containing individual `.npy` embedding files for each protein.
+- `.csv` files: Metadata files with UniProt IDs, amino acid sequences, or pre-aggregated embeddings.
+- `dpeb_aggreagated_embeddings_all_in_one.csv`: Combined metadata and aggregated embeddings for all proteins.
+---
+**User suggestions—when to use which file:**
+
+- Use the `.rar` archive if you need individual per-protein embeddings and want to analyze or model proteins separately (e.g., for custom downstream tasks or when working with raw embedding matrices).
+- Use the `.csv` metadata files in each directory if you want aggregated embeddings (e.g., averaged across residues) and quick access to UniProt IDs and sequences, typically for fast prototyping, graph construction, or ML tasks that do not require per-residue information.
+- Use `dpeb_aggreagated_embeddings_all_in_one.csv` if you want a single file containing aggregated embeddings of all types for all proteins.  
+  This is recommended for benchmarking, tabular machine learning, or analyses requiring a unified multimodal representation for every protein across all embedding modalities.
+  This file provides separate columns for each embedding type, so you can select, combine, or compare AlphaFold2, BioEmbedding, ESM-2, and ProtVec embeddings easily in one place.
+---
+**Dataset Directory Size Table**
+```text
+Below is a summary table showing the size of each main embedding directory and their key files:
+
+| Directory         | File(s)                                    | Size        |
+|-------------------|--------------------------------------------|-------------|
+| Alphafold-2/      | All_ePPI_Alphafold2_Embeddings_np_v1.3.rar | 14.857 GB   |
+|                   | eppi_alphafold_aggregated_embeddings.csv   | 171.96 MB   |
+| BioEmbedding/     | All_ePPI_Bio_Embeddings_np.rar             | 45.6364 GB  |
+|                   | bio_embeddings_ePPI.csv                    | 501.52 MB   |
+| ESM-2/            | esm2_dict_embeddings.rar                   | 49.3481 GB  |
+|                   | ProteinID_proteinSEQ_ESM_emb.csv           | 622.86 MB   |
+| ProtVec/          | protvec_dict_embeddings.rar                | 3.8175 GB   |
+|                   | protvec_aggregated_embeddings.csv          | 90.46 MB    |
+| *root directory*  | dpeb_aggreagated_embeddings_all_in_one.csv | 1.2749 GB   |
+```
 
 ---
 ##  Environment Setup
