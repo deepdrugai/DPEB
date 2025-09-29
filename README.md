@@ -163,6 +163,23 @@ Each `.npy` file inside the `.rar` archive corresponds to a protein and contains
 The `.csv` metadata files contain UniProt IDs, amino acid sequences, and optionally precomputed averaged embeddings for fast access.
 
 ---
+### Dataset Directory Size Table
+
+Below is a summary table showing the size of each main embedding directory and their key files:
+
+| Directory         | File(s)                                   | Size        |
+|-------------------|-------------------------------------------|-------------|
+| Alphafold-2/      | All_ePPI_Alphafold2_Embeddings_np_v1.3.rar| 14.857 GB   |
+|                   | eppi_alphafold_aggregated_embeddings.csv  | 171.96 MB   |
+| BioEmbedding/     | All_ePPI_Bio_Embeddings_np.rar            | 45.6364 GB  |
+|                   | bio_embeddings_ePPI.csv                   | 501.52 MB   |
+| ESM-2/            | esm2_dict_embeddings.rar                   | 49.3481 GB  |
+|                   | ProteinID_proteinSEQ_ESM_emb.csv           | 622.86 MB   |
+| ProtVec/          | protvec_dict_embeddings.rar                | 3.8175 GB   |
+|                   | protvec_aggregated_embeddings.csv          | 90.46 MB    |
+| *root directory*  | dpeb_aggreagated_embeddings_all_in_one.csv | 1.2749 GB   |
+
+---
 ##  Environment Setup
 
 To reproduce the results or run any experiments in this repository, use the provided Conda environment file to set up your environment. The environment is named `DPEB` and includes dependencies such as PyTorch, DGL (CUDA 10.2), scikit-learn, transformers, and AlphaFold-related utilities.
