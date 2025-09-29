@@ -121,15 +121,17 @@ The repository is organized under the `deepdrug-dpeb/` directory with subfolders
 
 ```text
 deepdrug-dpeb/
-│ 
-├── AlphaFold/
+│
+├── dpeb_aggreagated_embeddings_all_in_one.csv
+│
+├── AlphaFold-2/
 │   ├── All_ePPI_Alphafold2_Embeddings_np_v1.3.rar
 │   │   ├── Q9Y6X2.npy
 │   │   ├── P12345.npy
 │   │   └── ...
 │   └── eppi_alphafold_aggregated_embeddings.csv
 │   
-├── ESMFold/
+├── ESM-2/
 │   ├── esm2_dict_embeddings.rar
 │   │   ├── Q9Y6X2.npy
 │   │   ├── P12345.npy
@@ -141,7 +143,7 @@ deepdrug-dpeb/
 │   │   ├── Q9Y6X2.npy
 │   │   ├── P12345.npy
 │   │   └── ...
-│   └── stellar_df2_23k.csv
+│   └── protvec_aggregated_embeddings.csv
 │   
 └── BioEmbedding/
     ├── All_ePPI_Bio_Embeddings_np.rar
@@ -150,7 +152,6 @@ deepdrug-dpeb/
     │   └── ...
     └── bio_embeddings_ePPI.csv
     
-
 ```
 Each `.npy` file inside the `.rar` archive corresponds to a protein and contains its embedding matrix or vector:
 
