@@ -107,17 +107,20 @@ of interaction prediction.
 --- 
 ##  Dataset Acesss
 
-The dataset can be accessed from this [Box link](https://lsu.box.com/s/klwmn28k7hf8s048ebervd4v8y9i0zli).
+we are hosting the DeepDrug Protein Embeddings Bank (DPEB) on the Amazon Web Services (AWS) Open Data Program. This public repository provides curated, multi-modal protein embeddings—including AlphaFold2 structural vectors, ESM and ProtVec sequence representations. By making DPEB openly accessible via AWS, we aim to facilitate reproducibility, promote downstream discovery in drug development and systems biology.
+The dataset can be accessed from this [AWS S3 Bucket Link](https://registry.opendata.aws/deepdrug-dpeb/).
+
+ <!-- Box Link : https://lsu.box.com/s/klwmn28k7hf8s048ebervd4v8y9i0zli -->
 
 The data repository contains four main subdirectories under the `embeddings/` directory, each corresponding to a different protein embedding type:
 
-The repository is organized under the `embeddings/` directory with subfolders for each protein embedding type. Each folder includes:
+The repository is organized under the `deepdrug-dpeb/` directory with subfolders for each protein embedding type. Each folder includes:
 
 - A `.rar` archive containing individual `.npy` embedding files
 - A `.csv` metadata file with UniProt IDs, protein sequences, or pre-aggregated embeddings
 
 ```text
-embeddings/
+deepdrug-dpeb/
 │ 
 ├── AlphaFold/
 │   ├── All_ePPI_Alphafold2_Embeddings_np_v1.3.rar
