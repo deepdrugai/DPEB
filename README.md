@@ -112,9 +112,9 @@ The dataset can be accessed from this [AWS S3 Bucket Link](https://registry.open
 
  <!-- Box Link : https://lsu.box.com/s/klwmn28k7hf8s048ebervd4v8y9i0zli -->
 
-The data repository contains four main subdirectories under the `embeddings/` directory, each corresponding to a different protein embedding type:
+The data repository contains four main subdirectories under the `deepdrug-dpeb/` directory, each corresponding to a different protein embedding type.
 
-The repository is organized under the `deepdrug-dpeb/` directory with subfolders for each protein embedding type. Each folder includes:
+Each folder includes:
 
 ```text
 deepdrug-dpeb/
@@ -160,7 +160,6 @@ Each `.npy` file inside the `.rar` archive corresponds to a protein and contains
 The `.csv` metadata files contain UniProt IDs, amino acid sequences, and optionally precomputed averaged embeddings for fast access.
 
 ---
-```
 ### Dataset Directory Size Table
 
 Below is a summary table showing the size of each main embedding directory and their key files:
@@ -181,7 +180,7 @@ Below is a summary table showing the size of each main embedding directory and t
 - `.rar` files: Archives containing individual `.npy` embedding files for each protein.
 - `.csv` files: Metadata files with UniProt IDs, amino acid sequences, or pre-aggregated embeddings.
 - `dpeb_aggreagated_embeddings_all_in_one.csv`: Combined metadata and aggregated embeddings for all proteins.
-````
+  
 ---
 ##  Environment Setup
 
