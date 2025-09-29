@@ -160,6 +160,7 @@ Each `.npy` file inside the `.rar` archive corresponds to a protein and contains
 The `.csv` metadata files contain UniProt IDs, amino acid sequences, and optionally precomputed averaged embeddings for fast access.
 
 ---
+```
 ### Dataset Directory Size Table
 
 Below is a summary table showing the size of each main embedding directory and their key files:
