@@ -338,4 +338,8 @@ The reference numbers cited throughout the text (e.g., [3], [8], [18], [23], [28
 
 [References.docx](https://github.com/deepdrugai/DPEB/blob/853f34522a8b9fa01569ecba9ab0a4d27b63a1f4/references/References.docx)
 
+## License
+
+- **Code:** MIT  
+- **Data:** Creative Commons Attribution 4.0 International (CC BY 4.0)
 
