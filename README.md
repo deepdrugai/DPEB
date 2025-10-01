@@ -209,7 +209,7 @@ curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip
 unzip awscliv2.zip
 sudo ./aws/install
 ```
-**2. Download Example**
+**2. Download Example**  
 To download any file for example- aggregated ProtVec embeddings into your current directory, run:
 ```bash
 aws s3 cp s3://deepdrug-dpeb/ProtVec/protvec_aggregated_embeddings.csv . --no-sign-request
