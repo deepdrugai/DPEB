@@ -194,7 +194,7 @@ Below is a summary table showing the size of each main embedding directory and t
 ```
 
 ---
-## Programmatic Access via AWS CLI
+## Data Download via AWS CLI
 
 DPEB can be accessed directly using the [AWS Command Line Interface (CLI)](https://docs.aws.amazon.com/cli/).  
 No credentials are required since the dataset is hosted under the AWS Open Data Program.  
