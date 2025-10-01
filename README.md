@@ -194,6 +194,28 @@ Below is a summary table showing the size of each main embedding directory and t
 ```
 
 ---
+## Programmatic Access via AWS CLI
+
+DPEB can be accessed directly using the [AWS Command Line Interface (CLI)](https://docs.aws.amazon.com/cli/).  
+No credentials are required since the dataset is hosted under the AWS Open Data Program.  
+
+---
+
+### 1. Install AWS CLI (Linux example)
+```bash
+curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+unzip awscliv2.zip
+sudo ./aws/install
+```
+### 2. Download Example
+To download any file for example- aggregated ProtVec embeddings into your current directory, run:
+```bash
+aws s3 cp s3://deepdrug-dpeb/ProtVec/protvec_aggregated_embeddings.csv . --no-sign-request
+```
+
+You can replace the object path with any file or folder under ` s3://deepdrug-dpeb/ ` to access other parts of the dataset (e.g., AlphaFold2, BioEmbeddings, ESM-2).
+
+---
 ##  Environment Setup
 
 To reproduce the results or run any experiments in this repository, use the provided Conda environment file to set up your environment. The environment is named `DPEB` and includes dependencies such as PyTorch, DGL (CUDA 10.2), scikit-learn, transformers, and AlphaFold-related utilities.
