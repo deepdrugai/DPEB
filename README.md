@@ -193,7 +193,7 @@ Below is a summary table showing the size of each main embedding directory and t
 ---
 ### Dataset Download via Google Colab
 A Python Colab notebook is provided to help users easily  download data from the AWS DeepDrug Protein Embeddings Bank (DPEB) S3 bucket (`deepdrug-dpeb`). 
-The Colab notebook and download instructions can be found at this link: [DPEB download](https://colab.research.google.com/drive/1UYJOhiGKzpLZKvqOjYUXcAAjKfQnZnjE?usp=sharing)
+The Colab notebook and download instructions can be found at this link: [DPEB download](https://colab.research.google.com/drive/1ptsPDB7iVR-nLsMZxlT--fbV7YFgJCST?usp=sharing)
 
 ---
 ### Data Download via AWS CLI
