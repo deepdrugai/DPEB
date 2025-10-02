@@ -1,0 +1,1 @@
+Please download checkpoints from this link : https://lsu.box.com/s/ce2o616uub6khmmc8bnrj67205hslb8n 
