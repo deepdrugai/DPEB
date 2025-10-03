@@ -190,10 +190,6 @@ Below is a summary table showing the size of each main embedding directory and t
 |                   | protvec_aggregated_embeddings.csv          | 90.46 MB    |
 | *root directory*  | dpeb_aggreagated_embeddings_all_in_one.csv | 1.2749 GB   |
 ```
----
-### Dataset Download via Google Colab
-A Python Colab notebook is provided to help users easily  download data from the AWS DeepDrug Protein Embeddings Bank (DPEB) S3 bucket (`deepdrug-dpeb`). 
-The Colab notebook and download instructions can be found at this link: [DPEB download](https://colab.research.google.com/drive/1ptsPDB7iVR-nLsMZxlT--fbV7YFgJCST?usp=sharing)
 
 ---
 ### Data Download via AWS CLI
@@ -216,6 +212,10 @@ aws s3 cp s3://deepdrug-dpeb/ProtVec/protvec_aggregated_embeddings.csv . --no-si
 ```
 
 You can replace the object path with any file or folder under ` s3://deepdrug-dpeb/ ` to access other parts of the dataset (e.g., AlphaFold2, BioEmbeddings, ESM-2).
+---
+### Dataset Download via Google Colab
+A Python Colab notebook is provided to help users easily  download data from the AWS DeepDrug Protein Embeddings Bank (DPEB) S3 bucket (`deepdrug-dpeb`). 
+The Colab notebook and download instructions can be found at this link: [DPEB download](https://colab.research.google.com/drive/1ptsPDB7iVR-nLsMZxlT--fbV7YFgJCST?usp=sharing)
 
 ---
 ##  Environment Setup
