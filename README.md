@@ -211,7 +211,8 @@ To download any file for example- aggregated ProtVec embeddings into your curren
 aws s3 cp s3://deepdrug-dpeb/ProtVec/protvec_aggregated_embeddings.csv . --no-sign-request
 ```
 
-You can replace the object path with any file or folder under ` s3://deepdrug-dpeb/ ` to access other parts of the dataset (e.g., AlphaFold2, BioEmbeddings, ESM-2).
+You can replace the object path with any file or folder under  `S3 bucket path: deepdrug-dpeb/`  to access other parts of the dataset (e.g., AlphaFold2, BioEmbeddings, ESM-2).  
+
 ---
 ### Dataset Download via Google Colab
 A Python Colab notebook is provided to help users easily  download data from the AWS DeepDrug Protein Embeddings Bank (DPEB) S3 bucket (`deepdrug-dpeb`). 
