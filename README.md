@@ -2,6 +2,11 @@
 
 # DeepDrug Protein Embeddings Bank (DPEB) : A Multimodal Human Protein Embeddings Data
 
+This repository contains the source code and resources for the DeepDrug Protein Embeddings Bank (DPEB), a multimodal database of human protein embeddings designed to enhance protein-protein interaction modeling.  
+
+A preprint version of this work is available on [arXiv:2510.22008](https://arxiv.org/abs/2510.22008).  
+The dataset can be accessed from this link: [DPEB AWS S3 Bucket Link](https://registry.opendata.aws/deepdrug-dpeb/).  
+
 <p align="center">
   <img src="images/dpeb.PNG" alt="DPEB Overview" style="width:99%;">
 </p>
