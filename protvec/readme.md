@@ -39,7 +39,7 @@ pip install numpy pandas gensim
 ```
 ## Pretrained ProtVec model
 
-You need a pretrained ProtVec Word2Vec model (trained on protein 3-mers, e.g., SwissProt).
+You need a pretrained ProtVec Word2Vec model (trained on protein 3-mers, e.g., SwissProt). The pretrained model can be downloaded from https://github.com/kyu999/biovec/tree/master/trained_models link
 
 In the script, the model is loaded as:
 ```python
