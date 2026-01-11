@@ -30,8 +30,8 @@ Each saved file contains a dictionary with the following keys:
 ## Requirements
 #### 1. Create and activate a conda environment (recommended)
 ```bash
-conda create -n ePPI4 python=3.8
-conda activate ePPI4
+conda create -n protvec_env python=3.8
+conda activate protvec_env
 ```
 #### 2. Install required Python packages
 ```bash
