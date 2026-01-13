@@ -1,7 +1,7 @@
 
 ## Protein Bio-Embeddings Generator
 
-This script generates **per-residue protein embeddings** using the **ProtTransBert-BFD** model from the `bio_embeddings` library.
+This script generates **per-residue protein embeddings** using the **ProtTransBert-BFD** model from the `bio_embeddings` (https://github.com/sacdallago/bio_embeddings/blob/develop/bio_embeddings/embed/prottrans_bert_bfd_embedder.py) library.
 
 Each protein sequence is embedded and saved as an individual `.npy` file.
 
