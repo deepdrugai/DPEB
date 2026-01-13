@@ -340,7 +340,20 @@ In addition to the main DPEB embeddings hosted on the [AWS Open Data Program](ht
 Detailed file descriptions can be found inside `Supporting Data/readme.txt` file.
 
 ---
-## References
+
+## Generate Embeddings for your own input FASTA files
+
+We have also provided source code for obtaining embeddings of any input FASTA sequences. Please check these folders for more details:
+
+* [./alphafold](https://github.com/deepdrugai/DPEB/tree/main/alphafold)
+* [./esm](https://github.com/deepdrugai/DPEB/tree/main/esm)
+* [./bioembedding](https://github.com/deepdrugai/DPEB/tree/main/bioembedding)
+* [./protvec](https://github.com/deepdrugai/DPEB/tree/main/protvec)
+
+
+
+---  
+## References  
 
 The reference numbers cited throughout the text (e.g., [3], [8], [18], [23], [28], [33]) correspond to the full bibliographic entries listed in the following document:
 
