@@ -341,7 +341,7 @@ Detailed file descriptions can be found inside `Supporting Data/readme.txt` file
 
 ---
 
-## Generate Embeddings for your own input FASTA files
+## Generate Embeddings of your own input FASTA files
 
 The source code for obtaining embeddings of any input FASTA sequences can be found to the following directories. Please click on the links or visit following directories:
 
