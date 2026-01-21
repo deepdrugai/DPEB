@@ -25,7 +25,11 @@ import ast
 import torch.nn as nn
 import torch.optim as optim
 from torch.utils.data import DataLoader, TensorDataset
-
+from sklearn.metrics import (
+    accuracy_score, precision_score, recall_score, f1_score,
+    adjusted_rand_score, normalized_mutual_info_score,
+    homogeneity_score, completeness_score, v_measure_score
+)
 
 # Set random seed for reproducibility
 seed = 42
@@ -35,7 +39,7 @@ torch.manual_seed(seed)
 torch.cuda.manual_seed(seed)
 torch.backends.cudnn.deterministic = True
 torch.backends.cudnn.benchmark = False
-embed_type = 'Bio'
+embed_type = 'ESM'
 import sys
 sys.stdout = open(f"console_outputs/console_output_{embed_type}2.txt", "w")
 # sys.stdout = open("console_outputs/console_output", "w")
@@ -43,6 +47,7 @@ sys.stdout = open(f"console_outputs/console_output_{embed_type}2.txt", "w")
 print(f"Embedding type: {embed_type}")
 
 #%% Load and Preprocess Data
+
 def load_and_filter_data(protein_file, embedding_file):
     try:
         # Load protein families
@@ -56,11 +61,11 @@ def load_and_filter_data(protein_file, embedding_file):
         df_filtered = df_filtered[df_filtered['Family'].isin(frequent_families)]
         
         # Load AlphaFold embeddings
-        df_bioembed = pd.read_csv(embedding_file)
-        df_bioembed['Embeddings'] = df_bioembed['Embeddings'].apply(ast.literal_eval)
+        df_esm = pd.read_csv(embedding_file)
+        df_esm['ESM_Embeddings'] = df_esm['ESM_Embeddings'].apply(ast.literal_eval)
         
         # Merge dataframes
-        merged_df = pd.merge(df_bioembed, df_filtered, left_on='UniProt ID', right_on='Protein_ID', how='inner')
+        merged_df = pd.merge(df_esm, df_filtered, left_on='ProteinID', right_on='Protein_ID', how='inner')
         
         print(f"Merged DataFrame shape: {merged_df.shape}")
         print(f"Unique families: {df_filtered['Family'].nunique()}")
@@ -69,11 +74,12 @@ def load_and_filter_data(protein_file, embedding_file):
         print(f"Error in load_and_filter_data: {e}")
         raise
 
+
 # Load data
 protein_file = "/home/saiful/ePPI_dgl/clustering/protein_families23k.csv"
 # embedding_file = "/data/saiful/ePPI/alphafold_eppi_embeddings/eppi_alphafold_aggregated_embeddings.csv"
-# embedding_file = "/data/saiful/ePPI/ProteinID_proteinSEQ_ESM_emb.csv"
-embedding_file = "/home/saiful/ePPI_dgl/bioembedding/bio_embeddings_ePPI.csv"
+embedding_file = "/data/saiful/ePPI/ProteinID_proteinSEQ_ESM_emb.csv"
+
 
 try:
     merged_df = load_and_filter_data(protein_file, embedding_file)
@@ -81,11 +87,11 @@ except Exception as e:
     print(f"Failed to load data: {e}")
     exit()
 
-embeddings_raw = np.array(merged_df['Embeddings'].tolist())
+embeddings_raw = np.array(merged_df['ESM_Embeddings'].tolist())
 true_labels = merged_df['Family']
 label_encoder = LabelEncoder()
 true_labels_encoded = label_encoder.fit_transform(true_labels)
-print(f"Raw embeddings shape: {embeddings_raw.shape}")
+print(f"Raw {embed_type} Embeddings shape: {embeddings_raw.shape}")
 print(f"Number of unique labels: {len(np.unique(true_labels_encoded))}")
 
 #%% Plot Raw Embeddings
@@ -108,7 +114,7 @@ def plot_embeddings(embeddings, labels, title, save_path, label_type="Class"):
 
 # Plot raw embeddings with true labels
 plot_embeddings(embeddings_raw, true_labels_encoded, f"t-SNE Visualization of Raw {embed_type} Embeddings", 
-                f"/home/saiful/ePPI_dgl/clustering/figures_paper/raw_embeddings_tsne_{embed_type}.png")
+                f"/home/saiful/ePPI_dgl/clustering_v2/figures_paper/raw_embeddings_tsne_{embed_type}.png")
 
 #%% K-means Clustering on Raw Embeddings
 def evaluate_kmeans(embeddings, true_labels_encoded, label_encoder, title, save_path):
@@ -122,9 +128,18 @@ def evaluate_kmeans(embeddings, true_labels_encoded, label_encoder, title, save_
         
         # Perform K-means clustering on PCA-reduced embeddings
         k = len(np.unique(true_labels_encoded))
-        kmeans = KMeans(n_clusters=k, random_state=42)
+        kmeans = KMeans(n_clusters=k, random_state=42, n_init=20)
         cluster_labels = kmeans.fit_predict(embeddings_reduced)
         
+        # Permutation-invariant metrics (recommended for clustering comparison)
+        ari = adjusted_rand_score(true_labels_encoded, cluster_labels)
+        nmi = normalized_mutual_info_score(true_labels_encoded, cluster_labels)
+        
+        # New label-based clustering quality metrics
+        hom = homogeneity_score(true_labels_encoded, cluster_labels)
+        comp = completeness_score(true_labels_encoded, cluster_labels)
+        vmeas = v_measure_score(true_labels_encoded, cluster_labels)
+
         # Map cluster labels to true labels via majority voting
         cluster_to_label = {}
         for cluster in np.unique(cluster_labels):
@@ -135,19 +150,33 @@ def evaluate_kmeans(embeddings, true_labels_encoded, label_encoder, title, save_
         
         mapped_labels = np.array([cluster_to_label[cluster] for cluster in cluster_labels])
         
+        
         # Compute metrics
         metrics = {
+            "ARI": ari,
+            "NMI": nmi,
+            "Homogeneity": hom,
+            "Completeness": comp,
+            "V-measure": vmeas,
             'accuracy': accuracy_score(true_labels_encoded, mapped_labels),
             'precision': precision_score(true_labels_encoded, mapped_labels, average='weighted', zero_division=0),
             'recall': recall_score(true_labels_encoded, mapped_labels, average='weighted', zero_division=0),
             'f1_score': f1_score(true_labels_encoded, mapped_labels, average='weighted', zero_division=0)
         }
         
+        
         print(f"\n============K-means Clustering on {title}==========")
+        print(f"ARI (permutation-invariant): {ari:.4f}")
+        print(f"NMI (permutation-invariant): {nmi:.4f}")
+        print(f"Homogeneity: {hom:.4f}")
+        print(f"Completeness: {comp:.4f}")
+        print(f"V-measure: {vmeas:.4f}")
+        
         print(f"Accuracy: {metrics['accuracy']:.4f}")
         print(f"Precision: {metrics['precision']:.4f}")
         print(f"Recall: {metrics['recall']:.4f}")
         print(f"F1-Score: {metrics['f1_score']:.4f}")
+        
         # print("\nDetailed Classification Report:")
         # print(classification_report(true_labels_encoded, mapped_labels, target_names=label_encoder.classes_, zero_division=0))
         
@@ -171,48 +200,13 @@ def evaluate_kmeans(embeddings, true_labels_encoded, label_encoder, title, save_
 # Evaluate K-means on raw embeddings
 kmeans_raw_metrics = evaluate_kmeans(embeddings_raw, true_labels_encoded, label_encoder, 
                                     f"Raw {embed_type} Embeddings", 
-                                    f"/home/saiful/ePPI_dgl/clustering/figures_paper/raw_embeddings_kmeans_tsne_{embed_type}.png")
+                                    f"/home/saiful/ePPI_dgl/clustering_v2/figures_paper/raw_embeddings_kmeans_tsne_{embed_type}.png")
 
 
-#%% Define FCN Model
-class FCNClassifier(nn.Module):
-    def __init__(self, input_dim, num_classes):
-        super(FCNClassifier, self).__init__()
-        self.fc1 = nn.Linear(input_dim, 512)
-        self.bn1 = nn.BatchNorm1d(512)
-        self.act1 = nn.GELU()
-        self.dropout1 = nn.Dropout(0.3)
-        self.fc2 = nn.Linear(512, 256)
-        self.bn2 = nn.BatchNorm1d(256)
-        self.act2 = nn.GELU()
-        self.dropout2 = nn.Dropout(0.3)
-        self.fc3 = nn.Linear(256, 128)
-        self.bn3 = nn.BatchNorm1d(128)
-        self.act3 = nn.GELU()
-        self.dropout3 = nn.Dropout(0.3)
-        self.fc4 = nn.Linear(128, 64)
-        self.bn4 = nn.BatchNorm1d(64)
-        self.act4 = nn.GELU()
-        self.fc5 = nn.Linear(64, num_classes)
-        
-        # Xavier Initialization
-        for layer in [self.fc1, self.fc2, self.fc3, self.fc4, self.fc5]:
-            nn.init.xavier_uniform_(layer.weight)
-            nn.init.zeros_(layer.bias)
+# =============================================================================
+# Encoder
+# =============================================================================
 
-    def forward(self, x, return_embeddings=False):
-        x = self.act1(self.bn1(self.fc1(x)))
-        x = self.dropout1(x)
-        x = self.act2(self.bn2(self.fc2(x)))
-        x = self.dropout2(x)
-        x = self.act3(self.bn3(self.fc3(x)))
-        x = self.dropout3(x)
-        x = self.act4(self.bn4(self.fc4(x)))
-        embeddings = x
-        x = self.fc5(x)
-        if return_embeddings:
-            return x, embeddings
-        return x
 # TransformerClassifier
 class TransformerClassifier(nn.Module):
     def __init__(self, input_dim, num_classes, nhead=4, num_layers=2):
@@ -296,30 +290,61 @@ except Exception as e:
 
 # Plot refined embeddings with true labels
 plot_embeddings(refined_embeddings, true_labels_encoded, f"t-SNE Visualization of Refined {embed_type} Embeddings", 
-                f"/home/saiful/ePPI_dgl/clustering/figures_paper/refined_embeddings_tsne_{embed_type}.png")
+                f"/home/saiful/ePPI_dgl/clustering_v2/figures_paper/refined_embeddings_tsne_{embed_type}.png")
 
 # Evaluate K-means on refined embeddings
 kmeans_refined_metrics = evaluate_kmeans(refined_embeddings, true_labels_encoded, label_encoder, 
                                         f"Refined {embed_type} Embeddings", 
-                                        f"/home/saiful/ePPI_dgl/clustering/figures_paper/refined_embeddings_kmeans_tsne_{embed_type}.png")
+                                        f"/home/saiful/ePPI_dgl/clustering_v2/figures_paper/refined_embeddings_kmeans_tsne_{embed_type}.png")
+# import sys
+# sys.exit()
+#%% 
+# =============================================================================
+# Downstream Task on Raw and Refined Embedding
+# =============================================================================
+print(f"=========== =============================== ==========")
+print(f"=========== =============================== ==========")
 
-#%% Define Transformer Model
-class TransformerClassifier2(nn.Module):
-    def __init__(self, input_dim, num_classes, nhead=4, num_layers=2):
-        super(TransformerClassifier2, self).__init__()
-        self.input_norm = nn.LayerNorm(input_dim)  # Normalize input
-        self.embedding = nn.Linear(input_dim, 128)
-        encoder_layer = nn.TransformerEncoderLayer(d_model=128, nhead=nhead, dim_feedforward=512, dropout=0.3)
-        self.transformer = nn.TransformerEncoder(encoder_layer, num_layers=num_layers)
-        self.fc = nn.Linear(128, num_classes)
-        nn.init.xavier_uniform_(self.embedding.weight)
-        nn.init.xavier_uniform_(self.fc.weight)
+print(f"=========== Downstream Task on Raw and Refined Embedding ==========")
+ # Train and Evaluate Classifiers 
+# Define FCN Model
+class FCNClassifier(nn.Module):
+    def __init__(self, input_dim, num_classes):
+        super(FCNClassifier, self).__init__()
+        self.fc1 = nn.Linear(input_dim, 512)
+        self.bn1 = nn.BatchNorm1d(512)
+        self.act1 = nn.GELU()
+        self.dropout1 = nn.Dropout(0.3)
+        self.fc2 = nn.Linear(512, 256)
+        self.bn2 = nn.BatchNorm1d(256)
+        self.act2 = nn.GELU()
+        self.dropout2 = nn.Dropout(0.3)
+        self.fc3 = nn.Linear(256, 128)
+        self.bn3 = nn.BatchNorm1d(128)
+        self.act3 = nn.GELU()
+        self.dropout3 = nn.Dropout(0.3)
+        self.fc4 = nn.Linear(128, 64)
+        self.bn4 = nn.BatchNorm1d(64)
+        self.act4 = nn.GELU()
+        self.fc5 = nn.Linear(64, num_classes)
+        
+        # Xavier Initialization
+        for layer in [self.fc1, self.fc2, self.fc3, self.fc4, self.fc5]:
+            nn.init.xavier_uniform_(layer.weight)
+            nn.init.zeros_(layer.bias)
 
-    def forward(self, x):
-        x = self.input_norm(x)  # Normalize input
-        x = self.embedding(x.unsqueeze(1))
-        x = self.transformer(x).squeeze(1)
-        x = self.fc(x)
+    def forward(self, x, return_embeddings=False):
+        x = self.act1(self.bn1(self.fc1(x)))
+        x = self.dropout1(x)
+        x = self.act2(self.bn2(self.fc2(x)))
+        x = self.dropout2(x)
+        x = self.act3(self.bn3(self.fc3(x)))
+        x = self.dropout3(x)
+        x = self.act4(self.bn4(self.fc4(x)))
+        embeddings = x
+        x = self.fc5(x)
+        if return_embeddings:
+            return x, embeddings
         return x
 
 #%% Train and Evaluate Classifiers
@@ -477,3 +502,4 @@ def print_comparison_table(metrics_dict):
 
 # Print comparison table
 print_comparison_table(metrics_dict)
+print(f"Execution Finished..")
