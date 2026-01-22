@@ -1,0 +1,232 @@
+Current Combination:  _Alpha_Bio_ESM_
+Running models_name:  GIN
+Graph and protein mapping loaded successfully!
+Number of nodes in graph: 21435
+Example mapping: [('Q9NZK7', 0), ('O43822', 1), ('P08567', 2), ('Q0VDF9', 3), ('Q3KR37', 4)]
+original g: Graph(num_nodes=21435, num_edges=10277955,
+      ndata_schemes={'protvec': Scheme(shape=(300,), dtype=torch.float32), 'biovec': Scheme(shape=(1024,), dtype=torch.float32), 'alphafold': Scheme(shape=(384,), dtype=torch.float32), 'esm': Scheme(shape=(1280,), dtype=torch.float32)}
+      edata_schemes={'weight': Scheme(shape=(), dtype=torch.float32)})
+
+======Before Normalizing======
+Embedding: protvec
+  Shape: torch.Size([21435, 300])
+  Min value: -0.4914022386074066
+  Max value: 0.4184800088405609
+
+Embedding: biovec
+  Shape: torch.Size([21435, 1024])
+  Min value: -1.647519588470459
+  Max value: 2.2878119945526123
+
+Embedding: alphafold
+  Shape: torch.Size([21435, 384])
+  Min value: -3139.99267578125
+  Max value: 158.50872802734375
+
+Embedding: esm
+  Shape: torch.Size([21435, 1280])
+  Min value: -8.801618576049805
+  Max value: 1.9987815618515015
+
+
+======After Normalizing======
+Embedding: protvec
+  Shape: torch.Size([21435, 300])
+  Min value: -0.4914022386074066
+  Max value: 0.4184800088405609
+
+Embedding: biovec
+  Shape: torch.Size([21435, 1024])
+  Min value: -1.647519588470459
+  Max value: 2.2878119945526123
+
+Embedding: alphafold
+  Shape: torch.Size([21435, 384])
+  Min value: -3139.99267578125
+  Max value: 158.50872802734375
+
+Embedding: esm
+  Shape: torch.Size([21435, 1280])
+  Min value: -8.801618576049805
+  Max value: 1.9987815618515015
+
+g.ndata['concatenated'].shape: torch.Size([21435, 2688])
+After Concatenation g: Graph(num_nodes=21435, num_edges=10277955,
+      ndata_schemes={'protvec': Scheme(shape=(300,), dtype=torch.float32), 'biovec': Scheme(shape=(1024,), dtype=torch.float32), 'alphafold': Scheme(shape=(384,), dtype=torch.float32), 'esm': Scheme(shape=(1280,), dtype=torch.float32), 'concatenated': Scheme(shape=(2688,), dtype=torch.float32)}
+      edata_schemes={'weight': Scheme(shape=(), dtype=torch.float32)})
+Graph and protein mapping loaded successfully!
+Number of nodes in graph: 21435
+Data Loading is completed
+Total Number of Edges:  10275677
+Train Number of Edges:  7192975
+Valid Number of Edges:  2055135
+Test Number of Edges:  1027567
+Graph Splitting is completed
+For Feature: concatenated ; flag 1.10d GIN Model
+=================================
+flag 1.10b gin Model:
+ GIN(
+  (layers): ModuleList(
+    (0): GINConv(
+      (apply_func): Sequential(
+        (0): Linear(in_features=2688, out_features=128, bias=True)
+        (1): ReLU()
+        (2): Linear(in_features=128, out_features=160, bias=True)
+      )
+    )
+    (1): GINConv(
+      (apply_func): Sequential(
+        (0): Linear(in_features=160, out_features=128, bias=True)
+        (1): ReLU()
+        (2): Linear(in_features=128, out_features=160, bias=True)
+      )
+    )
+    (2): GINConv(
+      (apply_func): Sequential(
+        (0): Linear(in_features=160, out_features=128, bias=True)
+        (1): ReLU()
+        (2): Linear(in_features=128, out_features=160, bias=True)
+      )
+    )
+    (3): GINConv(
+      (apply_func): Sequential(
+        (0): Linear(in_features=160, out_features=128, bias=True)
+        (1): ReLU()
+        (2): Linear(in_features=128, out_features=160, bias=True)
+      )
+    )
+  )
+  (predictor): Sequential(
+    (0): Linear(in_features=160, out_features=80, bias=True)
+    (1): ReLU()
+    (2): Linear(in_features=80, out_features=1, bias=True)
+  )
+)
+Epoch: 00 |  Iteration: 00000 | Loss: 0.6933 | Training Accuracy: 57.9102 | AUC Score: 0.5736
+Epoch: 00 |  Iteration: 04000 | Loss: 0.6248 | Training Accuracy: 64.7461 | AUC Score: 0.7042
+Epoch: 00 |  Iteration: 08000 | Loss: 0.6116 | Training Accuracy: 67.1875 | AUC Score: 0.7394
+Epoch: 00 |  Iteration: 12000 | Loss: 0.6028 | Training Accuracy: 65.9180 | AUC Score: 0.7314
+Epoch: 00 |  Iteration: 00000 | Loss: 0.0000 | Validation Accuracy: 57.6893 | AUC Score: 0.4801
+Validation accuracy improved to 57.6893, saving model...
+Epoch: 01 |  Iteration: 00000 | Loss: 0.5807 | Training Accuracy: 68.4570 | AUC Score: 0.7478
+Epoch: 01 |  Iteration: 04000 | Loss: 0.5761 | Training Accuracy: 69.7266 | AUC Score: 0.7593
+Epoch: 01 |  Iteration: 08000 | Loss: 0.5743 | Training Accuracy: 69.1406 | AUC Score: 0.7515
+Epoch: 01 |  Iteration: 12000 | Loss: 0.5731 | Training Accuracy: 70.3125 | AUC Score: 0.7830
+Epoch: 01 |  Iteration: 00000 | Loss: 0.0000 | Validation Accuracy: 64.2492 | AUC Score: 0.6515
+Validation accuracy improved to 64.2492, saving model...
+Epoch: 02 |  Iteration: 00000 | Loss: 0.5547 | Training Accuracy: 70.9961 | AUC Score: 0.7779
+Epoch: 02 |  Iteration: 04000 | Loss: 0.5685 | Training Accuracy: 68.9453 | AUC Score: 0.7540
+Epoch: 02 |  Iteration: 08000 | Loss: 0.5681 | Training Accuracy: 69.3359 | AUC Score: 0.7622
+Epoch: 02 |  Iteration: 12000 | Loss: 0.5676 | Training Accuracy: 69.1406 | AUC Score: 0.7567
+Epoch: 02 |  Iteration: 00000 | Loss: 0.0000 | Validation Accuracy: 57.8833 | AUC Score: 0.5238
+Epoch: 03 |  Iteration: 00000 | Loss: 0.5663 | Training Accuracy: 68.6523 | AUC Score: 0.7575
+Epoch: 03 |  Iteration: 04000 | Loss: 0.5653 | Training Accuracy: 69.2383 | AUC Score: 0.7642
+Epoch: 03 |  Iteration: 08000 | Loss: 0.5651 | Training Accuracy: 68.7500 | AUC Score: 0.7555
+Epoch: 03 |  Iteration: 12000 | Loss: 0.5649 | Training Accuracy: 70.2148 | AUC Score: 0.7765
+Epoch: 03 |  Iteration: 00000 | Loss: 0.0000 | Validation Accuracy: 65.6727 | AUC Score: 0.7059
+Validation accuracy improved to 65.6727, saving model...
+Epoch: 04 |  Iteration: 00000 | Loss: 0.5583 | Training Accuracy: 71.1914 | AUC Score: 0.7745
+Epoch: 04 |  Iteration: 04000 | Loss: 0.5639 | Training Accuracy: 68.8477 | AUC Score: 0.7598
+Epoch: 04 |  Iteration: 08000 | Loss: 0.5635 | Training Accuracy: 68.9453 | AUC Score: 0.7642
+Epoch: 04 |  Iteration: 12000 | Loss: 0.5633 | Training Accuracy: 68.7500 | AUC Score: 0.7547
+Epoch: 04 |  Iteration: 00000 | Loss: 0.0000 | Validation Accuracy: 62.4706 | AUC Score: 0.6236
+Epoch: 05 |  Iteration: 00000 | Loss: 0.5569 | Training Accuracy: 71.8750 | AUC Score: 0.7733
+Epoch: 05 |  Iteration: 04000 | Loss: 0.5622 | Training Accuracy: 69.3359 | AUC Score: 0.7675
+Epoch: 05 |  Iteration: 08000 | Loss: 0.5622 | Training Accuracy: 68.1641 | AUC Score: 0.7476
+Epoch: 05 |  Iteration: 12000 | Loss: 0.5619 | Training Accuracy: 68.0664 | AUC Score: 0.7546
+Epoch: 05 |  Iteration: 00000 | Loss: 0.0000 | Validation Accuracy: 63.0163 | AUC Score: 0.6685
+Epoch: 06 |  Iteration: 00000 | Loss: 0.5702 | Training Accuracy: 70.1172 | AUC Score: 0.7635
+Epoch: 06 |  Iteration: 04000 | Loss: 0.5610 | Training Accuracy: 72.7539 | AUC Score: 0.7989
+Epoch: 06 |  Iteration: 08000 | Loss: 0.5609 | Training Accuracy: 68.3594 | AUC Score: 0.7555
+Epoch: 06 |  Iteration: 12000 | Loss: 0.5607 | Training Accuracy: 68.9453 | AUC Score: 0.7629
+Epoch: 06 |  Iteration: 00000 | Loss: 0.0000 | Validation Accuracy: 63.6245 | AUC Score: 0.6490
+Epoch: 07 |  Iteration: 00000 | Loss: 0.5459 | Training Accuracy: 72.6562 | AUC Score: 0.7890
+Epoch: 07 |  Iteration: 04000 | Loss: 0.5600 | Training Accuracy: 71.1914 | AUC Score: 0.7886
+Epoch: 07 |  Iteration: 08000 | Loss: 0.5598 | Training Accuracy: 70.8008 | AUC Score: 0.7822
+Epoch: 07 |  Iteration: 12000 | Loss: 0.5597 | Training Accuracy: 69.0430 | AUC Score: 0.7629
+Epoch: 07 |  Iteration: 00000 | Loss: 0.0000 | Validation Accuracy: 62.1497 | AUC Score: 0.6748
+Epoch: 08 |  Iteration: 00000 | Loss: 0.5468 | Training Accuracy: 70.7031 | AUC Score: 0.7854
+Epoch: 08 |  Iteration: 04000 | Loss: 0.5590 | Training Accuracy: 69.3359 | AUC Score: 0.7651
+Epoch: 08 |  Iteration: 08000 | Loss: 0.5588 | Training Accuracy: 70.8008 | AUC Score: 0.7921
+Epoch: 08 |  Iteration: 12000 | Loss: 0.5586 | Training Accuracy: 69.4336 | AUC Score: 0.7669
+Epoch: 08 |  Iteration: 00000 | Loss: 0.0000 | Validation Accuracy: 61.3884 | AUC Score: 0.6545
+Epoch: 09 |  Iteration: 00000 | Loss: 0.5639 | Training Accuracy: 71.2891 | AUC Score: 0.7704
+Epoch: 09 |  Iteration: 04000 | Loss: 0.5580 | Training Accuracy: 67.5781 | AUC Score: 0.7417
+Epoch: 09 |  Iteration: 08000 | Loss: 0.5580 | Training Accuracy: 72.7539 | AUC Score: 0.7916
+Epoch: 09 |  Iteration: 12000 | Loss: 0.5579 | Training Accuracy: 73.2422 | AUC Score: 0.8009
+Epoch: 09 |  Iteration: 00000 | Loss: 0.0000 | Validation Accuracy: 61.5027 | AUC Score: 0.6605
+Epoch: 10 |  Iteration: 00000 | Loss: 0.5494 | Training Accuracy: 71.4844 | AUC Score: 0.7834
+Epoch: 10 |  Iteration: 04000 | Loss: 0.5576 | Training Accuracy: 71.4844 | AUC Score: 0.7892
+Epoch: 10 |  Iteration: 08000 | Loss: 0.5576 | Training Accuracy: 69.5312 | AUC Score: 0.7657
+Epoch: 10 |  Iteration: 12000 | Loss: 0.5574 | Training Accuracy: 69.7266 | AUC Score: 0.7666
+Epoch: 10 |  Iteration: 00000 | Loss: 0.0000 | Validation Accuracy: 61.9836 | AUC Score: 0.6779
+Epoch: 11 |  Iteration: 00000 | Loss: 0.5740 | Training Accuracy: 68.6523 | AUC Score: 0.7553
+Epoch: 11 |  Iteration: 04000 | Loss: 0.5567 | Training Accuracy: 71.6797 | AUC Score: 0.7941
+Epoch: 11 |  Iteration: 08000 | Loss: 0.5566 | Training Accuracy: 70.1172 | AUC Score: 0.7824
+Epoch: 11 |  Iteration: 12000 | Loss: 0.5567 | Training Accuracy: 68.0664 | AUC Score: 0.7447
+Epoch: 11 |  Iteration: 00000 | Loss: 0.0000 | Validation Accuracy: 61.8466 | AUC Score: 0.6726
+Epoch: 12 |  Iteration: 00000 | Loss: 0.5670 | Training Accuracy: 68.5547 | AUC Score: 0.7662
+Epoch: 12 |  Iteration: 04000 | Loss: 0.5567 | Training Accuracy: 69.0430 | AUC Score: 0.7554
+Epoch: 12 |  Iteration: 08000 | Loss: 0.5564 | Training Accuracy: 68.2617 | AUC Score: 0.7637
+Epoch: 12 |  Iteration: 12000 | Loss: 0.5563 | Training Accuracy: 71.3867 | AUC Score: 0.7895
+Epoch: 12 |  Iteration: 00000 | Loss: 0.0000 | Validation Accuracy: 60.4068 | AUC Score: 0.6174
+Epoch: 13 |  Iteration: 00000 | Loss: 0.5397 | Training Accuracy: 71.2891 | AUC Score: 0.7925
+Epoch: 13 |  Iteration: 04000 | Loss: 0.5560 | Training Accuracy: 71.4844 | AUC Score: 0.7872
+Epoch: 13 |  Iteration: 08000 | Loss: 0.5559 | Training Accuracy: 71.2891 | AUC Score: 0.7755
+Epoch: 13 |  Iteration: 12000 | Loss: 0.5559 | Training Accuracy: 72.0703 | AUC Score: 0.7972
+Epoch: 13 |  Iteration: 00000 | Loss: 0.0000 | Validation Accuracy: 61.6666 | AUC Score: 0.6586
+Epoch: 14 |  Iteration: 00000 | Loss: 0.5489 | Training Accuracy: 70.5078 | AUC Score: 0.7861
+Epoch: 14 |  Iteration: 04000 | Loss: 0.5560 | Training Accuracy: 69.6289 | AUC Score: 0.7726
+Epoch: 14 |  Iteration: 08000 | Loss: 0.5559 | Training Accuracy: 71.2891 | AUC Score: 0.7828
+Epoch: 14 |  Iteration: 12000 | Loss: 0.5557 | Training Accuracy: 67.2852 | AUC Score: 0.7537
+Epoch: 14 |  Iteration: 00000 | Loss: 0.0000 | Validation Accuracy: 60.1912 | AUC Score: 0.6174
+Epoch: 15 |  Iteration: 00000 | Loss: 0.5602 | Training Accuracy: 69.2383 | AUC Score: 0.7680
+Epoch: 15 |  Iteration: 04000 | Loss: 0.5553 | Training Accuracy: 70.5078 | AUC Score: 0.7741
+Epoch: 15 |  Iteration: 08000 | Loss: 0.5553 | Training Accuracy: 70.2148 | AUC Score: 0.7769
+Epoch: 15 |  Iteration: 12000 | Loss: 0.5552 | Training Accuracy: 69.4336 | AUC Score: 0.7691
+Epoch: 15 |  Iteration: 00000 | Loss: 0.0000 | Validation Accuracy: 62.6943 | AUC Score: 0.6701
+Epoch: 16 |  Iteration: 00000 | Loss: 0.5514 | Training Accuracy: 71.5820 | AUC Score: 0.7817
+Epoch: 16 |  Iteration: 04000 | Loss: 0.5549 | Training Accuracy: 71.2891 | AUC Score: 0.7898
+Epoch: 16 |  Iteration: 08000 | Loss: 0.5547 | Training Accuracy: 69.7266 | AUC Score: 0.7480
+Epoch: 16 |  Iteration: 12000 | Loss: 0.5547 | Training Accuracy: 70.4102 | AUC Score: 0.7777
+Epoch: 16 |  Iteration: 00000 | Loss: 0.0000 | Validation Accuracy: 58.4696 | AUC Score: 0.5462
+Epoch: 17 |  Iteration: 00000 | Loss: 0.5756 | Training Accuracy: 67.9688 | AUC Score: 0.7549
+Epoch: 17 |  Iteration: 04000 | Loss: 0.5547 | Training Accuracy: 69.6289 | AUC Score: 0.7711
+Epoch: 17 |  Iteration: 08000 | Loss: 0.5546 | Training Accuracy: 70.4102 | AUC Score: 0.7752
+Epoch: 17 |  Iteration: 12000 | Loss: 0.5545 | Training Accuracy: 71.5820 | AUC Score: 0.7784
+Epoch: 17 |  Iteration: 00000 | Loss: 0.0000 | Validation Accuracy: 61.0299 | AUC Score: 0.6639
+Epoch: 18 |  Iteration: 00000 | Loss: 0.5646 | Training Accuracy: 70.8984 | AUC Score: 0.7716
+Epoch: 18 |  Iteration: 04000 | Loss: 0.5544 | Training Accuracy: 70.7031 | AUC Score: 0.7893
+Epoch: 18 |  Iteration: 08000 | Loss: 0.5544 | Training Accuracy: 69.7266 | AUC Score: 0.7758
+Epoch: 18 |  Iteration: 12000 | Loss: 0.5542 | Training Accuracy: 70.7031 | AUC Score: 0.7818
+Epoch: 18 |  Iteration: 00000 | Loss: 0.0000 | Validation Accuracy: 63.1376 | AUC Score: 0.6714
+Epoch: 19 |  Iteration: 00000 | Loss: 0.5514 | Training Accuracy: 71.1914 | AUC Score: 0.7789
+Epoch: 19 |  Iteration: 04000 | Loss: 0.5542 | Training Accuracy: 68.0664 | AUC Score: 0.7480
+Epoch: 19 |  Iteration: 08000 | Loss: 0.5539 | Training Accuracy: 71.5820 | AUC Score: 0.7975
+Epoch: 19 |  Iteration: 12000 | Loss: 0.5538 | Training Accuracy: 69.5312 | AUC Score: 0.7645
+Epoch: 19 |  Iteration: 00000 | Loss: 0.0000 | Validation Accuracy: 62.8614 | AUC Score: 0.6556
+Model checkpoint saved to: /data/saiful/ePPI/concatenated embeddings/checkpoints/concatenated_feat_gin_lr_1e-4__Alpha_Bio_ESM__embedding_checkpoint.pth
+#---Testing Performance Metrics---#
+=== === flag1.11a performance_metrics === ===
+Threshold: 78.64758
+True Positive: 0.2519334505681868
+False Negative: 0.2480665494318132
+True Negative: 0.3745103725596482
+False Positive: 0.12548962744035183
+confusion_matrix: [[0.37451037 0.12548963]
+ [0.24806655 0.25193345]]
+J   = 0.25288764625566995
+MCC = 0.2608476230112895
+AUC = 0.642502077490679
+Accuracy using deepdrug method:  = 62.6444%
+Precision = 0.6675
+Recall = 0.5039
+F1 Score = 0.5743
+=== === === ===
+
+
+Epoch: 19 | Final Performance: 00000 | Loss: 0.0000 | Testing Accuracy: 62.6444 | AUC Score: 0.6425
+
+
+=================================
+Execution Finished..
