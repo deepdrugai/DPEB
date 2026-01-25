@@ -535,42 +535,9 @@ def run_app(device, graph, edges):
     print("=================================")
     
     
-    # # =============================================================================
-    #     # # Run RGCN Model
-    # # =============================================================================
-    # hidden_feats = 256
-    # num_layers = 3  #5
-    # out_feats = 160
-    # rgcn = RGCN(in_feats=in_size, hidden_feats=hidden_feats,
-    #             num_layers=num_layers, out_feats=out_feats, num_rels=1)
-    #     # Wrap with DataParallel to use all GPUs:
-    # # rgcn = nn.DataParallel(rgcn)
-    # rgcn = rgcn.to(device)
-    
-    # print("For Feature: {0} ; flag 1.10e RGCN Model".format(feature))
-    # rgcn_model = train(device, graph, feature, edges, rgcn, "rgcn")
-    # print("=================================")
-    
-    # =============================================================================
-        # Run GTN Model
-    # =============================================================================
-    # embed_dim = 256 # 256     # Embedding dimension after input projection.
-    # num_layers = 3  #5    # Number of transformer layers.
-    # num_heads = 8       # Number of attention heads.
-    # dropout = 0.1       # Dropout rate.
-    
-    # gtn = GTN4o(in_feats=in_size, embed_dim=embed_dim,
-    #           num_layers=num_layers, num_heads=num_heads, dropout=dropout)
-    # # gtn = nn.DataParallel(gtn)
-    # gtn = gtn.to(device)
-    
-    # print("For Feature: {0} ; flag 1.10f GTN Model".format(feature))
-    # # Assuming your train function accepts (device, graph, feature, edges, model, name)
-    # gtn_model = train(device, graph, feature, edges, gtn, "gtn")
-    # print("=================================")
     
     # # =============================================================================
-    #     # Run GTN_g2 Model   ==> i used it last time, worked well, incorporates edge weights
+    #     # Run GTN_g2 Model   ==> worked well, incorporates edge weights
     # # =============================================================================
     # embed_dim = 256 # 256     # Embedding dimension after input projection.
     # num_layers = 3  #5    # Number of transformer layers.
