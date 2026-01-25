@@ -489,10 +489,10 @@ def run_app(device, graph, edges):
     # =============================================================================
           # Run SAGE Model
     # =============================================================================
-    # print("For Feature: {0} ; flag 1.10a Sage Model".format(feature))
-    # # Run SAGE Model
-    # sage_model = train(device, graph, feature, edges, sage, "sage")
-    # print("=================================")
+    print("For Feature: {0} ; flag 1.10a Sage Model".format(feature))
+    # Run SAGE Model
+    sage_model = train(device, graph, feature, edges, sage, "sage")
+    print("=================================")
     
     
     # # =============================================================================
@@ -516,23 +516,23 @@ def run_app(device, graph, edges):
     #     # Run GIN Model
     # # =============================================================================
 
-    ##Example hyperparameters for GIN: you can adjust 'hidden_feats', 'num_layers', 'mlp_hidden_dim', etc.
-    gin_hidden_feats = 256 #160        # Output dimension for each layer's MLP
-    num_layers = 4                # Number of GIN layers
-    mlp_hidden_dim = 128          # Hidden dimension for the internal MLP
-    final_dim = 1                 # Final output dimension from the predictor
-    set_random_seeds(42)
-    # Instantiate the GIN model. The constructor parameters below must match your GIN implementation.
-    gin = GIN(
-        in_feats=in_size,
-        hidden_feats=gin_hidden_feats,
-        num_layers=num_layers,
-        mlp_hidden_dim=mlp_hidden_dim,
-        final_dim=final_dim
-    )
-    print("For Feature: {0} ; flag 1.10d GIN Model".format(feature))
-    gin_model = train(device, graph, feature, edges, gin, "gin")
-    print("=================================")
+    # ##Example hyperparameters for GIN: you can adjust 'hidden_feats', 'num_layers', 'mlp_hidden_dim', etc.
+    # gin_hidden_feats = 256 #160        # Output dimension for each layer's MLP
+    # num_layers = 4                # Number of GIN layers
+    # mlp_hidden_dim = 128          # Hidden dimension for the internal MLP
+    # final_dim = 1                 # Final output dimension from the predictor
+    # set_random_seeds(42)
+    # # Instantiate the GIN model. The constructor parameters below must match your GIN implementation.
+    # gin = GIN(
+    #     in_feats=in_size,
+    #     hidden_feats=gin_hidden_feats,
+    #     num_layers=num_layers,
+    #     mlp_hidden_dim=mlp_hidden_dim,
+    #     final_dim=final_dim
+    # )
+    # print("For Feature: {0} ; flag 1.10d GIN Model".format(feature))
+    # gin_model = train(device, graph, feature, edges, gin, "gin")
+    # print("=================================")
     
     
     
