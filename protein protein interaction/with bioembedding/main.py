@@ -451,10 +451,10 @@ def run_app(device, graph, edges):
     # # =============================================================================
     #       # Run SAGE Model
     # # =============================================================================
-    # print("For Feature: {0} ; flag 1.10a Sage Model".format(feature))
-    # # Run SAGE Model
-    # sage_model = train(device, graph, feature, edges, sage, "sage")
-    # print("=================================")
+    print("For Feature: {0} ; flag 1.10a Sage Model".format(feature))
+    # Run SAGE Model
+    sage_model = train(device, graph, feature, edges, sage, "sage")
+    print("=================================")
     
     
     # # =============================================================================
