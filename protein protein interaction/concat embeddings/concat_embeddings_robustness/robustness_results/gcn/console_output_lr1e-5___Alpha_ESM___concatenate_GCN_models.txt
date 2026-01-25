@@ -1,0 +1,253 @@
+Current Combination:  __Alpha_ESM__
+Running models_name:  GCN
+Loaded checkpoint file: concatenated_feat_gcn_lr_1e-5__Alpha_ESM__embedding_checkpoint.pth
+Full checkpoint path: /data/saiful/ePPI/concatenated embeddings/checkpoints selected/GCN/concatenated_feat_gcn_lr_1e-5__Alpha_ESM__embedding_checkpoint.pth
+Running LR:  1e-5
+Graph and protein mapping loaded successfully!
+Number of nodes in graph: 21435
+Example mapping: [('Q9NZK7', 0), ('O43822', 1), ('P08567', 2), ('Q0VDF9', 3), ('Q3KR37', 4)]
+original g: Graph(num_nodes=21435, num_edges=10277955,
+      ndata_schemes={'protvec': Scheme(shape=(300,), dtype=torch.float32), 'biovec': Scheme(shape=(1024,), dtype=torch.float32), 'alphafold': Scheme(shape=(384,), dtype=torch.float32), 'esm': Scheme(shape=(1280,), dtype=torch.float32)}
+      edata_schemes={'weight': Scheme(shape=(), dtype=torch.float32)})
+
+======Before Normalizing======
+Embedding: protvec
+  Shape: torch.Size([21435, 300])
+  Min value: -0.4914022386074066
+  Max value: 0.4184800088405609
+
+Embedding: biovec
+  Shape: torch.Size([21435, 1024])
+  Min value: -1.647519588470459
+  Max value: 2.2878119945526123
+
+Embedding: alphafold
+  Shape: torch.Size([21435, 384])
+  Min value: -3139.99267578125
+  Max value: 158.50872802734375
+
+Embedding: esm
+  Shape: torch.Size([21435, 1280])
+  Min value: -8.801618576049805
+  Max value: 1.9987815618515015
+
+
+======After Normalizing======
+Embedding: protvec
+  Shape: torch.Size([21435, 300])
+  Min value: -0.4914022386074066
+  Max value: 0.4184800088405609
+
+Embedding: biovec
+  Shape: torch.Size([21435, 1024])
+  Min value: -1.647519588470459
+  Max value: 2.2878119945526123
+
+Embedding: alphafold
+  Shape: torch.Size([21435, 384])
+  Min value: -3139.99267578125
+  Max value: 158.50872802734375
+
+Embedding: esm
+  Shape: torch.Size([21435, 1280])
+  Min value: -8.801618576049805
+  Max value: 1.9987815618515015
+
+g.ndata['concatenated'].shape: torch.Size([21435, 1664])
+
+
+After Concatenation g: Graph(num_nodes=21435, num_edges=10277955,
+      ndata_schemes={'protvec': Scheme(shape=(300,), dtype=torch.float32), 'biovec': Scheme(shape=(1024,), dtype=torch.float32), 'alphafold': Scheme(shape=(384,), dtype=torch.float32), 'esm': Scheme(shape=(1280,), dtype=torch.float32), 'concatenated': Scheme(shape=(1664,), dtype=torch.float32)}
+      edata_schemes={'weight': Scheme(shape=(), dtype=torch.float32)})
+Graph and protein mapping loaded successfully!
+Number of nodes in graph: 21435
+Data Loading is completed
+Total Number of Edges:  10275677
+Train Number of Edges:  7192975
+Valid Number of Edges:  2055135
+Test Number of Edges:  1027567
+Train graph node types: ['_N']
+Train graph edge types: ['_E']
+Graph Splitting is completed
+For Feature: concatenated ; flag 1.10c GCN Model
+=================================
+flag 1.10b gcn Model:
+ GCN(
+  (layers): ModuleList(
+    (0): GraphConv(in=1664, out=512, normalization=both, activation=None)
+    (1): GraphConv(in=512, out=256, normalization=both, activation=None)
+    (2): GraphConv(in=256, out=160, normalization=both, activation=None)
+  )
+  (predictor): Sequential(
+    (0): Linear(in_features=160, out_features=80, bias=True)
+    (1): LeakyReLU(negative_slope=0.2)
+    (2): Linear(in_features=80, out_features=40, bias=True)
+    (3): LeakyReLU(negative_slope=0.2)
+    (4): Linear(in_features=40, out_features=1, bias=True)
+  )
+  (dropout): Dropout(p=0.2, inplace=False)
+)
+Loading saved checkpoints..
+
+#---Original Test Evaluation---#
+=== === flag1.11a performance_metrics === ===
+Threshold: 34638.34375
+True Positive: 0.3513230767434143
+False Negative: 0.1486769232565857
+True Negative: 0.31910960550504247
+False Positive: 0.1808903944949575
+confusion_matrix: [[0.31910961 0.18089039]
+ [0.14867692 0.35132308]]
+J   = 0.3408653644969135
+MCC = 0.34157501172865784
+AUC = 0.7421279081232605
+Accuracy using deepdrug method:  = 67.0433%
+Precision = 0.6601
+Recall = 0.7026
+F1 Score = 0.6807
+=== === === ===
+
+
+Original Run: Accuracy=67.0433, AUC=0.7421, F1=0.6807
+
+#---Bootstrapping Robustness Evaluation---#
+
+#---Starting Bootstrapping with 100 iterations---#
+Bootstrap iteration 1: First 10 indices = [121958 671155 131932 365838 259178 644167 110268 732180  54886 137337]
+Bootstrap iteration 2: First 10 indices = [673287 867013 269228 300784 644648 233787 433769  19379 785311  67934]
+Bootstrap iteration 3: First 10 indices = [210189 145404  86286 424006 223367 501786 283161 580260 961962 954577]
+Bootstrap iteration 4: First 10 indices = [463319 364124 391481 727790 998587 854063   7662 965462 371551 967988]
+Bootstrap iteration 5: First 10 indices = [681396 372964 166918 605020 152488 188708 874790 694347 605045 215557]
+Bootstrap iteration 6: First 10 indices = [ 200870 1009759  848982 1006833  283792  836253  145333  624337  951973
+  702971]
+Bootstrap iteration 7: First 10 indices = [  1517 194529 487859   2052 830616 537952 652009 585743 331433 668462]
+Bootstrap iteration 8: First 10 indices = [1010968  755040  783253  760418  903755   46137  319408  208252  496235
+  560398]
+Bootstrap iteration 9: First 10 indices = [ 231757  729651  722973  994798 1012390  109743  297783  882290  923232
+  395736]
+Bootstrap iteration 10: First 10 indices = [409365 425587 896912 299711 770635 192122 472707 474308 350260 613236]
+Bootstrap iteration 11: First 10 indices = [149525  96210 223485 326679 380114 790134 572133 531330 618880 815394]
+Bootstrap iteration 12: First 10 indices = [630338 121580 289898 556784 653120 449988 851885  55561 729042  59692]
+Bootstrap iteration 13: First 10 indices = [694115 714616 552225 237825  97234 925609 714337  77023  33278 265944]
+Bootstrap iteration 14: First 10 indices = [ 46485  47148 350930 735739 858747 203948 697084 861788 837170  11347]
+Bootstrap iteration 15: First 10 indices = [430060  98928 442745 569116 769194 503671 187884 750624 543726 675860]
+Bootstrap iteration 16: First 10 indices = [252897 792378 958409 944354 193502 403691 653921 470761 969123 838174]
+Bootstrap iteration 17: First 10 indices = [618182 597279  37496 305139 591908 182877  55582 670154 378247 384294]
+Bootstrap iteration 18: First 10 indices = [684663 167361 896846 962548 482796 900116 209281 520691 942549 850235]
+Bootstrap iteration 19: First 10 indices = [940964 761158 151187 969719 749625 507076 779007 519243 389087 313354]
+Bootstrap iteration 20: First 10 indices = [ 527937   78235  111290  205599  320627  672053  909604 1013915  585687
+  379323]
+Bootstrap iteration 21: First 10 indices = [ 733259  685576  174507 1012676  691052  128579  729507  332369  126726
+  653819]
+Bootstrap iteration 22: First 10 indices = [263476 541051 292217 897462 166332  98139 203664 599652 407514 142643]
+Bootstrap iteration 23: First 10 indices = [719626 100296 546085 533488 631062 139061 722773 673230 445215  40774]
+Bootstrap iteration 24: First 10 indices = [ 186467 1012120  372294   41685  752321  255514  715807 1009830  407157
+  565300]
+Bootstrap iteration 25: First 10 indices = [ 434270   42419  355076  232966   68826  183263 1000774  643900  600584
+  319045]
+Bootstrap iteration 26: First 10 indices = [ 549976  101494 1023332  311460  218301  601109  237998  747341  401075
+  512106]
+Bootstrap iteration 27: First 10 indices = [418595 557770 386359 640247 531484  38887  56179  21761 472291 957889]
+Bootstrap iteration 28: First 10 indices = [576704  15351 112763 817592 889104 675281 465336 527374 691188 614078]
+Bootstrap iteration 29: First 10 indices = [948820 348168 973249 237654 728821  87033  29407  29474 517044 593633]
+Bootstrap iteration 30: First 10 indices = [527301 863144 375868 845835 182998 510684  74253 975010 717852 225969]
+Bootstrap iteration 31: First 10 indices = [ 246996   74474  174977  254494  605455 1011202  651935  107500  768000
+  565632]
+Bootstrap iteration 32: First 10 indices = [ 245510  310727  139506  141291  400210  788376  218219  814412 1017778
+   71857]
+Bootstrap iteration 33: First 10 indices = [324764  56439 290584 764808 664103 992979 505548 359441 823004 497694]
+Bootstrap iteration 34: First 10 indices = [413032 433893 596150 323028 824361 916483 510324  33458  56044 261407]
+Bootstrap iteration 35: First 10 indices = [648569 951771 353184 424730 113324 434662 490878 868569 111617 680239]
+Bootstrap iteration 36: First 10 indices = [974489 119320 980742 758382 175408 810418 622079 195263 423448 687832]
+Bootstrap iteration 37: First 10 indices = [327602 468037 832651 891830 463587 760323 768074 108985 822931 648920]
+Bootstrap iteration 38: First 10 indices = [ 39010 536758 502539 121517  21979 375074 631510 344346 840832 919317]
+Bootstrap iteration 39: First 10 indices = [539558 854050 262126 672061 335274 627127 825933 178832 374374 848335]
+Bootstrap iteration 40: First 10 indices = [1014593  233866  554580  817307  672224  137437  144108  508182  422681
+  327936]
+Bootstrap iteration 41: First 10 indices = [157614 711588 608520 463982 289892  58878  60459 191989  14937 233537]
+Bootstrap iteration 42: First 10 indices = [812188 409959  10743 638589 610492 792722 245177  25931  59555 775970]
+Bootstrap iteration 43: First 10 indices = [1008505  401465  966652  636890   78250  479213   75957  238328  300800
+  206068]
+Bootstrap iteration 44: First 10 indices = [117294 313977 364168 792487 188722 256602 233615 745023 477059 575419]
+Bootstrap iteration 45: First 10 indices = [909251 313400 274425 838783  58960 159700 641183 259988 730713 324679]
+Bootstrap iteration 46: First 10 indices = [173219 690072 761122 147180  41536 364758  87719 922099 310735 842835]
+Bootstrap iteration 47: First 10 indices = [288141 532767 833388 758417 474311 691026 388112 447377 993810 198064]
+Bootstrap iteration 48: First 10 indices = [822902 786008 588838 536764 136585 288489 665769 480870 232561 261517]
+Bootstrap iteration 49: First 10 indices = [858862 966060 215697 764834  23088 265389 461621 886492 918714 699372]
+Bootstrap iteration 50: First 10 indices = [  36506  713672    9424 1010203  730629  995838  399846  311443  704654
+  877669]
+Bootstrap iteration 51: First 10 indices = [875307 433316 971644 811480 287662 281219 613424 992598 680381 585405]
+Bootstrap iteration 52: First 10 indices = [743438  34058 340062 349448 582940 810142 493775 345822 578337 455384]
+Bootstrap iteration 53: First 10 indices = [549231 106156 724080 708463 709107 804803 915090 883983 453499 474525]
+Bootstrap iteration 54: First 10 indices = [888818 782430 502119 850663 782217 226962  26098 361126 306085 479708]
+Bootstrap iteration 55: First 10 indices = [989758 386521 675149 210645 962032 655602 420321 290842 158634 270097]
+Bootstrap iteration 56: First 10 indices = [713887 786011 702890 374799 806187   2524 502171 935792 814512 525117]
+Bootstrap iteration 57: First 10 indices = [164868 190248 927218 697383  65336 106471 327850 256249 534171 150552]
+Bootstrap iteration 58: First 10 indices = [ 327064  703576  640850  739983  584882  354982  582826  379747   51586
+ 1027221]
+Bootstrap iteration 59: First 10 indices = [ 731778  594079  795210  682636  951250   41972  443365  616682  288063
+ 1009276]
+Bootstrap iteration 60: First 10 indices = [ 544311   76416  829908 1008532  771969   97587   46888 1018435  268421
+  528298]
+Bootstrap iteration 61: First 10 indices = [162565  67824   9475 856342 801159   6744 120951 103663 852735 865598]
+Bootstrap iteration 62: First 10 indices = [832337 360298 586936 915259 477616 546721   3373 722473 950708 900286]
+Bootstrap iteration 63: First 10 indices = [600133 539407 616123 462741 232825  96510 299754 912532 884683 531461]
+Bootstrap iteration 64: First 10 indices = [749848 689575 196238 769420 846963 126072 769669 212352 822811 231359]
+Bootstrap iteration 65: First 10 indices = [ 544717  156683  796171   93024  972391  332221  242205  932266  389496
+ 1016183]
+Bootstrap iteration 66: First 10 indices = [1004908  403395  483393  657306  702169  331134  349674  487087  545527
+  126829]
+Bootstrap iteration 67: First 10 indices = [790218 737031 658004 100815 116599 401557 324423 750178  81661 113569]
+Bootstrap iteration 68: First 10 indices = [388673  19391 753210  98743 401701 399433 253435 179060  33849 788968]
+Bootstrap iteration 69: First 10 indices = [514638 898346 751758 317572 346580 207245 984499 850299 564078 992254]
+Bootstrap iteration 70: First 10 indices = [ 785060  672943  953598  590978 1022239  706060  437433  207811 1010921
+  487653]
+Bootstrap iteration 71: First 10 indices = [264542 156435 886449  68266  35743 319604 283882 619979 893849 279656]
+Bootstrap iteration 72: First 10 indices = [816883 817343 634187 290794 485874 791520 529297 275043 343902 465791]
+Bootstrap iteration 73: First 10 indices = [196455 410877 284354 602951 151069 815897 704024  82069 370464 788116]
+Bootstrap iteration 74: First 10 indices = [632983 377820  91804 600457 731385 209129 565237 807957 454688 459734]
+Bootstrap iteration 75: First 10 indices = [473593 784087 126388 734988 471465 680796 858021 122852 512852 770739]
+Bootstrap iteration 76: First 10 indices = [ 119016  258962  919803  189207 1016529  570845  441453  543422  757371
+  126758]
+Bootstrap iteration 77: First 10 indices = [917016 735256 663273 917318 299129 961930 853415 877690 942705 386731]
+Bootstrap iteration 78: First 10 indices = [210055  18867 411470 962183  84647 997422 258089 291460 836451 735150]
+Bootstrap iteration 79: First 10 indices = [ 523292  809189  177412  650227  813898   71362 1006402  581400  257703
+  721196]
+Bootstrap iteration 80: First 10 indices = [363500 270600 628501 458818 213663 111018  64937 783324 532862 826348]
+Bootstrap iteration 81: First 10 indices = [212095 602701 191288 887117 291943 723152 693068 265944 523028 557154]
+Bootstrap iteration 82: First 10 indices = [175252 898405 402867 132103 448657 689784  18659  93725 800161 183472]
+Bootstrap iteration 83: First 10 indices = [595084 354658 855715 126788   4838 379794  59136 265025 701874 728115]
+Bootstrap iteration 84: First 10 indices = [694749 757416 644828  34390 909747 382831 907717 858286 345388 283420]
+Bootstrap iteration 85: First 10 indices = [792415 377551 609835 269274 373811 472947 294029 295483 640449 347443]
+Bootstrap iteration 86: First 10 indices = [965607 108630  21821 485568 404151 496217 961349 729382 318278 850898]
+Bootstrap iteration 87: First 10 indices = [849095 133905  32403 490769 849173  90315 763079 419038 370619 690282]
+Bootstrap iteration 88: First 10 indices = [239839 283996 969846 868671 129262 564266  24844 284917 745370 977702]
+Bootstrap iteration 89: First 10 indices = [324694 538999 867340 155030 291055 363285 314116 544323 898886 956443]
+Bootstrap iteration 90: First 10 indices = [ 33039 562212 356167 625041 510900 749050 534587 998007 986941 608634]
+Bootstrap iteration 91: First 10 indices = [ 245532  676815  289174  350572  338097  369929 1003107  821023  778250
+  865936]
+Bootstrap iteration 92: First 10 indices = [183612 828126 155158 884037 492688 282682 109848 935547 930883 779101]
+Bootstrap iteration 93: First 10 indices = [ 657977  406802  645580  761835  993273   71020   41498   58513  403107
+ 1010869]
+Bootstrap iteration 94: First 10 indices = [238510 410967 172887 105970 739869 612122 221460 446898 768289  75671]
+Bootstrap iteration 95: First 10 indices = [ 64297 517728 336492 788072 386592 156162 270842  87379 942474 239789]
+Bootstrap iteration 96: First 10 indices = [ 475355  799797  488662  291544   68729  486970  535756  343757  834909
+ 1013459]
+Bootstrap iteration 97: First 10 indices = [628036  87267 460515 622701 837350 574969 142195 334799 906499 350165]
+Bootstrap iteration 98: First 10 indices = [144363 758426 824618 397577 402300 940477 940687 822885 992505 380417]
+Bootstrap iteration 99: First 10 indices = [177014 726422 144251 268066 711179 896791 441920 589388 881332 797562]
+Bootstrap iteration 100: First 10 indices = [ 686786  576519  312573  824393  718478  140509 1023468  869167  711227
+  114574]
+
+=== Bootstrapping Robustness Summary (100 iterations) ===
+Accuracy:  67.0504 ± 0.0274 (95% CI: [67.0009, 67.0939])
+AUC:       0.7422 ± 0.0003 (95% CI: [0.7417, 0.7427])
+MCC:       0.3419 ± 0.0007 (95% CI: [0.3408, 0.3432])
+Precision: 0.6593 ± 0.0019 (95% CI: [0.6551, 0.6620])
+Recall:    0.7057 ± 0.0064 (95% CI: [0.6970, 0.7193])
+F1 Score:  0.6817 ± 0.0020 (95% CI: [0.6790, 0.6859])
+J Score:   0.3410 ± 0.0005 (95% CI: [0.3400, 0.3419])
+=== End Bootstrapping ===
+
+=================================
+Execution Finished..
