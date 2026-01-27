@@ -1,3 +1,5 @@
+This directory contains the implementation for predicting Protein-Protein Interactions (PPI) by concatenating 4 different types of protein embeddings
+
 - main_concat.py: Run this script for training and evaluating the PPI model using concatenated embeddings.
 
 - model.py: Defines the neural network architecture used for the interaction prediction.
