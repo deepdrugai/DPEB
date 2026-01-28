@@ -8,6 +8,8 @@ Please ensure that the conda environment is set up using the `env.yml` file loca
 
 #### Directory Structure
 
+- **build_combined_graph.py** and **build_combined_graph_part2.py**  
+  Run these two files one by one to build the combined graph that contains all embedding types as node features. Download relevant files from DPEB AWS Data repository.  
 - **main_concat.py**  
   Main script for training and evaluating the PPI prediction model using concatenated embeddings.
 
