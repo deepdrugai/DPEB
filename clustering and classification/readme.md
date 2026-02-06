@@ -8,6 +8,8 @@ Before running the scripts, ensure you have the environment set up as described 
 #### Execution Workflow
 To achieve the full pipeline (supervised training followed by unsupervised evaluation and classification),  run the scripts in the following order based on your chosen embedding model:
 
-#### (ESM)
+#### ESM
 1. Run the supervised training: python `supervised_clustering - esm.py`
 2. Run the unsupervised evaluation and classification: python `unsupervised_clustering_and_downstream_classification_ESM.py`
+
+   Run similarly for the other Embedding types with their corresponding files as well.
