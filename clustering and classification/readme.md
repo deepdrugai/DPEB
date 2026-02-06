@@ -12,4 +12,4 @@ To achieve the full pipeline (supervised training followed by unsupervised evalu
 1. Run the supervised training: python `supervised_clustering - esm.py`
 2. Run the unsupervised evaluation and classification: python `unsupervised_clustering_and_downstream_classification_ESM.py`
 
-   Run similarly for the other Embedding types with their corresponding files as well.
+Repeat this process for the remaining embedding types using their respective files.
