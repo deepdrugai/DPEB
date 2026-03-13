@@ -1,5 +1,4 @@
-
-
+ [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.19008090.svg)](https://doi.org/10.5281/zenodo.19008090)
 # DeepDrug Protein Embeddings Bank (DPEB) : A Multimodal Human Protein Embeddings Data
 
 This repository contains the source code and resources for the DeepDrug Protein Embeddings Bank (DPEB), a multimodal database of human protein embeddings designed to enhance protein-protein interaction modeling.  
